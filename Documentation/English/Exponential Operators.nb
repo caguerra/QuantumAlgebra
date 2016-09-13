@@ -1,0 +1,789 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     23208,        780]
+NotebookOptionsPosition[     18886,        629]
+NotebookOutlinePosition[     21394,        710]
+CellTagsIndexPosition[     21302,        704]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Exponential and Power Operators", "Section",
+ CellChangeTimes->{{3.444081157639*^9, 3.44408115784*^9}, {
+  3.4449763488809395`*^9, 3.444976350742939*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Exp", "Subsection",
+ CellTags->"b:5.0"],
+
+Cell["\<\
+Exponential operators are implemented with the defined  Exp function. No \
+special internal form is defined\
+\>", "Text",
+ CellTags->"b:5.0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Exp", "[", 
+   OverscriptBox["T", "^"], "]"}], "//", "FullForm"}]], "Input",
+ CellChangeTimes->{{3.444929539069549*^9, 3.444929541669549*^9}},
+ CellTags->"b:5.0"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Power", "[", 
+    RowBox[{"E", ",", 
+     RowBox[{"Operator", "[", "T", "]"}]}], "]"}],
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.444929542490549*^9},
+ CellTags->"b:5.0"]
+}, Open  ]],
+
+Cell["\<\
+However this is treated as a operator. In general every expression that \
+contains operators is considered to be an operator. All commands defined \
+above apply to them\
+\>", "Text",
+ CellTags->"b:5.0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", 
+      OverscriptBox["U", "^"]}], ",", 
+     SuperscriptBox[
+      RowBox[{"Exp", "[", 
+       OverscriptBox["T", "^"], "]"}], "\[Dagger]"]}], "]"}], "-"], "//", 
+  "QACommutatorExpand"}]], "Input",
+ CellTags->"b:5.0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    SuperscriptBox[
+     OverscriptBox["T", "^"], "\[Dagger]"]], "\[CenterDot]", 
+   OverscriptBox["U", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["U", "^"], "\[CenterDot]", 
+   SuperscriptBox["\[ExponentialE]", 
+    SuperscriptBox[
+     OverscriptBox["T", "^"], "\[Dagger]"]]}]}]], "Output",
+ CellTags->"b:5.0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", "QACommutatorContract"}]], "Input",
+ CellTags->"b:5.0"],
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     SuperscriptBox[
+      OverscriptBox["T", "^"], "\[Dagger]"]], ",", 
+    OverscriptBox["U", "^"]}], "]"}], "-"]], "Output",
+ CellTags->"b:5.0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QAMatrix", "[", 
+   RowBox[{
+    SqrtBox[
+     OverscriptBox["A", "^"]], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxMargins->{{-0.4, 0.}, {0., 0.}}], 
+        AdjustmentBox[
+         TagBox["0",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"], ",", 
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxMargins->{{-0.4, 0.}, {0., 0.}}], 
+        AdjustmentBox[
+         TagBox["1",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"]}], "}"}]}], "]"}], "//", 
+  "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.44408264906*^9, 3.444082681579*^9}, {3.444083501363*^9, 
+  3.444083516574*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SqrtBox[
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}], 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SqrtBox[
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}]},
+     {
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SqrtBox[
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}], 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SqrtBox[
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.4440835060810003`*^9, 3.4440835174820004`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"QAMatrix", "[", 
+   RowBox[{
+    RowBox[{"Exp", "[", 
+     OverscriptBox["A", "^"], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxMargins->{{-0.4, 0.}, {0., 0.}}], 
+        AdjustmentBox[
+         TagBox["0",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"], ",", 
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxMargins->{{-0.4, 0.}, {0., 0.}}], 
+        AdjustmentBox[
+         TagBox["1",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"]}], "}"}]}], "]"}], "//", 
+  "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.44408264906*^9, 3.444082681579*^9}, {3.444083501363*^9, 
+  3.444083516574*^9}, {3.444083552757*^9, 3.4440835584449997`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SuperscriptBox["\[ExponentialE]", 
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}], 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SuperscriptBox["\[ExponentialE]", 
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}]},
+     {
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SuperscriptBox["\[ExponentialE]", 
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["0",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}], 
+      RowBox[{
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`BraArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], 
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{0, -0.2}, {0, 0}}]}],
+        QuantumAlgebra`QuantumAlgebra`Bra,
+        BaseStyle->"BraWrapper"], "\[CenterDot]", 
+       SuperscriptBox["\[ExponentialE]", 
+        OverscriptBox["A", "^"]], "\[CenterDot]", 
+       TagBox[
+        RowBox[{
+         AdjustmentBox["\[VerticalSeparator]",
+          BoxMargins->{{-0.4, 0}, {0, 0}}], 
+         AdjustmentBox[
+          TagBox["1",
+           QuantumAlgebra`QuantumAlgebra`KetArgs,
+           BaseStyle->"BraKetArg"],
+          BoxBaselineShift->0], "\[RightAngleBracket]"}],
+        QuantumAlgebra`QuantumAlgebra`Ket,
+        BaseStyle->"KetWrapper"]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.444083559027*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["BCHRelation", "Subsection",
+ CellTags->"b:5.1"],
+
+Cell["\<\
+A well known formula to expand an exponential of a sum of operators in terms \
+of products of exponential is the  Baker\[Dash]Campbell\[Dash]Hausdorff \
+relation:\
+\>", "Text",
+ CellTags->"b:5.1"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"If", "     ", "[", 
+     RowBox[{
+      OverscriptBox["A", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["A", "^"], ",", 
+         OverscriptBox["B", "^"]}], "]"}], "-"]}], "]"}], "-"], "=", " ", 
+   RowBox[{
+    SubscriptBox[
+     RowBox[{"[", 
+      RowBox[{
+       OverscriptBox["B", "^"], ",", 
+       SubscriptBox[
+        RowBox[{"[", 
+         RowBox[{
+          OverscriptBox["A", "^"], ",", 
+          OverscriptBox["B", "^"]}], "]"}], "-"]}], "]"}], "-"], "=", 
+    RowBox[{"0", "     ", "then"}]}]}], TraditionalForm]], "DisplayFormula",
+ CellTags->"b:5.1"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     OverscriptBox["A", "^"], " ", "+", " ", 
+     OverscriptBox["B", "^"]}]], "=", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     OverscriptBox["A", "^"]], 
+    SuperscriptBox["\[ExponentialE]", 
+     OverscriptBox["B", "^"]], 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", 
+      SubscriptBox[
+       RowBox[{
+        FractionBox["1", "2"], "[", 
+        RowBox[{
+         OverscriptBox["A", "^"], ",", 
+         OverscriptBox["B", "^"]}], "]"}], "-"]}]]}]}], 
+  TraditionalForm]], "DisplayFormula",
+ CellTags->"b:5.1"],
+
+Cell["This relation is implemented with the command BCHRelation", "Text",
+ CellTags->"b:5.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Exp", "[", 
+   RowBox[{
+    RowBox[{"\[Alpha]", 
+     SuperscriptBox[
+      OverscriptBox["a", "^"], "\[Dagger]"]}], "-", 
+    RowBox[{
+     SuperscriptBox["\[Alpha]", "*"], 
+     OverscriptBox["a", "^"]}]}], "]"}], "//", "BCHRelation"}]], "Input",
+ CellTags->"b:5.1"],
+
+Cell[BoxData[
+ SuperscriptBox["\[ExponentialE]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["\[Alpha]", "*"]}], " ", 
+    OverscriptBox["a", "^"]}], "+", 
+   RowBox[{"\[Alpha]", " ", 
+    SuperscriptBox[
+     OverscriptBox["a", "^"], "\[Dagger]"]}]}]]], "Output",
+ CellTags->"b:5.1"]
+}, Open  ]],
+
+Cell["\<\
+As we see, if the commutator is not defined BCHRelation don't know how to \
+check the neccesary conditions to expand the expression, so let's define the \
+commutators\
+\>", "Text",
+ CellTags->"b:5.1"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["a", "^"], ",", 
+      SuperscriptBox[
+       OverscriptBox["a", "^"], "\[Dagger]"]}], "]"}], "-"], "=", 
+   OverscriptBox["1", "^"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SuperscriptBox[
+       OverscriptBox["a", "^"], "\[Dagger]"], ",", 
+      OverscriptBox["a", "^"]}], "]"}], "-"], "=", 
+   RowBox[{"-", 
+    OverscriptBox["1", "^"]}]}], ";"}]}], "InputOnly",
+ CellTags->"b:5.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BCHRelation", "[", 
+  RowBox[{"Exp", "[", 
+   RowBox[{
+    RowBox[{"\[Alpha]", 
+     SuperscriptBox[
+      OverscriptBox["a", "^"], "\[Dagger]"]}], "-", 
+    RowBox[{
+     SuperscriptBox["\[Alpha]", "*"], 
+     OverscriptBox["a", "^"]}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.444983409042*^9, 3.444983421391*^9}},
+ CellTags->"b:5.1"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"\[Alpha]", " ", 
+      SuperscriptBox["\[Alpha]", "*"]}], "2"]}]], " ", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"\[Alpha]", " ", 
+     SuperscriptBox[
+      OverscriptBox["a", "^"], "\[Dagger]"]}]], "\[CenterDot]", 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["\[Alpha]", "*"]}], " ", 
+     OverscriptBox["a", "^"]}]]}]}]], "Output",
+ CellChangeTimes->{{3.44498340941*^9, 3.4449834294700003`*^9}},
+ CellTags->"b:5.1"]
+}, Open  ]],
+
+Cell["\<\
+The condition apply and we get the expanded product of exponentials. Note the \
+the order in which the arguments enter to the algorithm is important to get \
+what we want.\
+\>", "Text",
+ CellTags->"b:5.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BCHRelation", "[", 
+  RowBox[{"Exp", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["\[Alpha]", "*"]}], 
+     OverscriptBox["a", "^"]}], "+", 
+    RowBox[{"\[Alpha]", 
+     SuperscriptBox[
+      OverscriptBox["a", "^"], "\[Dagger]"]}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.444983404215*^9, {3.44498343438*^9, 3.444983435712*^9}},
+ CellTags->"b:5.1"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   FractionBox[
+    RowBox[{"\[Alpha]", " ", 
+     SuperscriptBox["\[Alpha]", "*"]}], "2"]], " ", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["\[Alpha]", "*"]}], " ", 
+     OverscriptBox["a", "^"]}]], "\[CenterDot]", 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"\[Alpha]", " ", 
+     SuperscriptBox[
+      OverscriptBox["a", "^"], "\[Dagger]"]}]]}]}]], "Output",
+ CellChangeTimes->{3.4449834045220003`*^9, 3.4449834362*^9},
+ CellTags->"b:5.1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+WindowSize->{682, 709},
+WindowMargins->{{Automatic, 74}, {Automatic, 0}},
+DockedCells->Cell[
+  BoxData[
+   StyleBox[
+   "\!\(\*FrameBox[\"\[CapitalPsi]\",\nStripOnInput->False]\)   \
+QuantumAlgebra 2.0", FontFamily -> "Helvetica", FontWeight -> "Bold", 
+    FontColor -> GrayLevel[1]]], "DockedCell", Background -> 
+  RGBColor[0, 0.25098, 0.501961]],
+Magnification->1.,
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (February 7, 2008)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "QAStyles.nb"]]}, WindowSize -> {607, 579}, 
+  WindowMargins -> {{288, Automatic}, {Automatic, 65}}, Visible -> False, 
+  FrontEndVersion -> "6.0 for Microsoft Windows (32-bit) (February 7, 2008)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "b:5.0"->{
+  Cell[775, 29, 45, 1, 56, "Subsection",
+   CellTags->"b:5.0"],
+  Cell[823, 32, 151, 4, 49, "Text",
+   CellTags->"b:5.0"],
+  Cell[999, 40, 197, 5, 41, "Input",
+   CellTags->"b:5.0"],
+  Cell[1199, 47, 274, 10, 42, "Output",
+   CellTags->"b:5.0"],
+  Cell[1488, 60, 212, 5, 49, "Text",
+   CellTags->"b:5.0"],
+  Cell[1725, 69, 306, 11, 47, "Input",
+   CellTags->"b:5.0"],
+  Cell[2034, 82, 384, 12, 47, "Output",
+   CellTags->"b:5.0"],
+  Cell[2455, 99, 89, 2, 41, "Input",
+   CellTags->"b:5.0"],
+  Cell[2547, 103, 243, 8, 52, "Output",
+   CellTags->"b:5.0"]},
+ "b:5.1"->{
+  Cell[13529, 431, 53, 1, 56, "Subsection",
+   CellTags->"b:5.1"],
+  Cell[13585, 434, 206, 5, 49, "Text",
+   CellTags->"b:5.1"],
+  Cell[13794, 441, 680, 23, 60, "DisplayFormula",
+   CellTags->"b:5.1"],
+  Cell[14477, 466, 628, 21, 60, "DisplayFormula",
+   CellTags->"b:5.1"],
+  Cell[15108, 489, 93, 1, 30, "Text",
+   CellTags->"b:5.1"],
+  Cell[15226, 494, 303, 10, 41, "Input",
+   CellTags->"b:5.1"],
+  Cell[15532, 506, 302, 10, 45, "Output",
+   CellTags->"b:5.1"],
+  Cell[15849, 519, 210, 5, 49, "Text",
+   CellTags->"b:5.1"],
+  Cell[16062, 526, 559, 20, 75, "InputOnly",
+   CellTags->"b:5.1"],
+  Cell[16646, 550, 367, 11, 41, "Input",
+   CellTags->"b:5.1"],
+  Cell[17016, 563, 595, 18, 49, "Output",
+   CellTags->"b:5.1"],
+  Cell[17626, 584, 215, 5, 49, "Text",
+   CellTags->"b:5.1"],
+  Cell[17866, 593, 407, 12, 41, "Input",
+   CellTags->"b:5.1"],
+  Cell[18276, 607, 570, 17, 49, "Output",
+   CellTags->"b:5.1"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"b:5.0", 19796, 653},
+ {"b:5.1", 20363, 672}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[590, 23, 160, 2, 84, "Section"],
+Cell[CellGroupData[{
+Cell[775, 29, 45, 1, 56, "Subsection",
+ CellTags->"b:5.0"],
+Cell[823, 32, 151, 4, 49, "Text",
+ CellTags->"b:5.0"],
+Cell[CellGroupData[{
+Cell[999, 40, 197, 5, 41, "Input",
+ CellTags->"b:5.0"],
+Cell[1199, 47, 274, 10, 42, "Output",
+ CellTags->"b:5.0"]
+}, Open  ]],
+Cell[1488, 60, 212, 5, 49, "Text",
+ CellTags->"b:5.0"],
+Cell[CellGroupData[{
+Cell[1725, 69, 306, 11, 47, "Input",
+ CellTags->"b:5.0"],
+Cell[2034, 82, 384, 12, 47, "Output",
+ CellTags->"b:5.0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2455, 99, 89, 2, 41, "Input",
+ CellTags->"b:5.0"],
+Cell[2547, 103, 243, 8, 52, "Output",
+ CellTags->"b:5.0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2827, 116, 1072, 32, 56, "Input"],
+Cell[3902, 150, 4165, 118, 84, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8104, 273, 1135, 32, 44, "Input"],
+Cell[9242, 307, 4238, 118, 74, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13529, 431, 53, 1, 56, "Subsection",
+ CellTags->"b:5.1"],
+Cell[13585, 434, 206, 5, 49, "Text",
+ CellTags->"b:5.1"],
+Cell[13794, 441, 680, 23, 60, "DisplayFormula",
+ CellTags->"b:5.1"],
+Cell[14477, 466, 628, 21, 60, "DisplayFormula",
+ CellTags->"b:5.1"],
+Cell[15108, 489, 93, 1, 30, "Text",
+ CellTags->"b:5.1"],
+Cell[CellGroupData[{
+Cell[15226, 494, 303, 10, 41, "Input",
+ CellTags->"b:5.1"],
+Cell[15532, 506, 302, 10, 45, "Output",
+ CellTags->"b:5.1"]
+}, Open  ]],
+Cell[15849, 519, 210, 5, 49, "Text",
+ CellTags->"b:5.1"],
+Cell[16062, 526, 559, 20, 75, "InputOnly",
+ CellTags->"b:5.1"],
+Cell[CellGroupData[{
+Cell[16646, 550, 367, 11, 41, "Input",
+ CellTags->"b:5.1"],
+Cell[17016, 563, 595, 18, 49, "Output",
+ CellTags->"b:5.1"]
+}, Open  ]],
+Cell[17626, 584, 215, 5, 49, "Text",
+ CellTags->"b:5.1"],
+Cell[CellGroupData[{
+Cell[17866, 593, 407, 12, 41, "Input",
+ CellTags->"b:5.1"],
+Cell[18276, 607, 570, 17, 49, "Output",
+ CellTags->"b:5.1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

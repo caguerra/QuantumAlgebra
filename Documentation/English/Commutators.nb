@@ -1,0 +1,3718 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    130500,       3709]
+NotebookOptionsPosition[     90260,       2628]
+NotebookOutlinePosition[    123332,       3451]
+CellTagsIndexPosition[    123023,       3437]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Commutators", "Section",
+ CellTags->"qa:C.0"],
+
+Cell["Load QuantumAlgebra", "Text",
+ CellChangeTimes->{{3.445171137401*^9, 3.445171141133*^9}, 3.445172393881*^9}],
+
+Cell[BoxData[
+ RowBox[{"<<", "QuantumAlgebra`QuantumAlgebra`"}]], "InputOnly",
+ CellChangeTimes->{{3.445171147388*^9, 3.445171154102*^9}, 3.445172393881*^9}],
+
+Cell[CellGroupData[{
+
+Cell["Basic Properties", "Subsection",
+ CellTags->"qa:C.1"],
+
+Cell[TextData[{
+ "Commutators are defined in ",
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"],
+ " as objects with the head ",
+ StyleBox["Commutator",
+  FontWeight->"Bold"],
+ ". They can be entered using the standard notation with the alias (\
+\[EscapeKey] com \[EscapeKey]) or by writing the full form representation \
+using the commutator head. "
+}], "Text",
+ CellChangeTimes->{
+  3.445168028863*^9, {3.445171187566*^9, 3.4451712675959997`*^9}, {
+   3.445171299087*^9, 3.4451713728789997`*^9}, 3.445171415587*^9, {
+   3.445171481752*^9, 3.445171502337*^9}, {3.445171541174*^9, 
+   3.445171571521*^9}, {3.445171640781*^9, 3.44517168024*^9}, 
+   3.445172393882*^9},
+ CellTags->"b:4.0"],
+
+Cell["\<\
+The basic linear properties for commutators are applied automatically. The \
+final answer involves commutators that can no longer be simplified.\
+\>", "Text",
+ CellChangeTimes->{{3.445171422374*^9, 3.445171469608*^9}, {
+   3.4451715858719997`*^9, 3.445171611333*^9}, 3.445172393882*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Commutator", "[", 
+  RowBox[{
+   RowBox[{"\[ScriptA]", " ", 
+    OverscriptBox["\[ScriptCapitalA]", "^"]}], ",", 
+   RowBox[{"\[ScriptB]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "]"}]], "Input",
+ CellChangeTimes->{3.445172393882*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[ScriptA]", " ", "\[ScriptB]", " ", 
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"]}]], "Output",
+ CellChangeTimes->{{3.445172423097*^9, 3.4451724261470003`*^9}, 
+   3.5943724958543715`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], "+", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}], ",", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], "-", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "]"}], "-"]], "Input",
+ CellChangeTimes->{
+  3.4451680288640003`*^9, {3.445172126106*^9, 3.445172142494*^9}, 
+   3.445172393884*^9},
+ CellTags->"b:4.0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"]}], "+", 
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+     OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"]}]], "Output",
+ CellChangeTimes->{{3.445172429078*^9, 3.445172433291*^9}, 
+   3.5943724980354967`*^9},
+ CellTags->"b:4.0"]
+}, Open  ]],
+
+Cell["\<\
+Other common properties of commutators are also applied automatically. In the \
+next example we compute the commutator of an operator with itself, and the \
+hermitian conjugation of a commutator.\
+\>", "Text",
+ CellChangeTimes->{
+  3.4451680288640003`*^9, {3.445171755959*^9, 3.445171915834*^9}, 
+   3.4451723938859997`*^9, {3.5943725171255884`*^9, 3.5943725529526377`*^9}},
+ CellTags->"b:4.0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], ",", 
+   SuperscriptBox[
+    SubscriptBox[
+     RowBox[{"[", 
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+       OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "\[Dagger]"]}],
+   "}"}]], "Input",
+ CellChangeTimes->{
+  3.4451680288640003`*^9, {3.445172163392*^9, 3.445172176881*^9}, 
+   3.4451723938859997`*^9},
+ CellTags->"b:4.0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SuperscriptBox[
+       OverscriptBox["\[ScriptCapitalB]", "^"], "\[Dagger]"], ",", 
+      SuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"]}], "]"}], "-"]}],
+   "}"}]], "Output",
+ CellChangeTimes->{{3.4451724362530003`*^9, 3.4451724397609997`*^9}, 
+   3.594372540599931*^9},
+ CellTags->"b:4.0"]
+}, Open  ]],
+
+Cell["\<\
+The commutator of some operator with a function of itself gives cero. If the \
+function involves other operators the expression can no longer be simplified.\
+\>", "Text",
+ CellChangeTimes->{{3.445171942564*^9, 3.445172045197*^9}, 
+   3.445172393888*^9, {3.594373411258507*^9, 3.594373433427775*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      RowBox[{"f", "[", 
+       OverscriptBox["\[ScriptCapitalA]", "^"], "]"}]}], "]"}], "-"], ",", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"f", "[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+        OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{
+  3.445168028865*^9, {3.445172192767*^9, 3.4451722207860003`*^9}, 
+   3.445172393888*^9},
+ CellTags->"b:4.0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"f", "[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+        OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.445172441101*^9, 3.445172443914*^9}, 
+   3.59437257187572*^9},
+ CellTags->"b:4.0"]
+}, Open  ]],
+
+Cell["\<\
+Commutators involving products of operators are simplified until it  involves \
+only commutators of single operators.\
+\>", "Text",
+ CellChangeTimes->{{3.445172650877*^9, 3.445172749028*^9}, {3.445172802375*^9,
+   3.445172861013*^9}, {3.5943727973656173`*^9, 3.5943728044020195`*^9}, {
+  3.5943728760761194`*^9, 3.594372896751302*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalC]", "^"]}]}], "]"}], "-"]], "Input",
+ CellChangeTimes->{{3.445172593841*^9, 3.445172608481*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalC]", "^"]}], "]"}], "-"]}]}]], "Output",
+ CellChangeTimes->{3.445172608926*^9, 3.445172754292*^9, 3.59437274479161*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalC]", "^"]}], ",", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalE]", "^"]}]}], "]"}], "-"]], "Input",
+ CellChangeTimes->{{3.445172760824*^9, 3.445172781593*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}]}]], "Output",
+ CellChangeTimes->{{3.44517277123*^9, 3.445172782024*^9}, 
+   3.5943727456546593`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Expanding and Contracting Commutators", "Subsection",
+ CellChangeTimes->{{3.445200240146*^9, 3.445200240302*^9}},
+ CellTags->"qa:C.2"],
+
+Cell[TextData[{
+ "Commutators are not expanded automatically in terms of products of \
+operators. This can be done using the command ",
+ StyleBox["QACommutatorExpand",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{
+  3.445168028865*^9, {3.445172280395*^9, 3.445172326543*^9}, 
+   3.445172393891*^9, {3.5943734693808312`*^9, 3.594373498356488*^9}, {
+   3.5943736388395233`*^9, 3.5943736415146766`*^9}},
+ CellTags->"b:4.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "//", 
+  "QACommutatorExpand"}]], "Input",
+ CellChangeTimes->{
+  3.445168028865*^9, 3.4451723938929996`*^9, {3.4451729382019997`*^9, 
+   3.445172948594*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}]}]], "Output",
+ CellChangeTimes->{3.594373768699951*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalA]", "^"], "+", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+        OverscriptBox["\[ScriptCapitalD]", "^"]}]}], ",", 
+      RowBox[{
+       RowBox[{"\[ScriptA]", 
+        OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+       RowBox[{"\[ScriptB]", 
+        OverscriptBox["\[ScriptCapitalB]", "^"]}]}]}], "]"}], "-"], "//", 
+   "QACommutatorExpand"}], "//", "Expand"}]], "Input",
+ CellChangeTimes->{
+  3.445168028865*^9, {3.4451723326210003`*^9, 3.445172344599*^9}, 
+   3.445172393891*^9, 3.445172888487*^9},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptB]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "-", 
+  RowBox[{"\[ScriptB]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"]}]}], "-", 
+  RowBox[{"\[ScriptA]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalD]", "^"]}]}], "-", 
+  RowBox[{"\[ScriptB]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalD]", "^"]}]}], "+", 
+  RowBox[{"\[ScriptA]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"]}]}], "+", 
+  RowBox[{"\[ScriptB]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}]}]], "Output",
+ CellChangeTimes->{{3.445172451906*^9, 3.445172453175*^9}, 3.445172888991*^9, 
+   3.594373695287752*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalX]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalY]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalZ]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"], "+", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalY]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalZ]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalX]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"], "+", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalZ]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalX]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalY]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"]}], "//", "QACommutatorExpand"}]], "Input",
+ CellChangeTimes->{
+  3.44516802887*^9, 3.445172393899*^9, {3.445174368922*^9, 
+   3.4451744120629997`*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.445174413039*^9, 3.5943737082964964`*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The command ",
+ StyleBox["QACommutatorContract",
+  FontWeight->"Bold"],
+ " attemps to convert sum of products into an expression containing \
+commutators.    "
+}], "Text",
+ CellChangeTimes->{
+  3.445168028865*^9, 3.4451723938929996`*^9, {3.4451729150559998`*^9, 
+   3.445172933208*^9}, {3.5943737188901024`*^9, 3.594373730959792*^9}},
+ CellTags->"b:4.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "//", 
+  "QACommutatorExpand"}]], "Input",
+ CellChangeTimes->{
+  3.445168028865*^9, 3.4451723938929996`*^9, {3.4451729382019997`*^9, 
+   3.445172948594*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}]}]], "Output",
+ CellChangeTimes->{{3.4451729498389997`*^9, 3.445172953466*^9}, 
+   3.594373732872902*^9, 3.5943737862809567`*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", "QACommutatorContract"}]], "Input",
+ CellChangeTimes->{3.445168028865*^9, 3.4451723938929996`*^9},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"]], "Output",
+ CellChangeTimes->{{3.4451729567279997`*^9, 3.445172958604*^9}, 
+   3.594373736947135*^9, 3.5943737871020036`*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell["\<\
+If the expression is complex there is not guarantee that it is reduced to a \
+very simple expression involving commutators. Here is an example that \
+involves nested commutators:\
+\>", "Text",
+ CellChangeTimes->{
+  3.445168028866*^9, 3.4451723938929996`*^9, {3.445173006323*^9, 
+   3.445173016521*^9}, {3.445173056953*^9, 3.445173112554*^9}, {
+   3.594373810218326*^9, 3.59437385119967*^9}, 3.594373923662814*^9},
+ CellTags->"b:4.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"expr", "=", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalA]", "^"], "+", 
+       OverscriptBox["\[ScriptCapitalB]", "^"]}], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+         SubscriptBox[
+          RowBox[{"[", 
+           RowBox[{
+            OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+            OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+       "-"]}], "]"}], "-"], "//", "QACommutatorExpand"}]}]], "Input",
+ CellChangeTimes->{
+  3.445168028866*^9, 3.4451723938929996`*^9, {3.44517302363*^9, 
+   3.445173053665*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}]}]], "Output",
+ CellChangeTimes->{3.4451730893710003`*^9, 3.594373861879281*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"expr", "//", "QACommutatorContract"}]], "Input",
+ CellChangeTimes->{3.445168028866*^9, 3.445172393894*^9},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalC]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalC]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalE]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalE]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalE]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalE]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalC]", "^"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalE]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalC]", "^"]}], "]"}], "-"]}]}]], "Output",
+ CellChangeTimes->{{3.445173287349*^9, 3.44517329041*^9}, 
+   3.594373863506374*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell["\<\
+As can be seen, we don't get the original expression. In this case the \
+internal algorithm of the contraction has choosen the order in which to group \
+the operators to built the commutators. \
+\>", "Text",
+ CellChangeTimes->{
+  3.445168028867*^9, 3.445172393895*^9, {3.445173310481*^9, 
+   3.4451733705039997`*^9}, {3.445173403145*^9, 3.445173422118*^9}, {
+   3.445173470807*^9, 3.445173547176*^9}, {3.445173578324*^9, 
+   3.4451736121870003`*^9}, {3.445173770709*^9, 3.445173796618*^9}, 
+   3.5943738771071515`*^9},
+ CellTags->"b:4.1"],
+
+Cell[TextData[{
+ StyleBox["QACommutatorContract",
+  FontWeight->"Bold"],
+ " have a second argument to control the contraction. This argument should be \
+a list containing two operators whose commutator should be contracted, or a \
+list of lists of pairs of operators whose commutators should be contracted."
+}], "Text",
+ CellChangeTimes->{
+  3.445168028867*^9, 3.445172393895*^9, {3.445173310481*^9, 
+   3.4451733705039997`*^9}, {3.445173403145*^9, 3.445173422118*^9}, {
+   3.445173470807*^9, 3.445173547176*^9}, {3.445173578324*^9, 
+   3.4451736121870003`*^9}, {3.445173770709*^9, 3.445173796618*^9}, 
+   3.5943738771071515`*^9, {3.59437395033534*^9, 3.5943739848913164`*^9}},
+ CellTags->"b:4.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"expr", "//", 
+  RowBox[{
+   RowBox[{"QACommutatorContract", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+       OverscriptBox["\[ScriptCapitalE]", "^"]}], "}"}]}], "]"}], 
+   "&"}]}]], "Input",
+ CellChangeTimes->{
+  3.445168028867*^9, 3.445172393895*^9, {3.445173736416*^9, 
+   3.4451737418859997`*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}]}]], "Output",
+ CellChangeTimes->{{3.445173723545*^9, 3.445173742631*^9}, 
+   3.594374001979294*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", 
+  RowBox[{
+   RowBox[{"QACommutatorContract", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+       SubscriptBox[
+        RowBox[{"[", 
+         RowBox[{
+          OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+          OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "}"}]}], 
+    "]"}], "&"}]}]], "Input",
+ CellChangeTimes->{
+  3.445168028868*^9, 3.445172393896*^9, {3.445173811825*^9, 
+   3.445173825967*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox[
+      RowBox[{"[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+        SubscriptBox[
+         RowBox[{"[", 
+          RowBox[{
+           OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+           OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+      "-"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalA]", "^"]}], ")"}]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"]}]}]], "Output",
+ CellChangeTimes->{3.445173827034*^9, 3.594374008463665*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", 
+  RowBox[{
+   RowBox[{"QACommutatorContract", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+       SubscriptBox[
+        RowBox[{"[", 
+         RowBox[{
+          OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+          SubscriptBox[
+           RowBox[{"[", 
+            RowBox[{
+             OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+             OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+        "-"]}], "}"}]}], "]"}], "&"}]}]], "Input",
+ CellChangeTimes->{
+  3.445168028868*^9, 3.445172393896*^9, {3.44517384225*^9, 
+   3.445173854667*^9}, {3.445173888388*^9, 3.445173890012*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+     SubscriptBox[
+      RowBox[{"[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+        SubscriptBox[
+         RowBox[{"[", 
+          RowBox[{
+           OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+           OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+      "-"]}], "]"}], "-"], "-", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+    "-"]}]}]], "Output",
+ CellChangeTimes->{3.445173890373*^9, 3.5943740100857573`*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", 
+  RowBox[{
+   RowBox[{"QACommutatorContract", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+       SubscriptBox[
+        RowBox[{"[", 
+         RowBox[{
+          OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+          SubscriptBox[
+           RowBox[{"[", 
+            RowBox[{
+             OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+             OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+        "-"]}], "}"}]}], "]"}], "&"}]}]], "Input",
+ CellChangeTimes->{
+  3.445168028868*^9, 3.445172393896*^9, {3.445173916045*^9, 
+   3.445173920834*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+     SubscriptBox[
+      RowBox[{"[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+        SubscriptBox[
+         RowBox[{"[", 
+          RowBox[{
+           OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+           OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+      "-"]}], "]"}], "-"], "+", 
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+     SubscriptBox[
+      RowBox[{"[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+        SubscriptBox[
+         RowBox[{"[", 
+          RowBox[{
+           OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+           OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+      "-"]}], "]"}], "-"]}]], "Output",
+ CellChangeTimes->{3.445173921227*^9, 3.5943740114488354`*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"expr", "//", 
+  RowBox[{
+   RowBox[{"QACommutatorContract", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalE]", "^"]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+         SubscriptBox[
+          RowBox[{"[", 
+           RowBox[{
+            OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+            OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+         SubscriptBox[
+          RowBox[{"[", 
+           RowBox[{
+            OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+            SubscriptBox[
+             RowBox[{"[", 
+              RowBox[{
+               OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+               OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], 
+           "]"}], "-"]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+         SubscriptBox[
+          RowBox[{"[", 
+           RowBox[{
+            OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+            SubscriptBox[
+             RowBox[{"[", 
+              RowBox[{
+               OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+               OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], 
+           "]"}], "-"]}], "}"}]}], "}"}]}], "]"}], "&"}]}]], "Input",
+ CellChangeTimes->{
+  3.445168028869*^9, 3.4451723938970003`*^9, {3.445173989047*^9, 
+   3.445174031684*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+     SubscriptBox[
+      RowBox[{"[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+        SubscriptBox[
+         RowBox[{"[", 
+          RowBox[{
+           OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+           OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+      "-"]}], "]"}], "-"], "+", 
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+     SubscriptBox[
+      RowBox[{"[", 
+       RowBox[{
+        OverscriptBox["\[ScriptCapitalC]", "^"], ",", 
+        SubscriptBox[
+         RowBox[{"[", 
+          RowBox[{
+           OverscriptBox["\[ScriptCapitalD]", "^"], ",", 
+           OverscriptBox["\[ScriptCapitalE]", "^"]}], "]"}], "-"]}], "]"}], 
+      "-"]}], "]"}], "-"]}]], "Output",
+ CellChangeTimes->{3.445174032546*^9, 3.5943740352051945`*^9},
+ CellTags->"b:4.1"]
+}, Open  ]],
+
+Cell["\<\
+Here is another example. The following expression is the expanded form of a \
+commutator of two commutators. After some contractions this becomes explicit.\
+\>", "Text",
+ CellChangeTimes->{{3.445590660807*^9, 3.445590667358*^9}, {3.445590836512*^9,
+   3.445590948093*^9}, {3.445591002024*^9, 3.445591035508*^9}},
+ CellTags->"b:7.2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"]}]}]], "Input",
+ CellChangeTimes->{3.4455907676280003`*^9},
+ CellTags->"b:7.2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"]}]}]], "Output",
+ CellChangeTimes->{3.4455907714630003`*^9, 3.594374050012041*^9},
+ CellTags->"b:7.2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", 
+  RowBox[{
+   RowBox[{"QACommutatorContract", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "}"}]}], "]"}], 
+   "&"}]}]], "Input",
+ CellChangeTimes->{3.4455907942209997`*^9},
+ CellTags->"b:7.2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "]"}], "-"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "]"}], "-"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "]"}], "-"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "4"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "3"], "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "]"}], 
+    "-"]}]}]], "Output",
+ CellChangeTimes->{3.4455908024779997`*^9, 3.594374051925151*^9},
+ CellTags->"b:7.2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", 
+  RowBox[{
+   RowBox[{"QACommutatorContract", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "3"], ",", 
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "}"}]}], "]"}], 
+   "&"}]}]], "Input",
+ CellChangeTimes->{{3.445590813021*^9, 3.445590815814*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "]"}], "-"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "3"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "]"}], "-"]}], "-", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "3"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "]"}], "-"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "]"}], 
+    "-"]}]}]], "Output",
+ CellChangeTimes->{3.445590816153*^9, 3.594374053789257*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", "QACommutatorContract"}]], "Input",
+ CellTags->"b:7.2"],
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    SubscriptBox[
+     RowBox[{"[", 
+      RowBox[{
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "]"}], "-"], ",", 
+    SubscriptBox[
+     RowBox[{"[", 
+      RowBox[{
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "3"], ",", 
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "4"]}], "]"}], "-"]}], "]"}],
+   "-"]], "Output",
+ CellChangeTimes->{3.4455908198780003`*^9, 3.594374057915493*^9},
+ CellTags->"b:7.2"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Finally, there is a command ",
+ StyleBox["QAExpandAll",
+  FontWeight->"Bold"],
+ " which applies the commands ",
+ StyleBox["QAPowerExpand",
+  FontWeight->"Bold"],
+ ", ",
+ StyleBox["QAProductExpand",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["QACommutatorExpand",
+  FontWeight->"Bold"],
+ ", in that order, to the expression given as its argument."
+}], "Text",
+ CellChangeTimes->{
+  3.445168028869*^9, 3.445172393898*^9, 3.445174459574*^9, {3.44517451899*^9, 
+   3.445174760638*^9}, {3.445174804368*^9, 3.445175047443*^9}, {
+   3.594374076005528*^9, 3.5943741337558312`*^9}},
+ CellTags->"b:4.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox[
+       RowBox[{"[", 
+        RowBox[{
+         OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+         OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], 
+      "\[CenterDot]", 
+      OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+     RowBox[{"\[ScriptD]", "\[CenterDot]", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}]}], ")"}], "2"], "//", 
+  "QAExpandAll"}]], "Input",
+ CellChangeTimes->{
+  3.445168028869*^9, 3.445172393898*^9, {3.445174482207*^9, 
+   3.4451745074969997`*^9}, {3.445175078771*^9, 3.4451750998929996`*^9}},
+ CellTags->"b:4.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["\[ScriptD]", "2"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalD]", "^"]}]}], "+", 
+  RowBox[{"\[ScriptD]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalD]", "^"]}]}], "-", 
+  RowBox[{"\[ScriptD]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalD]", "^"]}]}], "+", 
+  RowBox[{"\[ScriptD]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalC]", "^"]}]}], "-", 
+  RowBox[{"\[ScriptD]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalD]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalC]", "^"]}]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "-", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}]}]], "Output",
+ CellChangeTimes->{3.445174512475*^9, 3.445175100784*^9, 3.594374090491357*^9,
+   3.594374156257118*^9},
+ CellTags->"b:4.1"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Defining Commutation Relations", "Subsection",
+ CellTags->"qa:C.3"],
+
+Cell[TextData[{
+ "The commutation relation between two operators can be defined using the \
+rules to make new assignments in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "."
+}], "Text",
+ CellChangeTimes->{
+  3.4451680288710003`*^9, 3.445172393902*^9, {3.445177140451*^9, 
+   3.445177260885*^9}, {3.4451773949639997`*^9, 3.445177410245*^9}, {
+   3.445177526816*^9, 3.445177574242*^9}, {3.445177756649*^9, 
+   3.445177780642*^9}, {3.445177835867*^9, 3.4451779746549997`*^9}, {
+   3.5943756932140274`*^9, 3.594375709031932*^9}},
+ CellTags->"b:4.2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "=", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "=", 
+   RowBox[{"-", 
+    OverscriptBox["\[ScriptCapitalC]", "^"]}]}], ";"}]}], "InputOnly",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.445172393902*^9, {3.445177612441*^9, 
+   3.445177647408*^9}},
+ CellTags->"b:4.2"],
+
+Cell["\<\
+The second definition is not automatically deduced from the first, so both \
+are necesary to have complete information about its commutator. \
+\>", "Text",
+ CellChangeTimes->{{3.445178005599*^9, 3.44517814371*^9}, {
+  3.4451781873970003`*^9, 3.4451782563129997`*^9}, {3.445178288098*^9, 
+  3.44517835909*^9}, {3.445178404881*^9, 3.445178443682*^9}, {
+  3.44519999176*^9, 3.445200017801*^9}, {3.5943757264649286`*^9, 
+  3.594375783777207*^9}, {3.5943758177941523`*^9, 3.5943758314279327`*^9}}],
+
+Cell[TextData[{
+ "In the tutorial about ",
+ StyleBox[ButtonBox["Setting Several Definitions",
+  BaseStyle->"Hyperlink",
+  ButtonData->{"Setting Several Definitions.nb", None}],
+  FontSlant->"Italic"],
+ ", you can find how to setup a definition and let ",
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"],
+ " automatically define the inmediate consequences. "
+}], "Text",
+ CellChangeTimes->{{3.445178005599*^9, 3.44517814371*^9}, {
+  3.4451781873970003`*^9, 3.4451782563129997`*^9}, {3.445178288098*^9, 
+  3.44517835909*^9}, {3.445178404881*^9, 3.445178443682*^9}, {
+  3.44519999176*^9, 3.445200017801*^9}, {3.5943757264649286`*^9, 
+  3.594375783777207*^9}, {3.5943758177941523`*^9, 3.5943758680140247`*^9}}],
+
+Cell["\<\
+The following commutator is simplified using the basic properties of \
+commutators together with the new definition.\
+\>", "Text",
+ CellChangeTimes->{{3.445178005599*^9, 3.44517814371*^9}, {
+  3.4451781873970003`*^9, 3.4451782563129997`*^9}, {3.445178288098*^9, 
+  3.44517835909*^9}, {3.445178404881*^9, 3.445178536053*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalA]", "^"]}], ",", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "]"}], "-"]], "Input",
+ CellChangeTimes->{{3.4451776587*^9, 3.445177678722*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalC]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}]}]], "Output",
+ CellChangeTimes->{3.445177679087*^9, 3.445178211574*^9, 3.594375914137663*^9}
+  ]
+}, Open  ]],
+
+Cell["\<\
+An important point when defining commutators is that the commutator between \
+operators should be an operator. If the commutation of two operators is \
+proportional to the identity, you should write it explicitly.\
+\>", "Text",
+ CellChangeTimes->{{3.4451680242349997`*^9, 3.44516802887*^9}, 
+   3.445172393899*^9, {3.445178719951*^9, 3.4451788114049997`*^9}, {
+   3.445179015457*^9, 3.4451790158780003`*^9}, {3.5943759310506306`*^9, 
+   3.5943759468705354`*^9}},
+ CellTags->"b:4.2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "=", 
+   RowBox[{"\[ScriptG]", " ", 
+    OverscriptBox["1", "^"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "=", 
+   RowBox[{
+    RowBox[{"-", "\[ScriptG]"}], " ", 
+    OverscriptBox["1", "^"]}]}], ";"}]}], "InputOnly",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.445172393902*^9, {3.44517863345*^9, 
+   3.445178676863*^9}},
+ CellTags->"b:4.2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalA]", "^"]}], ",", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "]"}], "-"]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"2", " ", "\[ScriptG]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "+", 
+  RowBox[{"2", " ", "\[ScriptG]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "+", 
+  RowBox[{"2", " ", "\[ScriptG]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"]}]}]}]], "Output",
+ CellChangeTimes->{3.445178693401*^9, 3.445178817019*^9, 3.594375954315961*^9}
+  ]
+}, Open  ]],
+
+Cell["\<\
+If the identity operator is not used, then the complex variables involved may \
+appear in non commutative products in further computation:\
+\>", "Text",
+ CellChangeTimes->{
+  3.4451680288710003`*^9, 3.4451723939*^9, 3.445178974099*^9, {
+   3.445179039028*^9, 3.445179132242*^9}, {3.59437596759072*^9, 
+   3.594376066100355*^9}, {3.5943761288819456`*^9, 3.5943761818879776`*^9}},
+ CellTags->"b:4.2"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "=", 
+   "\[ScriptG]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "=", 
+   RowBox[{"-", "\[ScriptG]"}]}], ";"}]}], "InputOnly",
+ CellChangeTimes->{
+  3.4451680288710003`*^9, 3.4451723939*^9, {3.445178943333*^9, 
+   3.445178961617*^9}},
+ CellTags->"b:4.2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SubscriptBox[
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalA]", "^"]}], ",", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "]"}], "-"]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[ScriptG]", "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", "\[ScriptG]", 
+   "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", "\[ScriptG]", 
+   "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", "\[ScriptG]", 
+   "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", "\[ScriptG]", 
+   "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   "\[ScriptG]"}]}]], "Output",
+ CellChangeTimes->{{3.445178949976*^9, 3.4451789631280003`*^9}, 
+   3.5943760730027494`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "As discussed before, this can be fixed using ",
+ StyleBox["QAProductExpand",
+  FontWeight->"Bold"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.5943760792131047`*^9, 3.594376112832028*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", "QAProductExpand"}]], "Input",
+ CellChangeTimes->{{3.445178987453*^9, 3.445178995031*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"2", " ", "\[ScriptG]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "+", 
+  RowBox[{"2", " ", "\[ScriptG]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "+", 
+  RowBox[{"2", " ", "\[ScriptG]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"]}]}]}]], "Output",
+ CellChangeTimes->{3.4451789957209997`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "To clear the definitions you should use the ",
+ StyleBox["Unset",
+  FontWeight->"Bold"],
+ " command. In short, just copy the l.h.s. of the definitions, followed by \
+the (",
+ Cell[BoxData[
+  FormBox["=.", TraditionalForm]]],
+ ") operator."
+}], "Text",
+ CellChangeTimes->{{3.445179157703*^9, 3.445179264767*^9}, {
+  3.4451795859110003`*^9, 3.445179611084*^9}, {3.4451913812390003`*^9, 
+  3.445191420859*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], 
+  "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+     OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], 
+  "=."}]}], "InputOnly",
+ CellChangeTimes->{{3.445179150403*^9, 3.4451791550889997`*^9}}],
+
+Cell["\<\
+More complex definitions can be given using patterns. In the following \
+example, we define the commutator between a fixed operator A and a operator B \
+with a dummy subscript label.\
+\>", "Text",
+ CellChangeTimes->{{3.445191459481*^9, 3.445191477493*^9}, {
+   3.4451915403599997`*^9, 3.4451916061029997`*^9}, {3.4451923272539997`*^9, 
+   3.445192385176*^9}, {3.44519245969*^9, 3.4451924603719997`*^9}, {
+   3.445193107359*^9, 3.445193161182*^9}, 3.445193216227*^9, {
+   3.5943762225883055`*^9, 3.5943762470547047`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalB]", "^"], "i_"]}], "]"}], "-"], "=", 
+   "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalB]", "^"], "i_"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "=", "0"}], 
+  ";"}]}], "InputOnly",
+ CellChangeTimes->{{3.4451915082390003`*^9, 3.445191528513*^9}}],
+
+Cell[TextData[{
+ "The index can be filled with any valid ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " expression."
+}], "Text",
+ CellChangeTimes->{{3.4451928649440002`*^9, 3.445192894561*^9}, {
+  3.445192964635*^9, 3.4451929652530003`*^9}, {3.445193033818*^9, 
+  3.445193043399*^9}, {3.445193090966*^9, 3.445193094549*^9}, {
+  3.4451932349630003`*^9, 3.445193260041*^9}, {3.445193339566*^9, 
+  3.445193342514*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalB]", "^"], "2"]}], "]"}], "-"], ",", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalB]", "^"], "x"]}], "]"}], "-"], ",", 
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalB]", "^"], "\[Phi]"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.44519240181*^9, 3.445192402808*^9}, {3.445192527439*^9, 
+  3.4451925833570004`*^9}, {3.445193276053*^9, 3.445193290256*^9}, {
+  3.4451933233570004`*^9, 3.445193326821*^9}, {3.445193438067*^9, 
+  3.44519345167*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "0", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{3.445192403189*^9, 3.445192565633*^9, 3.445193271641*^9, 
+  3.445193327523*^9, 3.445193456288*^9, 3.5943762652807474`*^9}]
+}, Open  ]],
+
+Cell["We clear the definitions exactly as before. ", "Text",
+ CellChangeTimes->{{3.4451933662980003`*^9, 3.445193383561*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+     SubscriptBox[
+      OverscriptBox["\[ScriptCapitalB]", "^"], "i_"]}], "]"}], "-"], 
+  "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox[
+   RowBox[{"[", 
+    RowBox[{
+     SubscriptBox[
+      OverscriptBox["\[ScriptCapitalB]", "^"], "i_"], ",", 
+     OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], 
+  "=."}]}], "InputOnly",
+ CellChangeTimes->{{3.445193353329*^9, 3.44519335609*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sorting Products of Operators", "Subsection",
+ CellChangeTimes->{3.5943762807866344`*^9},
+ CellTags->"qa:C.4"],
+
+Cell["\<\
+The product of operators is non conmmutative and so it is not possible to \
+sort the operators of a given product in whatever order, unless all operators \
+commute with each other. For example, in the following expression, if we \
+would like to put all \[ScriptCapitalA] operators before the \
+\[ScriptCapitalB] operators, we can not just interchange them.\
+\>", "Text",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.445172393903*^9, {3.445194169366*^9, 
+   3.445194191076*^9}, {3.445194754535*^9, 3.4451947775880003`*^9}, {
+   3.44519491275*^9, 3.445195077359*^9}, {3.445195128862*^9, 
+   3.445195183374*^9}, {3.445195216094*^9, 3.445195276951*^9}, {
+   3.44519532348*^9, 3.445195360007*^9}, {3.445195427226*^9, 
+   3.445195575599*^9}, {3.44519565365*^9, 3.445195692736*^9}, {
+   3.445195814476*^9, 3.445195902428*^9}, {3.4451960360150003`*^9, 
+   3.445196055138*^9}},
+ CellTags->"b:4.3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"expr", "=", 
+  RowBox[{
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}]}]], "Input",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.445172393903*^9, {3.445194840575*^9, 
+   3.445194884818*^9}},
+ CellTags->"b:4.3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+   OverscriptBox["\[ScriptCapitalA]", "^"]}]}]], "Output",
+ CellChangeTimes->{3.4451948870810003`*^9, 3.445196063057*^9, 
+  3.5943763125534515`*^9},
+ CellTags->"b:4.3"]
+}, Open  ]],
+
+Cell["\<\
+However in some instances the commutation relation between the involved \
+operators can help to acomplish this kind of task. For instance, suposse that \
+the two operators \[ScriptCapitalA] and \[ScriptCapitalB] satisfies the \
+following relations:\
+\>", "Text",
+ CellChangeTimes->{{3.445195914667*^9, 3.445195963001*^9}, {3.445196080325*^9,
+    3.44519616545*^9}, {3.445196333967*^9, 3.445196352236*^9}, {
+   3.445196664899*^9, 3.44519671471*^9}, {3.445196779115*^9, 
+   3.445196887855*^9}, 3.445197152299*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalB]", "^"]}], "]"}], "-"], "=", 
+   RowBox[{"\[ScriptG]", " ", 
+    OverscriptBox["1", "^"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalB]", "^"], ",", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], "]"}], "-"], "=", 
+   RowBox[{
+    RowBox[{"-", "\[ScriptG]"}], " ", 
+    OverscriptBox["1", "^"]}]}], ";"}]}], "InputOnly",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.445172393902*^9, {3.44517863345*^9, 
+   3.445178676863*^9}},
+ CellTags->"b:4.2"],
+
+Cell["\<\
+Then it is obviously from the definition of the commutator that we can \
+succesively apply the commutation relation to replace products of the form \
+\[ScriptCapitalB]\[ScriptCapitalA] into the form \[ScriptCapitalA]\
+\[ScriptCapitalB]  plus a term independent of \[ScriptCapitalA] and \
+\[ScriptCapitalB], thus acomplishing the desired ordering.\
+\>", "Text",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.445172393903*^9, {3.445196905676*^9, 
+   3.445197057374*^9}, {3.445197163203*^9, 3.445197303575*^9}},
+ CellTags->"b:4.3"],
+
+Cell[TextData[{
+ "The command ",
+ StyleBox["QAOrdering",
+  FontWeight->"Bold"],
+ " can be used to perform this transformation. It recives two arguments, the \
+first one is the expression we want to transform, and the second one is a \
+list of operators in the order in which they should appear in the final \
+expression. The following example shows how to sort the original expression \
+so that all \[ScriptCapitalA] operators are placed before the \
+\[ScriptCapitalB] operators."
+}], "Text",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.445172393903*^9, {3.445196905676*^9, 
+   3.445197082439*^9}, {3.445197116856*^9, 3.4451971248059998`*^9}, {
+   3.445197333343*^9, 3.445197402413*^9}, {3.4451974709189997`*^9, 
+   3.445197498689*^9}, {3.445197539189*^9, 3.445197583271*^9}, {
+   3.445197861328*^9, 3.445197912168*^9}, {3.445197943446*^9, 
+   3.44519812785*^9}, {3.445198163192*^9, 3.445198169422*^9}, {
+   3.445198256299*^9, 3.445198264998*^9}},
+ CellTags->"b:4.3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"QAOrdering", "[", 
+    RowBox[{"expr", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+       OverscriptBox["\[ScriptCapitalB]", "^"]}], "}"}]}], "]"}], "//", 
+   "Expand"}], "//", "QAPowerContract"}]], "Input",
+ CellChangeTimes->{
+  3.4451680288719997`*^9, 3.4451723939040003`*^9, {3.445197418052*^9, 
+   3.44519742556*^9}, {3.59437640764389*^9, 3.5943764119751377`*^9}},
+ CellTags->"b:4.3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "7"}], " ", "\[ScriptG]", " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalB]", "^"]}]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+    SuperscriptBox[
+     OverscriptBox["\[ScriptCapitalB]", "^"], "2"]}]}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["\[ScriptG]", "2"], " ", 
+   OverscriptBox["1", "^"]}]}]], "Output",
+ CellChangeTimes->{{3.445197426524*^9, 3.445197432803*^9}, {
+  3.594376388563799*^9, 3.5943764124761667`*^9}},
+ CellTags->"b:4.3"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Here is a another example, in which we want to sort the following \
+expression so that the operators ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[ScriptCapitalA]", "i"], TraditionalForm]]],
+ " are placed after their adjoints. In quantum field theory this ordering is \
+called normal ordering."
+}], "Text",
+ CellChangeTimes->{
+  3.445168028873*^9, 3.4451723939040003`*^9, 3.4451981984*^9, {
+   3.445198279829*^9, 3.445198490179*^9}, {3.44519921254*^9, 
+   3.445199238466*^9}},
+ CellTags->"b:4.3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"expr", "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+    "\[CenterDot]", 
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"]}], "+", 
+   RowBox[{
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+    "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"], 
+    "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "+", 
+   RowBox[{
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+    "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2", 
+     "\[Dagger]"]}]}]}]], "Input",
+ CellChangeTimes->{
+  3.445168028873*^9, 3.445172393908*^9, {3.4451977874379997`*^9, 
+   3.445197824418*^9}},
+ CellTags->"b:4.3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+   "\[CenterDot]", 
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"]}], "+", 
+  RowBox[{
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"], "\[CenterDot]", 
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"]}], "+", 
+  RowBox[{
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}]}]], "Output",
+ CellChangeTimes->{
+  3.44519845166*^9, 3.445199577951*^9, {3.4451997938129997`*^9, 
+   3.4451998217460003`*^9}, 3.445257029057*^9, 3.594376426614975*^9},
+ CellTags->"b:4.3"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Before going on we need to define the commutation relations. For instance, \
+let's assume that the product ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[ScriptCapitalA]", "i"], 
+    SubsuperscriptBox["\[ScriptCapitalA]", "i", "\[Dagger]"]}], 
+   TraditionalForm]]],
+ " can be interchanged with its corresponding adjoint plus the unity \
+operator, and that all other products can be interchanged (i.e. the involving \
+operators commute with each other). We can define this commutations sucintly \
+using patterns:"
+}], "Text",
+ CellChangeTimes->{{3.445199252896*^9, 3.4451992969630003`*^9}, {
+  3.4451993331289997`*^9, 3.445199529358*^9}, {3.445199715737*^9, 
+  3.445199723321*^9}, {3.594376443079917*^9, 3.59437644365495*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i_"], ",", 
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "j_", "\[Dagger]"]}], "]"}], 
+    "-"], "=", " ", 
+   RowBox[{
+    RowBox[{"KroneckerDelta", "[", 
+     RowBox[{"i", ",", "j"}], "]"}], 
+    OverscriptBox["1", "^"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i_", "\[Dagger]"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "j_"]}], "]"}], "-"], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"KroneckerDelta", "[", 
+      RowBox[{"i", ",", "j"}], "]"}]}], 
+    OverscriptBox["1", "^"]}]}], ";"}]}], "InputOnly",
+ CellChangeTimes->{{3.444928139244549*^9, 3.444928141918549*^9}, 
+   3.445168028876*^9, 3.445172393926*^9, 3.4451991772460003`*^9, {
+   3.445199590624*^9, 3.445199602748*^9}, {3.445199758523*^9, 
+   3.445199764067*^9}},
+ CellTags->"b:4.3"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i_"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "j_"]}], "]"}], "-"], "=", 
+   "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i_", "\[Dagger]"], ",", 
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "j_", "\[Dagger]"]}], "]"}], 
+    "-"], "=", "0"}], ";"}]}], "InputOnly",
+ CellChangeTimes->{{3.444928139244549*^9, 3.444928141918549*^9}, 
+   3.445168028876*^9, 3.445172393926*^9, 3.4451991772460003`*^9, {
+   3.445199606222*^9, 3.4451996163120003`*^9}, {3.445199767362*^9, 
+   3.445199772578*^9}},
+ CellTags->"b:4.3"],
+
+Cell["Then the normal ordering can be computed as:", "Text",
+ CellChangeTimes->{
+  3.445168028873*^9, 3.4451723939110003`*^9, {3.445198523277*^9, 
+   3.445198533171*^9}, {3.445199652387*^9, 3.445199665877*^9}, {
+   3.445199842021*^9, 3.445199846199*^9}},
+ CellTags->"b:4.3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"QAOrdering", "[", 
+  RowBox[{"expr", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     SubsuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], ",", 
+     SubsuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"], ",", 
+     SubscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "1"], ",", 
+     SubscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.445168028874*^9, 3.4451723939119997`*^9, {3.445198498332*^9, 
+   3.445198517084*^9}},
+ CellTags->"b:4.3"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"2", " ", 
+   RowBox[{
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+    "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1"]}]}], "+", 
+  RowBox[{
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"], 
+   "\[CenterDot]", 
+   SubscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "+", 
+  RowBox[{"3", " ", 
+   RowBox[{
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1", "\[Dagger]"], 
+    "\[CenterDot]", 
+    SubsuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2", "\[Dagger]"], 
+    "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "1"], "\[CenterDot]", 
+    SubscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}]}], "+", 
+  OverscriptBox["1", "^"]}]], "Output",
+ CellChangeTimes->{
+  3.445198518054*^9, 3.445199572198*^9, 3.445199618226*^9, 3.445199775797*^9, 
+   3.44519982681*^9, {3.445257031789*^9, 3.445257047727*^9}, 
+   3.594376492034717*^9},
+ CellTags->"b:4.3"]
+}, Open  ]],
+
+Cell["Finally, we clear the definitions:", "Text",
+ CellChangeTimes->{{3.445257053165*^9, 3.445257102348*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i_"], ",", 
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "j_", "\[Dagger]"]}], "]"}], 
+    "-"], "=."}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i_", "\[Dagger]"], ",", 
+      SubscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "j_"]}], "]"}], "-"], "=."}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox[
+     RowBox[{"[", 
+      RowBox[{
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "i_"], ",", 
+       SubscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "j_"]}], "]"}], "-"], "=."}],
+    ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    RowBox[{"[", 
+     RowBox[{
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i_", "\[Dagger]"], ",", 
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "j_", "\[Dagger]"]}], "]"}], 
+    "-"], "=."}], ";"}]}], "InputOnly",
+ CellChangeTimes->{{3.444928139244549*^9, 3.444928141918549*^9}, 
+   3.445168028876*^9, 3.445172393926*^9, 3.4451991772460003`*^9, {
+   3.445199590624*^9, 3.445199602748*^9}, {3.445199758523*^9, 
+   3.445199764067*^9}, {3.445257009124*^9, 3.4452570359040003`*^9}, {
+   3.4452570701879997`*^9, 3.44525708666*^9}},
+ CellTags->"b:4.3"]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+WindowSize->{593, 762},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+DockedCells->Cell[
+  BoxData[
+   StyleBox[
+   "\!\(\*FrameBox[\"\[CapitalPsi]\",\nStripOnInput->False]\)   \
+QuantumAlgebra 2.0", FontFamily -> "Helvetica", FontWeight -> "Bold", 
+    FontColor -> GrayLevel[1]]], "DockedCell", Background -> 
+  RGBColor[0, 0.25098, 0.501961]],
+InputAliases->{"ket" -> TagBox[
+    RowBox[{
+      AdjustmentBox[
+      "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0.}, {0., 0.}}, 
+       BoxBaselineShift -> -0.1], 
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      "\[RightAngleBracket]"}], QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> 
+    "KetWrapper"], "bra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      AdjustmentBox[
+      "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+       BoxBaselineShift -> -0.1]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "braket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       RowBox[{
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs, 
+          BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs, 
+          BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0.], 
+      "\[RightAngleBracket]"}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "ketd" -> TagBox[
+    SubscriptBox[
+     RowBox[{
+       AdjustmentBox[
+       "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0}, {0, 0}}, 
+        BoxBaselineShift -> -0.1], 
+       AdjustmentBox[
+        TagBox[
+        "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+         BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> "KetWrapper"], "ketu" -> 
+  TagBox[
+    SuperscriptBox[
+     RowBox[{
+       AdjustmentBox[
+       "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0}, {0, 0}}, 
+        BoxBaselineShift -> -0.1], 
+       AdjustmentBox[
+        TagBox[
+        "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+         BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> "KetWrapper"], "ketdu" -> 
+  TagBox[
+    SubsuperscriptBox[
+     RowBox[{
+       AdjustmentBox[
+       "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0}, {0, 0}}, 
+        BoxBaselineShift -> -0.1], 
+       AdjustmentBox[
+        TagBox[
+        "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+         BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> "KetWrapper"], "dbra" -> 
+  TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        AdjustmentBox[
+        "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+         BoxBaselineShift -> -0.1]}]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "ubra" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        AdjustmentBox[
+        "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+         BoxBaselineShift -> -0.1]}]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "dubra" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        AdjustmentBox[
+        "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+         BoxBaselineShift -> -0.1]}]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "braketd" -> TagBox[
+    SubscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        RowBox[{
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "braketu" -> TagBox[
+    SuperscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        RowBox[{
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "braketdu" -> TagBox[
+    SubsuperscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        RowBox[{
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dbraket" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         RowBox[{
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"], "\[VerticalSeparator]", 
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"]}], BoxBaselineShift -> 0], 
+        "\[RightAngleBracket]"}]}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "ubraket" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         RowBox[{
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"], "\[VerticalSeparator]", 
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"]}], BoxBaselineShift -> 0], 
+        "\[RightAngleBracket]"}]}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "dubraket" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         RowBox[{
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"], "\[VerticalSeparator]", 
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"]}], BoxBaselineShift -> 0], 
+        "\[RightAngleBracket]"}]}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "dbraketd" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dbraketu" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "ubraketd" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "ubraketu" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dbraketdu" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubsuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "ubraketdu" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubsuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dubraketd" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          TagStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dubraketu" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          TagStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dubraketdu" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubsuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0.], 
+         "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "com" -> SubscriptBox[
+    RowBox[{"[", 
+      RowBox[{"\[SelectionPlaceholder]", ",", "\[SelectionPlaceholder]"}], 
+      "]"}], "-"], "op" -> OverscriptBox["\[SelectionPlaceholder]", "^"], 
+  "opd" -> SubscriptBox[
+    OverscriptBox["\[SelectionPlaceholder]", "^"], "\[SelectionPlaceholder]"],
+   "opu" -> TagBox[
+    SuperscriptBox[
+     OverscriptBox["\[SelectionPlaceholder]", "^"], 
+     "\[SelectionPlaceholder]"], 
+    QuantumAlgebra`QuantumAlgebra`Private`superscript], "opdu" -> TagBox[
+    SubsuperscriptBox[
+     OverscriptBox["\[SelectionPlaceholder]", "^"], "\[SelectionPlaceholder]",
+      "\[SelectionPlaceholder]"], 
+    QuantumAlgebra`QuantumAlgebra`Private`superscript], "hop" -> 
+  SuperscriptBox[
+    OverscriptBox["\[SelectionPlaceholder]", "^"], "\[Dagger]"]},
+Magnification->1.,
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "QAStyles.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell["Bra Ket Styles", "Section"], 
+      Cell[
+      " The cells below define certain styles needed for defining Bras&Kets. \
+These styles serve to give the correct structural properties to Bras & Kets ",
+        "Text"], 
+      Cell[
+       StyleData["BraKetArg"], SpanMinSize -> Automatic, StyleMenuListing -> 
+       None, AdjustmentBoxOptions -> {BoxMargins -> {{0, 0}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> True, Selectable -> True}], 
+      Cell[
+       StyleData["BraWrapper"], 
+       AutoStyleOptions -> {"HighlightSyntaxErrors" -> False}, 
+       ScriptBaselineShifts -> {0.6, 0.9}, SpanMinSize -> 1.5, 
+       StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0.2, -0.13}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["KetWrapper"], 
+       AutoStyleOptions -> {"HighlightSyntaxErrors" -> False}, 
+       ScriptBaselineShifts -> {0.6, 0.9}, SpanMinSize -> 1.5, 
+       StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{-0.1, 0.2}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["BraKetWrapper"], ScriptBaselineShifts -> {0.6, 0.9}, 
+       SpanMinSize -> 1.5, StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0.25, 0.25}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["RIndex"], StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{-0.16, 0}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["LIndex"], StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0, -0.1}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}]}, Closed]]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (32-bit) (January 25, 2013)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "qa:C.0"->{
+  Cell[567, 22, 51, 1, 99, "Section",
+   CellTags->"qa:C.0"]},
+ "qa:C.1"->{
+  Cell[920, 34, 59, 1, 60, "Subsection",
+   CellTags->"qa:C.1"]},
+ "b:4.0"->{
+  Cell[982, 37, 689, 17, 99, "Text",
+   CellTags->"b:4.0"],
+  Cell[2629, 87, 443, 13, 43, "Input",
+   CellTags->"b:4.0"],
+  Cell[3075, 102, 491, 15, 43, "Output",
+   CellTags->"b:4.0"],
+  Cell[3581, 120, 404, 8, 77, "Text",
+   CellTags->"b:4.0"],
+  Cell[4010, 132, 568, 18, 45, "Input",
+   CellTags->"b:4.0"],
+  Cell[4581, 152, 426, 13, 45, "Output",
+   CellTags->"b:4.0"],
+  Cell[5356, 177, 665, 21, 43, "Input",
+   CellTags->"b:4.0"],
+  Cell[6024, 200, 448, 14, 43, "Output",
+   CellTags->"b:4.0"]},
+ "qa:C.2"->{
+  Cell[10633, 334, 140, 2, 60, "Subsection",
+   CellTags->"qa:C.2"]},
+ "b:4.1"->{
+  Cell[10776, 338, 434, 11, 55, "Text",
+   CellTags->"b:4.1"],
+  Cell[11235, 353, 360, 11, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[11598, 366, 340, 9, 41, "Output",
+   CellTags->"b:4.1"],
+  Cell[11975, 380, 704, 20, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[12682, 402, 1357, 32, 41, "Output",
+   CellTags->"b:4.1"],
+  Cell[14076, 439, 1120, 36, 64, "Input",
+   CellTags->"b:4.1"],
+  Cell[15199, 477, 111, 2, 41, "Output",
+   CellTags->"b:4.1"],
+  Cell[15325, 482, 372, 10, 55, "Text",
+   CellTags->"b:4.1"],
+  Cell[15722, 496, 360, 11, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[16085, 509, 413, 10, 41, "Output",
+   CellTags->"b:4.1"],
+  Cell[16535, 524, 152, 3, 41, "Input",
+   CellTags->"b:4.1"],
+  Cell[16690, 529, 313, 8, 43, "Output",
+   CellTags->"b:4.1"],
+  Cell[17018, 540, 443, 9, 77, "Text",
+   CellTags->"b:4.1"],
+  Cell[17486, 553, 738, 22, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[18227, 577, 4052, 83, 102, "Output",
+   CellTags->"b:4.1"],
+  Cell[22316, 665, 150, 3, 41, "Input",
+   CellTags->"b:4.1"],
+  Cell[22469, 670, 7455, 196, 175, "Output",
+   CellTags->"b:4.1"],
+  Cell[29939, 869, 548, 11, 77, "Text",
+   CellTags->"b:4.1"],
+  Cell[30490, 882, 697, 13, 99, "Text",
+   CellTags->"b:4.1"],
+  Cell[31212, 899, 419, 13, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[31634, 914, 2576, 68, 65, "Output",
+   CellTags->"b:4.1"],
+  Cell[34247, 987, 548, 17, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[34798, 1006, 1701, 53, 65, "Output",
+   CellTags->"b:4.1"],
+  Cell[36536, 1064, 739, 21, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[37278, 1087, 1315, 41, 43, "Output",
+   CellTags->"b:4.1"],
+  Cell[38630, 1133, 700, 21, 43, "Input",
+   CellTags->"b:4.1"],
+  Cell[39333, 1156, 993, 31, 43, "Output",
+   CellTags->"b:4.1"],
+  Cell[40363, 1192, 1719, 49, 108, "Input",
+   CellTags->"b:4.1"],
+  Cell[42085, 1243, 993, 31, 43, "Output",
+   CellTags->"b:4.1"],
+  Cell[53608, 1599, 611, 19, 77, "Text",
+   CellTags->"b:4.1"],
+  Cell[54244, 1622, 662, 19, 45, "Input",
+   CellTags->"b:4.1"],
+  Cell[54909, 1643, 2943, 61, 82, "Output",
+   CellTags->"b:4.1"]},
+ "b:7.2"->{
+  Cell[43093, 1277, 342, 6, 77, "Text",
+   CellTags->"b:7.2"],
+  Cell[43460, 1287, 2829, 75, 82, "Input",
+   CellTags->"b:7.2"],
+  Cell[46292, 1364, 2852, 75, 62, "Output",
+   CellTags->"b:7.2"],
+  Cell[49181, 1444, 406, 13, 43, "Input",
+   CellTags->"b:7.2"],
+  Cell[49590, 1459, 1757, 54, 65, "Output",
+   CellTags->"b:7.2"],
+  Cell[52874, 1572, 89, 2, 41, "Input",
+   CellTags->"b:7.2"],
+  Cell[52966, 1576, 627, 20, 43, "Output",
+   CellTags->"b:7.2"]},
+ "qa:C.3"->{
+  Cell[57901, 1710, 73, 1, 60, "Subsection",
+   CellTags->"qa:C.3"]},
+ "b:4.2"->{
+  Cell[57977, 1713, 553, 13, 55, "Text",
+   CellTags->"b:4.2"],
+  Cell[58533, 1728, 691, 21, 74, "InputOnly",
+   CellTags->"b:4.2"],
+  Cell[62866, 1837, 492, 9, 77, "Text",
+   CellTags->"b:4.2"],
+  Cell[63361, 1848, 726, 23, 74, "InputOnly",
+   CellTags->"b:4.2"],
+  Cell[65334, 1908, 408, 8, 55, "Text",
+   CellTags->"b:4.2"],
+  Cell[65745, 1918, 630, 20, 74, "InputOnly",
+   CellTags->"b:4.2"],
+  Cell[77092, 2239, 726, 23, 74, "InputOnly",
+   CellTags->"b:4.2"]},
+ "qa:C.4"->{
+  Cell[73689, 2159, 116, 2, 60, "Subsection",
+   CellTags->"qa:C.4"]},
+ "b:4.3"->{
+  Cell[73808, 2163, 901, 16, 121, "Text",
+   CellTags->"b:4.3"],
+  Cell[74734, 2183, 938, 21, 41, "Input",
+   CellTags->"b:4.3"],
+  Cell[75675, 2206, 878, 19, 41, "Output",
+   CellTags->"b:4.3"],
+  Cell[77821, 2264, 540, 10, 99, "Text",
+   CellTags->"b:4.3"],
+  Cell[78364, 2276, 971, 19, 143, "Text",
+   CellTags->"b:4.3"],
+  Cell[79360, 2299, 485, 13, 43, "Input",
+   CellTags->"b:4.3"],
+  Cell[79848, 2314, 654, 18, 43, "Output",
+   CellTags->"b:4.3"],
+  Cell[80517, 2335, 516, 13, 77, "Text",
+   CellTags->"b:4.3"],
+  Cell[81058, 2352, 1372, 38, 41, "Input",
+   CellTags->"b:4.3"],
+  Cell[82433, 2392, 1355, 36, 41, "Output",
+   CellTags->"b:4.3"],
+  Cell[84564, 2449, 1107, 33, 76, "InputOnly",
+   CellTags->"b:4.3"],
+  Cell[85674, 2484, 863, 25, 75, "InputOnly",
+   CellTags->"b:4.3"],
+  Cell[86540, 2511, 274, 5, 33, "Text",
+   CellTags->"b:4.3"],
+  Cell[86839, 2520, 599, 17, 43, "Input",
+   CellTags->"b:4.3"],
+  Cell[87441, 2539, 1107, 32, 41, "Output",
+   CellTags->"b:4.3"],
+  Cell[88676, 2577, 1556, 47, 121, "InputOnly",
+   CellTags->"b:4.3"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"qa:C.0", 117989, 3274},
+ {"qa:C.1", 118065, 3277},
+ {"b:4.0", 118143, 3280},
+ {"qa:C.2", 118658, 3297},
+ {"b:4.1", 118740, 3300},
+ {"b:7.2", 120825, 3365},
+ {"qa:C.3", 121296, 3380},
+ {"b:4.2", 121378, 3383},
+ {"qa:C.4", 121858, 3398},
+ {"b:4.3", 121941, 3401}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 51, 1, 99, "Section",
+ CellTags->"qa:C.0"],
+Cell[621, 25, 114, 1, 33, "Text"],
+Cell[738, 28, 157, 2, 50, "InputOnly"],
+Cell[CellGroupData[{
+Cell[920, 34, 59, 1, 60, "Subsection",
+ CellTags->"qa:C.1"],
+Cell[982, 37, 689, 17, 99, "Text",
+ CellTags->"b:4.0"],
+Cell[1674, 56, 296, 5, 55, "Text"],
+Cell[CellGroupData[{
+Cell[1995, 65, 268, 7, 43, "Input"],
+Cell[2266, 74, 326, 8, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2629, 87, 443, 13, 43, "Input",
+ CellTags->"b:4.0"],
+Cell[3075, 102, 491, 15, 43, "Output",
+ CellTags->"b:4.0"]
+}, Open  ]],
+Cell[3581, 120, 404, 8, 77, "Text",
+ CellTags->"b:4.0"],
+Cell[CellGroupData[{
+Cell[4010, 132, 568, 18, 45, "Input",
+ CellTags->"b:4.0"],
+Cell[4581, 152, 426, 13, 45, "Output",
+ CellTags->"b:4.0"]
+}, Open  ]],
+Cell[5022, 168, 309, 5, 77, "Text"],
+Cell[CellGroupData[{
+Cell[5356, 177, 665, 21, 43, "Input",
+ CellTags->"b:4.0"],
+Cell[6024, 200, 448, 14, 43, "Output",
+ CellTags->"b:4.0"]
+}, Open  ]],
+Cell[6487, 217, 345, 6, 55, "Text"],
+Cell[CellGroupData[{
+Cell[6857, 227, 316, 8, 43, "Input"],
+Cell[7176, 237, 597, 16, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7810, 258, 458, 11, 43, "Input"],
+Cell[8271, 271, 2313, 57, 65, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10633, 334, 140, 2, 60, "Subsection",
+ CellTags->"qa:C.2"],
+Cell[10776, 338, 434, 11, 55, "Text",
+ CellTags->"b:4.1"],
+Cell[CellGroupData[{
+Cell[11235, 353, 360, 11, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[11598, 366, 340, 9, 41, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11975, 380, 704, 20, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[12682, 402, 1357, 32, 41, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14076, 439, 1120, 36, 64, "Input",
+ CellTags->"b:4.1"],
+Cell[15199, 477, 111, 2, 41, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[15325, 482, 372, 10, 55, "Text",
+ CellTags->"b:4.1"],
+Cell[CellGroupData[{
+Cell[15722, 496, 360, 11, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[16085, 509, 413, 10, 41, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16535, 524, 152, 3, 41, "Input",
+ CellTags->"b:4.1"],
+Cell[16690, 529, 313, 8, 43, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[17018, 540, 443, 9, 77, "Text",
+ CellTags->"b:4.1"],
+Cell[CellGroupData[{
+Cell[17486, 553, 738, 22, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[18227, 577, 4052, 83, 102, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22316, 665, 150, 3, 41, "Input",
+ CellTags->"b:4.1"],
+Cell[22469, 670, 7455, 196, 175, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[29939, 869, 548, 11, 77, "Text",
+ CellTags->"b:4.1"],
+Cell[30490, 882, 697, 13, 99, "Text",
+ CellTags->"b:4.1"],
+Cell[CellGroupData[{
+Cell[31212, 899, 419, 13, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[31634, 914, 2576, 68, 65, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34247, 987, 548, 17, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[34798, 1006, 1701, 53, 65, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36536, 1064, 739, 21, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[37278, 1087, 1315, 41, 43, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38630, 1133, 700, 21, 43, "Input",
+ CellTags->"b:4.1"],
+Cell[39333, 1156, 993, 31, 43, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40363, 1192, 1719, 49, 108, "Input",
+ CellTags->"b:4.1"],
+Cell[42085, 1243, 993, 31, 43, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]],
+Cell[43093, 1277, 342, 6, 77, "Text",
+ CellTags->"b:7.2"],
+Cell[CellGroupData[{
+Cell[43460, 1287, 2829, 75, 82, "Input",
+ CellTags->"b:7.2"],
+Cell[46292, 1364, 2852, 75, 62, "Output",
+ CellTags->"b:7.2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49181, 1444, 406, 13, 43, "Input",
+ CellTags->"b:7.2"],
+Cell[49590, 1459, 1757, 54, 65, "Output",
+ CellTags->"b:7.2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51384, 1518, 402, 12, 43, "Input"],
+Cell[51789, 1532, 1048, 35, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52874, 1572, 89, 2, 41, "Input",
+ CellTags->"b:7.2"],
+Cell[52966, 1576, 627, 20, 43, "Output",
+ CellTags->"b:7.2"]
+}, Open  ]],
+Cell[53608, 1599, 611, 19, 77, "Text",
+ CellTags->"b:4.1"],
+Cell[CellGroupData[{
+Cell[54244, 1622, 662, 19, 45, "Input",
+ CellTags->"b:4.1"],
+Cell[54909, 1643, 2943, 61, 82, "Output",
+ CellTags->"b:4.1"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57901, 1710, 73, 1, 60, "Subsection",
+ CellTags->"qa:C.3"],
+Cell[57977, 1713, 553, 13, 55, "Text",
+ CellTags->"b:4.2"],
+Cell[58533, 1728, 691, 21, 74, "InputOnly",
+ CellTags->"b:4.2"],
+Cell[59227, 1751, 502, 8, 55, "Text"],
+Cell[59732, 1761, 709, 15, 77, "Text"],
+Cell[60444, 1778, 334, 6, 55, "Text"],
+Cell[CellGroupData[{
+Cell[60803, 1788, 456, 11, 43, "Input"],
+Cell[61262, 1801, 1589, 33, 62, "Output"]
+}, Open  ]],
+Cell[62866, 1837, 492, 9, 77, "Text",
+ CellTags->"b:4.2"],
+Cell[63361, 1848, 726, 23, 74, "InputOnly",
+ CellTags->"b:4.2"],
+Cell[CellGroupData[{
+Cell[64112, 1875, 398, 10, 43, "Input"],
+Cell[64513, 1887, 806, 18, 41, "Output"]
+}, Open  ]],
+Cell[65334, 1908, 408, 8, 55, "Text",
+ CellTags->"b:4.2"],
+Cell[65745, 1918, 630, 20, 74, "InputOnly",
+ CellTags->"b:4.2"],
+Cell[CellGroupData[{
+Cell[66400, 1942, 398, 10, 43, "Input"],
+Cell[66801, 1954, 1433, 32, 62, "Output"]
+}, Open  ]],
+Cell[68249, 1989, 202, 6, 33, "Text"],
+Cell[CellGroupData[{
+Cell[68476, 1999, 124, 2, 41, "Input"],
+Cell[68603, 2003, 767, 17, 41, "Output"]
+}, Open  ]],
+Cell[69385, 2023, 425, 12, 55, "Text"],
+Cell[69813, 2037, 478, 15, 74, "InputOnly"],
+Cell[70294, 2054, 530, 9, 77, "Text"],
+Cell[70827, 2065, 589, 19, 74, "InputOnly"],
+Cell[71419, 2086, 423, 10, 33, "Text"],
+Cell[CellGroupData[{
+Cell[71867, 2100, 888, 25, 43, "Input"],
+Cell[72758, 2127, 225, 4, 41, "Output"]
+}, Open  ]],
+Cell[72998, 2134, 125, 1, 33, "Text"],
+Cell[73126, 2137, 526, 17, 74, "InputOnly"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73689, 2159, 116, 2, 60, "Subsection",
+ CellTags->"qa:C.4"],
+Cell[73808, 2163, 901, 16, 121, "Text",
+ CellTags->"b:4.3"],
+Cell[CellGroupData[{
+Cell[74734, 2183, 938, 21, 41, "Input",
+ CellTags->"b:4.3"],
+Cell[75675, 2206, 878, 19, 41, "Output",
+ CellTags->"b:4.3"]
+}, Open  ]],
+Cell[76568, 2228, 521, 9, 77, "Text"],
+Cell[77092, 2239, 726, 23, 74, "InputOnly",
+ CellTags->"b:4.2"],
+Cell[77821, 2264, 540, 10, 99, "Text",
+ CellTags->"b:4.3"],
+Cell[78364, 2276, 971, 19, 143, "Text",
+ CellTags->"b:4.3"],
+Cell[CellGroupData[{
+Cell[79360, 2299, 485, 13, 43, "Input",
+ CellTags->"b:4.3"],
+Cell[79848, 2314, 654, 18, 43, "Output",
+ CellTags->"b:4.3"]
+}, Open  ]],
+Cell[80517, 2335, 516, 13, 77, "Text",
+ CellTags->"b:4.3"],
+Cell[CellGroupData[{
+Cell[81058, 2352, 1372, 38, 41, "Input",
+ CellTags->"b:4.3"],
+Cell[82433, 2392, 1355, 36, 41, "Output",
+ CellTags->"b:4.3"]
+}, Open  ]],
+Cell[83803, 2431, 758, 16, 121, "Text"],
+Cell[84564, 2449, 1107, 33, 76, "InputOnly",
+ CellTags->"b:4.3"],
+Cell[85674, 2484, 863, 25, 75, "InputOnly",
+ CellTags->"b:4.3"],
+Cell[86540, 2511, 274, 5, 33, "Text",
+ CellTags->"b:4.3"],
+Cell[CellGroupData[{
+Cell[86839, 2520, 599, 17, 43, "Input",
+ CellTags->"b:4.3"],
+Cell[87441, 2539, 1107, 32, 41, "Output",
+ CellTags->"b:4.3"]
+}, Open  ]],
+Cell[88563, 2574, 110, 1, 33, "Text"],
+Cell[88676, 2577, 1556, 47, 121, "InputOnly",
+ CellTags->"b:4.3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

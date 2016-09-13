@@ -1,0 +1,2878 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    100560,       2869]
+NotebookOptionsPosition[     67229,       2020]
+NotebookOutlinePosition[     96830,       2734]
+CellTagsIndexPosition[     96601,       2723]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Hermitian Conjugation", "Section",
+ CellTags->"qa:HC.0"],
+
+Cell["Load QuantumAlgebra", "Text",
+ CellChangeTimes->{{3.444898363887549*^9, 3.444898372778549*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "QuantumAlgebra`QuantumAlgebra`"}]], "InputOnly"],
+
+Cell[CellGroupData[{
+
+Cell["Conjugation of Operators: Adjoint Operators", "Subsection",
+ CellTags->"qa:HC.1"],
+
+Cell[TextData[{
+ "The hermitian conjugation of an operator gives its associated adjoint \
+operator, and it can be computed with the command ",
+ StyleBox["Hermitian",
+  FontWeight->"Bold"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.4448979330815487`*^9, 3.444897936046549*^9}, {
+   3.444898168766549*^9, 3.444898182557549*^9}, {3.444898219995549*^9, 
+   3.444898291325549*^9}, {3.444898449025549*^9, 3.444898515072549*^9}, {
+   3.4451186837945375`*^9, 3.4451186933485374`*^9}, 3.445806426023*^9, 
+   3.59437104503539*^9, {3.594371088489875*^9, 3.594371229898963*^9}},
+ CellTags->"b:3.0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Hermitian", "[", 
+  OverscriptBox["\[ScriptCapitalA]", "^"], "]"}]], "Input",
+ CellChangeTimes->{{3.444897798556549*^9, 3.4448978128425493`*^9}, {
+  3.444898301643549*^9, 3.444898344609549*^9}, {3.594371157668832*^9, 
+  3.5943711716916337`*^9}},
+ CellTags->"b:3.0"],
+
+Cell[BoxData[
+ SuperscriptBox[
+  OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"]], "Output",
+ CellChangeTimes->{3.444897814221549*^9, 3.444898324925549*^9, 
+  3.444898497591549*^9, 3.4451187147605376`*^9, 3.5943712488700485`*^9},
+ CellTags->"b:3.0"]
+}, Open  ]],
+
+Cell["\<\
+It is also possible to use the common superdagger notation:\
+\>", "Text",
+ CellChangeTimes->{3.594371150069397*^9, 3.5943712562684717`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], ",", 
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "i", "\[Dagger]"]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.5943711616900616`*^9, 3.594371167522395*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], ",", 
+   SubsuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "i", "\[Dagger]"]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.594371250853162*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "The internal representation of the adjoint operator is an ",
+ StyleBox["Operator",
+  FontWeight->"Bold"],
+ " object which has as a first argument the name of the operator and as a \
+second argument a string label \"H\"."
+}], "Text",
+ CellChangeTimes->{{3.4448985449755487`*^9, 3.4448986775075493`*^9}, {
+   3.444898805219549*^9, 3.4448988205345488`*^9}, 3.445152640101*^9, {
+   3.594371267413109*^9, 3.594371283116007*^9}},
+ CellTags->"b:3.0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"FullForm", "/@", 
+    RowBox[{"{", 
+     RowBox[{
+      SuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], ",", 
+      SubsuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], "i", "\[Dagger]"], ",", 
+      SuperscriptBox[
+       OverscriptBox["\[ScriptCapitalA]", "^"], 
+       RowBox[{"i", ",", "\[Dagger]"}]], ",", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        TagBox[
+         SubsuperscriptBox[
+          OverscriptBox["\[ScriptCapitalA]", "^"], "i", "j"],
+         QuantumAlgebra`QuantumAlgebra`Private`superscript], ")"}], 
+       "\[Dagger]"], ",", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        SubsuperscriptBox[
+         OverscriptBox["\[ScriptCapitalA]", "^"], "i", "j"], ")"}], 
+       "\[Dagger]"]}], "}"}]}], "//", "TableForm"}]}]], "Input",
+ CellChangeTimes->{{3.444897820245549*^9, 3.444897837792549*^9}, {
+  3.444898775643549*^9, 3.4448987941725492`*^9}},
+ CellTags->"b:3.0"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      TagBox[
+       StyleBox[
+        RowBox[{"Operator", "[", 
+         RowBox[{"\[ScriptCapitalA]", ",", "\"\<H\>\""}], "]"}],
+        ShowStringCharacters->True,
+        NumberMarks->True],
+       FullForm]},
+     {
+      TagBox[
+       StyleBox[
+        RowBox[{"Operator", "[", 
+         RowBox[{"\[ScriptCapitalA]", ",", "\"\<H\>\"", ",", 
+          RowBox[{"List", "[", "i", "]"}], ",", 
+          RowBox[{"List", "[", "]"}]}], "]"}],
+        ShowStringCharacters->True,
+        NumberMarks->True],
+       FullForm]},
+     {
+      TagBox[
+       StyleBox[
+        RowBox[{"Operator", "[", 
+         RowBox[{"\[ScriptCapitalA]", ",", "\"\<H\>\"", ",", 
+          RowBox[{"List", "[", "]"}], ",", 
+          RowBox[{"List", "[", "i", "]"}]}], "]"}],
+        ShowStringCharacters->True,
+        NumberMarks->True],
+       FullForm]},
+     {
+      TagBox[
+       StyleBox[
+        RowBox[{"Operator", "[", 
+         RowBox[{"\[ScriptCapitalA]", ",", "\"\<H\>\"", ",", 
+          RowBox[{"List", "[", "i", "]"}], ",", 
+          RowBox[{"List", "[", "j", "]"}]}], "]"}],
+        ShowStringCharacters->True,
+        NumberMarks->True],
+       FullForm]},
+     {
+      TagBox[
+       StyleBox[
+        RowBox[{"Power", "[", 
+         RowBox[{
+          RowBox[{"Operator", "[", 
+           RowBox[{"\[ScriptCapitalA]", ",", "\"\<H\>\"", ",", 
+            RowBox[{"List", "[", "i", "]"}], ",", 
+            RowBox[{"List", "[", "]"}]}], "]"}], ",", "j"}], "]"}],
+        ShowStringCharacters->True,
+        NumberMarks->True],
+       FullForm]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.444897839420549*^9, 3.4448987954085493`*^9, 
+  3.4451187305275373`*^9, 3.5943712849421115`*^9},
+ CellTags->"b:3.0"]
+}, Open  ]],
+
+Cell["\<\
+Some common properties of the hermitian conjugation are applied \
+automatically, and the complex conjugation of numbers is parsed with the \
+usual notation.\
+\>", "Text",
+ CellChangeTimes->{{3.444899434036549*^9, 3.4448994413575487`*^9}, {
+  3.444899614524549*^9, 3.444899651049549*^9}, {3.445255779561*^9, 
+  3.445255787994*^9}, {3.5943713969715195`*^9, 3.594371401561782*^9}, {
+  3.5943716455347357`*^9, 3.594371812989314*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], ")"}], 
+    "\[Dagger]"], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", " ", 
+      OverscriptBox["\[ScriptCapitalA]", "^"]}], ")"}], "\[Dagger]"]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.444899453111549*^9, 3.444899524866549*^9}, {
+  3.444899603843549*^9, 3.4448996110415487`*^9}, {3.4451188445425377`*^9, 
+  3.4451188491415377`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   OverscriptBox["\[ScriptCapitalA]", "^"], ",", 
+   RowBox[{
+    SuperscriptBox["\[Lambda]", "*"], " ", 
+    SuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.444899467499549*^9, {3.4448994985085487`*^9, 3.444899525754549*^9}, 
+   3.444899655536549*^9, 3.4451188497415376`*^9, 3.594371410609299*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[ScriptA]", 
+       OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+      RowBox[{"\[ScriptB]", 
+       OverscriptBox["\[ScriptCapitalB]", "^"]}]}], ")"}], "\[Dagger]"], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"\[ScriptA]", 
+      RowBox[{
+       OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+       OverscriptBox["\[ScriptCapitalB]", "^"]}]}], ")"}], "\[Dagger]"]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.444899578763549*^9, 3.444899588031549*^9}, {
+  3.4451188593545375`*^9, 3.4451188670115376`*^9}, {3.445255796087*^9, 
+  3.445255805601*^9}, {3.445256021131*^9, 3.445256025145*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[ScriptA]", "*"], " ", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[ScriptB]", "*"], " ", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalB]", "^"], "\[Dagger]"]}]}], ",", 
+   RowBox[{
+    SuperscriptBox["\[ScriptA]", "*"], " ", 
+    RowBox[{
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalB]", "^"], "\[Dagger]"], "\[CenterDot]", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"]}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.444899588756549*^9, 3.444899657751549*^9, 
+  3.4451188676925373`*^9, 3.445255819351*^9, 3.445256026067*^9, 
+  3.59437141464353*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Conjugation of Bras, Kets and Brakets", "Subsection",
+ CellTags->"qa:HC.2"],
+
+Cell["\<\
+The hermitian conjugation of bras and kets use the standard rules of Quantum \
+Mechanics, bras are converted to kets, and kets are converted to bras.\
+\>", "Text",
+ CellChangeTimes->{{3.4451188865585375`*^9, 3.4451189082545376`*^9}, {
+  3.445118973736538*^9, 3.4451190767925377`*^9}, {3.445153127282*^9, 
+  3.445153174957*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Alpha]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[Dagger]"], ",", 
+   SuperscriptBox[
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Alpha]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], 
+    RowBox[{" ", "\[Dagger]"}]]}], "}"}]], "Input",
+ CellChangeTimes->{{3.4448998104755487`*^9, 3.444899886110549*^9}, {
+  3.4451189230135374`*^9, 3.4451189280575376`*^9}, {3.594371860968058*^9, 
+  3.5943718747168446`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      TagBox["\[Alpha]",
+       QuantumAlgebra`QuantumAlgebra`BraArgs,
+       BaseStyle->"BraKetArg"],
+      BoxBaselineShift->0], 
+     AdjustmentBox["\[VerticalSeparator]",
+      BoxBaselineShift->-0.1,
+      BoxMargins->{{0, -0.2}, {0, 0}}]}],
+    QuantumAlgebra`QuantumAlgebra`Bra,
+    BaseStyle->"BraWrapper"], ",", 
+   TagBox[
+    RowBox[{
+     AdjustmentBox["\[VerticalSeparator]",
+      BoxBaselineShift->-0.1,
+      BoxMargins->{{-0.2, 0}, {0, 0}}], 
+     AdjustmentBox[
+      TagBox["\[Alpha]",
+       QuantumAlgebra`QuantumAlgebra`KetArgs,
+       BaseStyle->"BraKetArg"],
+      BoxBaselineShift->0], "\[RightAngleBracket]"}],
+    QuantumAlgebra`QuantumAlgebra`Ket,
+    BaseStyle->"KetWrapper"]}], "}"}]], "Output",
+ CellChangeTimes->{{3.444899817907549*^9, 3.444899887005549*^9}, 
+   3.4451189288415375`*^9, {3.5943718702205877`*^9, 3.5943718755898943`*^9}}]
+}, Open  ]],
+
+Cell["\<\
+For the outer an the inner product of bras and kets, the hermitian \
+conjugation applies the above rule to both objects and then interchanges \
+their positions.\
+\>", "Text",
+ CellChangeTimes->{{3.4451191133505373`*^9, 3.4451192264445376`*^9}, 
+   3.4451194736815376`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Beta]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Alpha]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}], ")"}], "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.4448999340075493`*^9, 3.4448999500925493`*^9}, {
+  3.594371894776992*^9, 3.594371912664015*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox[
+   RowBox[{
+    AdjustmentBox["\[VerticalSeparator]",
+     BoxBaselineShift->-0.1,
+     BoxMargins->{{-0.2, 0}, {0, 0}}], 
+    AdjustmentBox[
+     TagBox["\[Alpha]",
+      QuantumAlgebra`QuantumAlgebra`KetArgs,
+      BaseStyle->"BraKetArg"],
+     BoxBaselineShift->0], "\[RightAngleBracket]"}],
+   QuantumAlgebra`QuantumAlgebra`Ket,
+   BaseStyle->"KetWrapper"], "\[CenterDot]", 
+  TagBox[
+   RowBox[{"\[LeftAngleBracket]", 
+    AdjustmentBox[
+     TagBox["\[Beta]",
+      QuantumAlgebra`QuantumAlgebra`BraArgs,
+      BaseStyle->"BraKetArg"],
+     BoxBaselineShift->0], 
+    AdjustmentBox["\[VerticalSeparator]",
+     BoxBaselineShift->-0.1,
+     BoxMargins->{{0, -0.2}, {0, 0}}]}],
+   QuantumAlgebra`QuantumAlgebra`Bra,
+   BaseStyle->"BraWrapper"]}]], "Output",
+ CellChangeTimes->{3.444899951005549*^9, 3.594371913851083*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Alpha]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    TagBox[
+     SubscriptBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0}, {0, 0}}], 
+       AdjustmentBox[
+        TagBox["\[Beta]",
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+      TagBox[
+       AdjustmentBox[
+        TagBox["x",
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0],
+       QuantumAlgebra`QuantumAlgebra`UDScript,
+       BaseStyle->"RIndex"]],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"]}], ")"}], "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.444899961457549*^9, 3.444899972032549*^9}, 
+   3.4451191013265376`*^9, 3.5943719346012697`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox[
+   RowBox[{
+    SubscriptBox["\[InvisiblePrefixScriptBase]", 
+     TagBox[
+      AdjustmentBox[
+       TagBox["x",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0],
+      QuantumAlgebra`QuantumAlgebra`UDScript,
+      BaseStyle->"LIndex"]], 
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      TagBox["\[Beta]",
+       QuantumAlgebra`QuantumAlgebra`BraArgs,
+       BaseStyle->"BraKetArg"],
+      BoxBaselineShift->0], 
+     AdjustmentBox["\[VerticalSeparator]",
+      BoxBaselineShift->-0.1,
+      BoxMargins->{{0, -0.2}, {0, 0}}]}]}],
+   QuantumAlgebra`QuantumAlgebra`Bra,
+   BaseStyle->"BraWrapper"], "\[CenterDot]", 
+  TagBox[
+   RowBox[{
+    AdjustmentBox["\[VerticalSeparator]",
+     BoxBaselineShift->-0.1,
+     BoxMargins->{{-0.2, 0}, {0, 0}}], 
+    AdjustmentBox[
+     TagBox["\[Alpha]",
+      QuantumAlgebra`QuantumAlgebra`KetArgs,
+      BaseStyle->"BraKetArg"],
+     BoxBaselineShift->0], "\[RightAngleBracket]"}],
+   QuantumAlgebra`QuantumAlgebra`Ket,
+   BaseStyle->"KetWrapper"]}]], "Output",
+ CellChangeTimes->{3.4448999726915493`*^9, 3.4451191025655375`*^9, 
+  3.594371934860285*^9}]
+}, Open  ]],
+
+Cell["\<\
+If we apply the hermitian conjugation to a braket object, then this operation \
+simplifies to a the complex conjugation operation (as with any complex \
+variable). Then, the conjugation operation simplifies to a simple braket \
+interchanging the labels.\
+\>", "Text",
+ CellChangeTimes->{{3.4451192717095375`*^9, 3.445119275460538*^9}, {
+  3.4451193231225376`*^9, 3.4451194362065372`*^9}, {3.4451194931615376`*^9, 
+  3.4451194943175373`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       RowBox[{
+        TagBox["\[Psi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+        TagBox["\[Phi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"]}],
+       BoxBaselineShift->0.], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Braket,
+     BaseStyle->"BraKetWrapper"], "\[Dagger]"], ",", 
+   SuperscriptBox[
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       RowBox[{
+        TagBox["\[Psi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+        TagBox["\[Phi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"]}],
+       BoxBaselineShift->0.], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Braket,
+     BaseStyle->"BraKetWrapper"], "*"]}], "}"}]], "Input",
+ CellChangeTimes->{{3.4451192528975377`*^9, 3.4451192623185377`*^9}, {
+   3.4451193091745377`*^9, 3.445119310507538*^9}, 3.445119377705538*^9, {
+   3.4451194406485376`*^9, 3.445119447670538*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      RowBox[{
+       TagBox["\[Phi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"]}],
+      BoxBaselineShift->0], "\[RightAngleBracket]"}],
+    QuantumAlgebra`QuantumAlgebra`Braket,
+    BaseStyle->"BraKetWrapper"], ",", 
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      RowBox[{
+       TagBox["\[Phi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"]}],
+      BoxBaselineShift->0], "\[RightAngleBracket]"}],
+    QuantumAlgebra`QuantumAlgebra`Braket,
+    BaseStyle->"BraKetWrapper"]}], "}"}]], "Output",
+ CellChangeTimes->{3.4451192629145374`*^9, 3.4451193110865374`*^9, 
+  3.4451193780715375`*^9, 3.4451194481975374`*^9, 3.5943719625468683`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Conjugation of More Complex Expressions", "Subsection",
+ CellTags->"qa:HC.3"],
+
+Cell["\<\
+The hermitian conjugation can be applied to more complex expressions that mix \
+operators, bras, kets and complex numbers. Kets transform to bras, bras \
+transform to kets, operators transform to their associated adjoint operators, \
+complex numbers to their complex conjugate numbers and finally the order of \
+the non commutative products are reversed. \
+\>", "Text",
+ CellChangeTimes->{{3.444899922602549*^9, 3.444899924020549*^9}, {
+   3.4451195135725374`*^9, 3.4451195386225376`*^9}, {3.445152729837*^9, 
+   3.445152731909*^9}, {3.44515320583*^9, 3.445153320965*^9}, {
+   3.4451533762019997`*^9, 3.445153401866*^9}, {3.445153448193*^9, 
+   3.4451534504519997`*^9}, {3.445153682454*^9, 3.4451536911359997`*^9}, 
+   3.445255862551*^9},
+ CellTags->"b:3.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"\[ScriptC]", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+     TagBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0.}, {0., 0.}}], 
+       AdjustmentBox[
+        TagBox["\[Psi]",
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}],
+      QuantumAlgebra`QuantumAlgebra`Ket,
+      BaseStyle->"KetWrapper"]}]}], ")"}], "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.4451195557065372`*^9, 3.4451195663275375`*^9}, {
+  3.445153660913*^9, 3.4451536661879997`*^9}, {3.594372032929894*^9, 
+  3.5943720357380543`*^9}},
+ CellTags->"b:3.1"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ScriptC]", "*"], " ", 
+  RowBox[{
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      TagBox["\[Psi]",
+       QuantumAlgebra`QuantumAlgebra`BraArgs,
+       BaseStyle->"BraKetArg"],
+      BoxBaselineShift->0], 
+     AdjustmentBox["\[VerticalSeparator]",
+      BoxBaselineShift->-0.1,
+      BoxMargins->{{0, -0.2}, {0, 0}}]}],
+    QuantumAlgebra`QuantumAlgebra`Bra,
+    BaseStyle->"BraWrapper"], "\[CenterDot]", 
+   SuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], "\[CenterDot]", 
+   SuperscriptBox[
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{3.4451195676675377`*^9, 3.445153666916*^9, 
+  3.594372037140135*^9},
+ CellTags->"b:3.1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", " ", 
+   RowBox[{
+    RowBox[{"\[ScriptC]", 
+     RowBox[{
+      OverscriptBox["\[ScriptCapitalA]", "^"], "\[CenterDot]", 
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{-0.2, 0.}, {0., 0.}}], 
+        AdjustmentBox[
+         TagBox["\[Theta]",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox["\[Omega]",
+          QuantumAlgebra`QuantumAlgebra`BraArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], 
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{0, -0.2}, {0, 0}}]}],
+       QuantumAlgebra`QuantumAlgebra`Bra,
+       BaseStyle->"BraWrapper"], "\[CenterDot]", 
+      SuperscriptBox[
+       OverscriptBox["\[ScriptCapitalB]", "^"], "\[Dagger]"]}]}], " ", "+", 
+    RowBox[{
+     SuperscriptBox["\[ScriptD]", "*"], 
+     RowBox[{
+      SuperscriptBox[
+       OverscriptBox["\[ScriptCapitalC]", "^"], "\[Dagger]"], "\[CenterDot]", 
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{-0.2, 0.}, {0., 0.}}], 
+        AdjustmentBox[
+         TagBox["\[Phi]",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox["\[Psi]",
+          QuantumAlgebra`QuantumAlgebra`BraArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], 
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{0, -0.2}, {0, 0}}]}],
+       QuantumAlgebra`QuantumAlgebra`Bra,
+       BaseStyle->"BraWrapper"], "\[CenterDot]", 
+      OverscriptBox["\[ScriptCapitalD]", "^"]}]}]}], " ", ")"}], 
+  "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.4451210666385374`*^9, 3.445121102698538*^9}, {
+  3.4451212950945377`*^9, 3.4451213200375376`*^9}, {3.4451213515095377`*^9, 
+  3.4451214482885375`*^9}, {3.5943720450735884`*^9, 3.5943720861569386`*^9}},
+ CellTags->"b:3.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["\[ScriptC]", "*"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Omega]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Theta]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    SuperscriptBox[
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"]}]}], "+", 
+  RowBox[{"\[ScriptD]", " ", 
+   RowBox[{
+    SuperscriptBox[
+     OverscriptBox["\[ScriptCapitalD]", "^"], "\[Dagger]"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Phi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalC]", "^"]}]}]}]], "Output",
+ CellChangeTimes->{
+  3.4451211050225377`*^9, 3.4451213209075375`*^9, {3.4451213638975377`*^9, 
+   3.4451213890045376`*^9}, {3.4451214386285377`*^9, 3.4451214494835377`*^9}, 
+   3.594372087284003*^9},
+ CellTags->"b:3.1"]
+}, Open  ]],
+
+Cell["\<\
+The hermitian conjugation interchanges with the power of operators. \
+\>", "Text",
+ CellChangeTimes->{{3.4451195864455376`*^9, 3.4451196330745373`*^9}, {
+   3.445120850427538*^9, 3.4451209716415377`*^9}, {3.4451519971210003`*^9, 
+   3.445151997532*^9}, {3.445153701833*^9, 3.445153716966*^9}, 
+   3.445153799666*^9, 3.445154233933*^9, {3.445154320057*^9, 
+   3.4451543402539997`*^9}, {3.5943721304214697`*^9, 3.5943721311375113`*^9}},
+ CellTags->"b:3.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "2"], ")"}], "\[Dagger]"], ",", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       SuperscriptBox[
+        OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], ")"}], "2"], 
+     ")"}], "\[Dagger]"]}], "}"}]], "Input",
+ CellChangeTimes->{{3.445153813433*^9, 3.4451538845290003`*^9}, {
+  3.445154052288*^9, 3.445154086038*^9}, {3.44515437004*^9, 
+  3.445154405381*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], ")"}], "2"], ",", 
+   SuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "2"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.4451538325150003`*^9, {3.445153865304*^9, 3.445153886414*^9}, 
+   3.4451540735559998`*^9, 3.4451542981359997`*^9, 3.445154372366*^9, 
+   3.445154406613*^9, 3.5943721109653573`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[ScriptA]", 
+       OverscriptBox["\[ScriptCapitalA]", "^"]}], "+", 
+      RowBox[{"\[ScriptB]", 
+       OverscriptBox["\[ScriptCapitalB]", "^"]}]}], ")"}], "2"], ")"}], 
+  "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.445154257663*^9, 3.445154308507*^9}}],
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[ScriptA]", "*"], " ", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"]}], "+", 
+    RowBox[{
+     SuperscriptBox["\[ScriptB]", "*"], " ", 
+     SuperscriptBox[
+      OverscriptBox["\[ScriptCapitalB]", "^"], "\[Dagger]"]}]}], ")"}], 
+  "2"]], "Output",
+ CellChangeTimes->{3.44515427987*^9, 3.4451543098719997`*^9, 
+  3.5943721118784094`*^9}]
+}, Open  ]],
+
+Cell["\<\
+In the following example, we expand the power of a given expression and then \
+apply the hermitian conjugation to the result.\
+\>", "Text",
+ CellChangeTimes->{{3.4451195864455376`*^9, 3.4451196330745373`*^9}, {
+   3.445120850427538*^9, 3.4451209716415377`*^9}, {3.4451519971210003`*^9, 
+   3.445151997532*^9}, {3.445153701833*^9, 3.445153716966*^9}, {
+   3.445153799666*^9, 3.445153803376*^9}, {3.445153932255*^9, 
+   3.445153942321*^9}, {3.4451540928719997`*^9, 3.445154153733*^9}, 
+   3.445154230933*^9, {3.445154425576*^9, 3.445154425953*^9}, {
+   3.445154523207*^9, 3.4451545263450003`*^9}},
+ CellTags->"b:3.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", " ", 
+     RowBox[{
+      RowBox[{"\[ImaginaryI]", " ", "\[ScriptA]", 
+       SuperscriptBox[
+        OverscriptBox["\[ScriptCapitalP]", "^"], "\[Dagger]"]}], "+", 
+      RowBox[{"\[ScriptB]", 
+       RowBox[{
+        TagBox[
+         RowBox[{
+          AdjustmentBox["\[VerticalSeparator]",
+           BoxBaselineShift->-0.1,
+           BoxMargins->{{-0.2, 0.}, {0., 0.}}], 
+          AdjustmentBox[
+           TagBox["\[Psi]",
+            QuantumAlgebra`QuantumAlgebra`KetArgs,
+            BaseStyle->"BraKetArg"],
+           BoxBaselineShift->0], "\[RightAngleBracket]"}],
+         QuantumAlgebra`QuantumAlgebra`Ket,
+         BaseStyle->"KetWrapper"], "\[CenterDot]", 
+        TagBox[
+         RowBox[{"\[LeftAngleBracket]", 
+          AdjustmentBox[
+           TagBox["\[Psi]",
+            QuantumAlgebra`QuantumAlgebra`BraArgs,
+            BaseStyle->"BraKetArg"],
+           BoxBaselineShift->0], 
+          AdjustmentBox["\[VerticalSeparator]",
+           BoxBaselineShift->-0.1,
+           BoxMargins->{{0, -0.2}, {0, 0}}]}],
+         QuantumAlgebra`QuantumAlgebra`Bra,
+         BaseStyle->"BraWrapper"]}]}]}], ")"}], "3"], "//", "QAPowerExpand"}],
+   "//", "Hermitian"}]], "Input",
+ CellChangeTimes->{{3.445119637757538*^9, 3.4451196777335377`*^9}, {
+  3.445153471376*^9, 3.445153487145*^9}, {3.4451535435769997`*^9, 
+  3.445153568551*^9}, {3.4451536302139997`*^9, 3.445153631432*^9}, {
+  3.445153782191*^9, 3.445153782407*^9}, {3.44515401634*^9, 
+  3.4451540344820004`*^9}, {3.594372150857639*^9, 3.5943721651244545`*^9}},
+ CellTags->"b:3.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox[
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       RowBox[{
+        TagBox["\[Psi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+        TagBox["\[Psi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"]}],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Braket,
+     BaseStyle->"BraKetWrapper"], "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "3"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}], "-", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      RowBox[{
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"]}],
+      BoxBaselineShift->0], "\[RightAngleBracket]"}],
+    QuantumAlgebra`QuantumAlgebra`Braket,
+    BaseStyle->"BraKetWrapper"], " ", 
+   SuperscriptBox["\[ScriptA]", "*"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "2"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      RowBox[{
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"]}],
+      BoxBaselineShift->0], "\[RightAngleBracket]"}],
+    QuantumAlgebra`QuantumAlgebra`Braket,
+    BaseStyle->"BraKetWrapper"], " ", 
+   SuperscriptBox["\[ScriptA]", "*"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "2"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}], "+", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "3"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "2"], " ", 
+   SuperscriptBox["\[ScriptB]", "*"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "2"], " ", 
+   SuperscriptBox["\[ScriptB]", "*"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "2"], " ", 
+   SuperscriptBox["\[ScriptB]", "*"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}], "-", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   SuperscriptBox["\[ScriptA]", "*"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "2"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}]}]], "Output",
+ CellChangeTimes->{
+  3.445153511582*^9, {3.445153549153*^9, 3.4451535696730003`*^9}, 
+   3.445153783049*^9, {3.445154017921*^9, 3.445154035199*^9}, 
+   3.594372165574481*^9},
+ CellTags->"b:3.1"]
+}, Open  ]],
+
+Cell["\<\
+Now, we first apply the hermitian conjugation to the same expression and then \
+expand the power of the result. \
+\>", "Text",
+ CellChangeTimes->{{3.4451206693995376`*^9, 3.445120677896538*^9}, {
+  3.445120765363538*^9, 3.4451208388325377`*^9}, {3.4451209876215377`*^9, 
+  3.4451210329025373`*^9}, {3.4451537626540003`*^9, 3.4451537632060003`*^9}, {
+  3.445153971918*^9, 3.4451539771689997`*^9}, {3.445154469633*^9, 
+  3.4451544742*^9}, {3.44515453871*^9, 3.445154556528*^9}},
+ CellTags->"b:3.1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    SuperscriptBox[
+     RowBox[{"(", " ", 
+      RowBox[{
+       RowBox[{"\[ImaginaryI]", " ", "\[ScriptA]", 
+        SuperscriptBox[
+         OverscriptBox["\[ScriptCapitalP]", "^"], "\[Dagger]"]}], "+", 
+       RowBox[{"\[ScriptB]", 
+        RowBox[{
+         TagBox[
+          RowBox[{
+           AdjustmentBox["\[VerticalSeparator]",
+            BoxBaselineShift->-0.1,
+            BoxMargins->{{-0.2, 0.}, {0., 0.}}], 
+           AdjustmentBox[
+            TagBox["\[Psi]",
+             QuantumAlgebra`QuantumAlgebra`KetArgs,
+             BaseStyle->"BraKetArg"],
+            BoxBaselineShift->0], "\[RightAngleBracket]"}],
+          QuantumAlgebra`QuantumAlgebra`Ket,
+          BaseStyle->"KetWrapper"], "\[CenterDot]", 
+         TagBox[
+          RowBox[{"\[LeftAngleBracket]", 
+           AdjustmentBox[
+            TagBox["\[Psi]",
+             QuantumAlgebra`QuantumAlgebra`BraArgs,
+             BaseStyle->"BraKetArg"],
+            BoxBaselineShift->0], 
+           AdjustmentBox["\[VerticalSeparator]",
+            BoxBaselineShift->-0.1,
+            BoxMargins->{{0, -0.2}, {0, 0}}]}],
+          QuantumAlgebra`QuantumAlgebra`Bra,
+          BaseStyle->"BraWrapper"]}]}]}], ")"}], "\[Dagger]"], ")"}], "3"], "//",
+   "QAPowerExpand"}]], "Input",
+ CellChangeTimes->{
+  3.4451207078415375`*^9, {3.445153581118*^9, 3.445153619374*^9}, {
+   3.445153790439*^9, 3.445153794127*^9}, {3.5943721866506863`*^9, 
+   3.5943721875507374`*^9}},
+ CellTags->"b:3.1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox[
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       RowBox[{
+        TagBox["\[Psi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+        TagBox["\[Psi]",
+         QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+         BaseStyle->"BraKetArg"]}],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Braket,
+     BaseStyle->"BraKetWrapper"], "2"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "3"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}], "-", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      RowBox[{
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"]}],
+      BoxBaselineShift->0], "\[RightAngleBracket]"}],
+    QuantumAlgebra`QuantumAlgebra`Braket,
+    BaseStyle->"BraKetWrapper"], " ", 
+   SuperscriptBox["\[ScriptA]", "*"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "2"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      RowBox[{
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+        BaseStyle->"BraKetArg"]}],
+      BoxBaselineShift->0], "\[RightAngleBracket]"}],
+    QuantumAlgebra`QuantumAlgebra`Braket,
+    BaseStyle->"BraKetWrapper"], " ", 
+   SuperscriptBox["\[ScriptA]", "*"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "2"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}], "+", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "3"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "2"], " ", 
+   SuperscriptBox["\[ScriptB]", "*"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "2"], " ", 
+   SuperscriptBox["\[ScriptB]", "*"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"]}]}], "-", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptA]", "*"], ")"}], "2"], " ", 
+   SuperscriptBox["\[ScriptB]", "*"], " ", 
+   RowBox[{
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}], "-", 
+  RowBox[{"\[ImaginaryI]", " ", 
+   SuperscriptBox["\[ScriptA]", "*"], " ", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox["\[ScriptB]", "*"], ")"}], "2"], " ", 
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CenterDot]", 
+    OverscriptBox["\[ScriptCapitalP]", "^"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CenterDot]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Psi]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}]}]], "Output",
+ CellChangeTimes->{
+  3.4451207117615376`*^9, {3.445153582074*^9, 3.445153612899*^9}, 
+   3.59437218986187*^9},
+ CellTags->"b:3.1"]
+}, Open  ]],
+
+Cell["They are both equal:", "Text",
+ CellChangeTimes->{{3.5943722115701113`*^9, 3.5943722171794324`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "===", "%%"}]], "Input",
+ CellChangeTimes->{{3.5943721935820827`*^9, 3.5943721962742367`*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.5943721969382744`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Conjugation of Composite Quantum Objects", "Subsection",
+ CellTags->"qa:HC.4"],
+
+Cell["\<\
+The properties of the hermitian conjugation for tensor products of quantum \
+objects are automatically applied. \
+\>", "Text",
+ CellChangeTimes->{{3.4451513726549997`*^9, 3.445151423334*^9}, 
+   3.445151486383*^9, {3.445151618387*^9, 3.445151652807*^9}, {
+   3.59437225734873*^9, 3.5943722773618746`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"\[ScriptA]", 
+    RowBox[{
+     OverscriptBox["\[ScriptCapitalA]", "^"], "\[CircleTimes]", 
+     OverscriptBox["\[ScriptCapitalB]", "^"]}]}], ")"}], 
+  "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.444900226815549*^9, 3.444900252365549*^9}, {
+  3.445151515112*^9, 3.4451515177139997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ScriptA]", "*"], " ", 
+  RowBox[{
+   SuperscriptBox[
+    OverscriptBox["\[ScriptCapitalA]", "^"], "\[Dagger]"], "\[CircleTimes]", 
+   SuperscriptBox[
+    OverscriptBox["\[ScriptCapitalB]", "^"], "\[Dagger]"]}]}]], "Output",
+ CellChangeTimes->{3.444900253097549*^9, 3.445151519215*^9, 
+  3.5943722815591145`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"\[ScriptA]", " ", 
+    RowBox[{
+     TagBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0}, {0, 0}}], 
+       AdjustmentBox[
+        TagBox["\[Alpha]",
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}],
+      QuantumAlgebra`QuantumAlgebra`Ket,
+      BaseStyle->"KetWrapper"], "\[CircleTimes]", 
+     TagBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0}, {0, 0}}], 
+       AdjustmentBox[
+        TagBox["\[Beta]",
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}],
+      QuantumAlgebra`QuantumAlgebra`Ket,
+      BaseStyle->"KetWrapper"]}]}], ")"}], "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.444900275327549*^9, 3.444900306136549*^9}, {
+   3.445151549738*^9, 3.445151553317*^9}, 3.5943723004601955`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ScriptA]", "*"], " ", 
+  RowBox[{
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      TagBox["\[Alpha]",
+       QuantumAlgebra`QuantumAlgebra`BraArgs,
+       BaseStyle->"BraKetArg"],
+      BoxBaselineShift->0], 
+     AdjustmentBox["\[VerticalSeparator]",
+      BoxBaselineShift->-0.1,
+      BoxMargins->{{0, -0.2}, {0, 0}}]}],
+    QuantumAlgebra`QuantumAlgebra`Bra,
+    BaseStyle->"BraWrapper"], "\[CircleTimes]", 
+   TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+     AdjustmentBox[
+      TagBox["\[Beta]",
+       QuantumAlgebra`QuantumAlgebra`BraArgs,
+       BaseStyle->"BraKetArg"],
+      BoxBaselineShift->0], 
+     AdjustmentBox["\[VerticalSeparator]",
+      BoxBaselineShift->-0.1,
+      BoxMargins->{{0, -0.2}, {0, 0}}]}],
+    QuantumAlgebra`QuantumAlgebra`Bra,
+    BaseStyle->"BraWrapper"]}]}]], "Output",
+ CellChangeTimes->{{3.444900284086549*^9, 3.444900307689549*^9}, 
+   3.445151553995*^9, 3.594372300682208*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"\[ScriptB]", " ", 
+    RowBox[{
+     TagBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0}, {0, 0}}], 
+       AdjustmentBox[
+        TagBox[
+         SubscriptBox["\[Alpha]", "1"],
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}],
+      QuantumAlgebra`QuantumAlgebra`Ket,
+      BaseStyle->"KetWrapper"], "\[CircleTimes]", 
+     TagBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0}, {0, 0}}], 
+       AdjustmentBox[
+        TagBox[
+         SubscriptBox["\[Beta]", "2"],
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}],
+      QuantumAlgebra`QuantumAlgebra`Ket,
+      BaseStyle->"KetWrapper"]}]}], ")"}], "\[Dagger]"]], "Input",
+ CellChangeTimes->{{3.4449003250675488`*^9, 3.444900328780549*^9}, {
+  3.445151556651*^9, 3.445151557929*^9}, {3.594372302959339*^9, 
+  3.594372310964796*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox[
+   RowBox[{"\[LeftAngleBracket]", 
+    AdjustmentBox[
+     TagBox[
+      RowBox[{
+       SubscriptBox["\[Alpha]", "1"], ",", 
+       SubscriptBox["\[Beta]", "2"]}],
+      QuantumAlgebra`QuantumAlgebra`BraArgs,
+      BaseStyle->"BraKetArg"],
+     BoxBaselineShift->0], 
+    AdjustmentBox["\[VerticalSeparator]",
+     BoxBaselineShift->-0.1,
+     BoxMargins->{{0, -0.2}, {0, 0}}]}],
+   QuantumAlgebra`QuantumAlgebra`Bra,
+   BaseStyle->"BraWrapper"], " ", 
+  SuperscriptBox["\[ScriptB]", "*"]}]], "Output",
+ CellChangeTimes->{3.4449003292325487`*^9, 3.445151558557*^9, 
+  3.5943723112338123`*^9}]
+}, Open  ]],
+
+Cell["\<\
+The hermitian conjugation can be applied to more complex constructions. In \
+the following examples the three type of products are involved, the usual \
+commutative times, the non commutative product and the tensor product.\
+\>", "Text",
+ CellChangeTimes->{{3.445151660535*^9, 3.445151762315*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"\[ScriptA]", " ", 
+     RowBox[{
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{-0.2, 0}, {0, 0}}], 
+        AdjustmentBox[
+         TagBox["\[Beta]",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox["\[Alpha]",
+          QuantumAlgebra`QuantumAlgebra`BraArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], 
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{0, -0.2}, {0, 0}}]}],
+       QuantumAlgebra`QuantumAlgebra`Bra,
+       BaseStyle->"BraWrapper"]}]}], ")"}], "\[CircleTimes]", 
+   RowBox[{"(", 
+    RowBox[{"\[ScriptB]", " ", 
+     RowBox[{
+      TagBox[
+       RowBox[{
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{-0.2, 0}, {0, 0}}], 
+        AdjustmentBox[
+         TagBox["\[Beta]",
+          QuantumAlgebra`QuantumAlgebra`KetArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], "\[RightAngleBracket]"}],
+       QuantumAlgebra`QuantumAlgebra`Ket,
+       BaseStyle->"KetWrapper"], "\[CenterDot]", 
+      TagBox[
+       RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox["\[Alpha]",
+          QuantumAlgebra`QuantumAlgebra`BraArgs,
+          BaseStyle->"BraKetArg"],
+         BoxBaselineShift->0], 
+        AdjustmentBox["\[VerticalSeparator]",
+         BoxBaselineShift->-0.1,
+         BoxMargins->{{0, -0.2}, {0, 0}}]}],
+       QuantumAlgebra`QuantumAlgebra`Bra,
+       BaseStyle->"BraWrapper"]}]}], ")"}]}], "//", "Hermitian"}]], "Input",
+ CellChangeTimes->{{3.444900345847549*^9, 3.444900372477549*^9}, {
+   3.4451515280030003`*^9, 3.445151537667*^9}, 3.594372348709955*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ScriptA]", "*"], " ", 
+  SuperscriptBox["\[ScriptB]", "*"], " ", 
+  RowBox[{
+   RowBox[{
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Alpha]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"], "\[CircleTimes]", 
+    TagBox[
+     RowBox[{
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{-0.2, 0}, {0, 0}}], 
+      AdjustmentBox[
+       TagBox["\[Alpha]",
+        QuantumAlgebra`QuantumAlgebra`KetArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], "\[RightAngleBracket]"}],
+     QuantumAlgebra`QuantumAlgebra`Ket,
+     BaseStyle->"KetWrapper"]}], "\[CenterDot]", 
+   RowBox[{
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Beta]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"], "\[CircleTimes]", 
+    TagBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox["\[Beta]",
+        QuantumAlgebra`QuantumAlgebra`BraArgs,
+        BaseStyle->"BraKetArg"],
+       BoxBaselineShift->0], 
+      AdjustmentBox["\[VerticalSeparator]",
+       BoxBaselineShift->-0.1,
+       BoxMargins->{{0, -0.2}, {0, 0}}]}],
+     QuantumAlgebra`QuantumAlgebra`Bra,
+     BaseStyle->"BraWrapper"]}]}]}]], "Output",
+ CellChangeTimes->{{3.4449003649815493`*^9, 3.444900373171549*^9}, {
+   3.44515153083*^9, 3.445151538862*^9}, 3.594372349192983*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     TagBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0}, {0, 0}}], 
+       AdjustmentBox[
+        TagBox[
+         SubscriptBox["\[Beta]", "i"],
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}],
+      QuantumAlgebra`QuantumAlgebra`Ket,
+      BaseStyle->"KetWrapper"], "\[CenterDot]", 
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        TagBox[
+         SubscriptBox["\[Alpha]", "i"],
+         QuantumAlgebra`QuantumAlgebra`BraArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], 
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{0, -0.2}, {0, 0}}]}],
+      QuantumAlgebra`QuantumAlgebra`Bra,
+      BaseStyle->"BraWrapper"]}], ")"}], "\[CircleTimes]", 
+   RowBox[{"(", 
+    RowBox[{
+     TagBox[
+      RowBox[{
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{-0.2, 0}, {0, 0}}], 
+       AdjustmentBox[
+        TagBox[
+         SubscriptBox["\[Beta]", "j"],
+         QuantumAlgebra`QuantumAlgebra`KetArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], "\[RightAngleBracket]"}],
+      QuantumAlgebra`QuantumAlgebra`Ket,
+      BaseStyle->"KetWrapper"], "\[CenterDot]", 
+     TagBox[
+      RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        TagBox[
+         SubscriptBox["\[Alpha]", "j"],
+         QuantumAlgebra`QuantumAlgebra`BraArgs,
+         BaseStyle->"BraKetArg"],
+        BoxBaselineShift->0], 
+       AdjustmentBox["\[VerticalSeparator]",
+        BoxBaselineShift->-0.1,
+        BoxMargins->{{0, -0.2}, {0, 0}}]}],
+      QuantumAlgebra`QuantumAlgebra`Bra,
+      BaseStyle->"BraWrapper"]}], ")"}]}], "//", "Hermitian"}]], "Input",
+ CellChangeTimes->{{3.444900434087549*^9, 3.444900443892549*^9}, 
+   3.594372364802876*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  TagBox[
+   RowBox[{
+    AdjustmentBox["\[VerticalSeparator]",
+     BoxBaselineShift->-0.1,
+     BoxMargins->{{-0.2, 0}, {0, 0}}], 
+    AdjustmentBox[
+     TagBox[
+      RowBox[{
+       SubscriptBox["\[Alpha]", "i"], ",", 
+       SubscriptBox["\[Alpha]", "j"]}],
+      QuantumAlgebra`QuantumAlgebra`KetArgs,
+      BaseStyle->"BraKetArg"],
+     BoxBaselineShift->0], "\[RightAngleBracket]"}],
+   QuantumAlgebra`QuantumAlgebra`Ket,
+   BaseStyle->"KetWrapper"], "\[CenterDot]", 
+  TagBox[
+   RowBox[{"\[LeftAngleBracket]", 
+    AdjustmentBox[
+     TagBox[
+      RowBox[{
+       SubscriptBox["\[Beta]", "i"], ",", 
+       SubscriptBox["\[Beta]", "j"]}],
+      QuantumAlgebra`QuantumAlgebra`BraArgs,
+      BaseStyle->"BraKetArg"],
+     BoxBaselineShift->0], 
+    AdjustmentBox["\[VerticalSeparator]",
+     BoxBaselineShift->-0.1,
+     BoxMargins->{{0, -0.2}, {0, 0}}]}],
+   QuantumAlgebra`QuantumAlgebra`Bra,
+   BaseStyle->"BraWrapper"]}]], "Output",
+ CellChangeTimes->{3.444900444627549*^9, 3.5943723651118937`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+AutoGeneratedPackage->None,
+InitializationCellEvaluation->Automatic,
+WindowSize->{593, 762},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+DockedCells->Cell[
+  BoxData[
+   StyleBox[
+   "\!\(\*FrameBox[\"\[CapitalPsi]\",\nStripOnInput->False]\)   \
+QuantumAlgebra 2.0", FontFamily -> "Helvetica", FontWeight -> "Bold", 
+    FontColor -> GrayLevel[1]]], "DockedCell", Background -> 
+  RGBColor[0, 0.25098, 0.501961]],
+InputAliases->{"ket" -> TagBox[
+    RowBox[{
+      AdjustmentBox[
+      "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0.}, {0., 0.}}, 
+       BoxBaselineShift -> -0.1], 
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      "\[RightAngleBracket]"}], QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> 
+    "KetWrapper"], "bra" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      AdjustmentBox[
+      "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+       BoxBaselineShift -> -0.1]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "braket" -> TagBox[
+    RowBox[{"\[LeftAngleBracket]", 
+      AdjustmentBox[
+       RowBox[{
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs, 
+          BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs, 
+          BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0.], 
+      "\[RightAngleBracket]"}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "ketd" -> TagBox[
+    SubscriptBox[
+     RowBox[{
+       AdjustmentBox[
+       "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0}, {0, 0}}, 
+        BoxBaselineShift -> -0.1], 
+       AdjustmentBox[
+        TagBox[
+        "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+         BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> "KetWrapper"], "ketu" -> 
+  TagBox[
+    SuperscriptBox[
+     RowBox[{
+       AdjustmentBox[
+       "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0}, {0, 0}}, 
+        BoxBaselineShift -> -0.1], 
+       AdjustmentBox[
+        TagBox[
+        "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+         BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> "KetWrapper"], "ketdu" -> 
+  TagBox[
+    SubsuperscriptBox[
+     RowBox[{
+       AdjustmentBox[
+       "\[VerticalSeparator]", BoxMargins -> {{-0.2, 0}, {0, 0}}, 
+        BoxBaselineShift -> -0.1], 
+       AdjustmentBox[
+        TagBox[
+        "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+         BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Ket, BaseStyle -> "KetWrapper"], "dbra" -> 
+  TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        AdjustmentBox[
+        "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+         BoxBaselineShift -> -0.1]}]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "ubra" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        AdjustmentBox[
+        "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+         BoxBaselineShift -> -0.1]}]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "dubra" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        AdjustmentBox[
+        "\[VerticalSeparator]", BoxMargins -> {{0, -0.2}, {0, 0}}, 
+         BoxBaselineShift -> -0.1]}]}], QuantumAlgebra`QuantumAlgebra`Bra, 
+    BaseStyle -> "BraWrapper"], "braketd" -> TagBox[
+    SubscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        RowBox[{
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "braketu" -> TagBox[
+    SuperscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        RowBox[{
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "braketdu" -> TagBox[
+    SubsuperscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+       AdjustmentBox[
+        RowBox[{
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"], "\[VerticalSeparator]", 
+          TagBox[
+          "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+            BaseStyle -> "BraKetArg"]}], BoxBaselineShift -> 0], 
+       "\[RightAngleBracket]"}], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+     TagBox[
+      AdjustmentBox[
+       TagBox[
+       "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`KetArgs, 
+        BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+      QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dbraket" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         RowBox[{
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"], "\[VerticalSeparator]", 
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"]}], BoxBaselineShift -> 0], 
+        "\[RightAngleBracket]"}]}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "ubraket" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         RowBox[{
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"], "\[VerticalSeparator]", 
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"]}], BoxBaselineShift -> 0], 
+        "\[RightAngleBracket]"}]}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "dubraket" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      RowBox[{"\[LeftAngleBracket]", 
+        AdjustmentBox[
+         RowBox[{
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"], "\[VerticalSeparator]", 
+           TagBox[
+           "\[SelectionPlaceholder]", 
+            QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+            "BraKetArg"]}], BoxBaselineShift -> 0], 
+        "\[RightAngleBracket]"}]}], QuantumAlgebra`QuantumAlgebra`Braket, 
+    BaseStyle -> "BraKetWrapper"], "dbraketd" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dbraketu" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "ubraketd" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "ubraketu" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dbraketdu" -> TagBox[
+    RowBox[{
+      SubscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubsuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "ubraketdu" -> TagBox[
+    RowBox[{
+      SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubsuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dubraketd" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          TagStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dubraketu" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          TagStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0], "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "dubraketdu" -> TagBox[
+    RowBox[{
+      SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "LIndex"]], 
+      SubsuperscriptBox[
+       RowBox[{"\[LeftAngleBracket]", 
+         AdjustmentBox[
+          RowBox[{
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"], "\[VerticalSeparator]", 
+            TagBox[
+            "\[SelectionPlaceholder]", 
+             QuantumAlgebra`QuantumAlgebra`BraKetArgs, BaseStyle -> 
+             "BraKetArg"]}], BoxBaselineShift -> 0.], 
+         "\[RightAngleBracket]"}], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"], 
+       TagBox[
+        AdjustmentBox[
+         TagBox[
+         "\[SelectionPlaceholder]", QuantumAlgebra`QuantumAlgebra`BraArgs, 
+          BaseStyle -> "BraKetArg"], BoxBaselineShift -> 0.], 
+        QuantumAlgebra`QuantumAlgebra`UDScript, BaseStyle -> "RIndex"]]}], 
+    QuantumAlgebra`QuantumAlgebra`Braket, BaseStyle -> "BraKetWrapper"], 
+  "com" -> SubscriptBox[
+    RowBox[{"[", 
+      RowBox[{"\[SelectionPlaceholder]", ",", "\[SelectionPlaceholder]"}], 
+      "]"}], "-"], "op" -> OverscriptBox["\[SelectionPlaceholder]", "^"], 
+  "opd" -> SubscriptBox[
+    OverscriptBox["\[SelectionPlaceholder]", "^"], "\[SelectionPlaceholder]"],
+   "opu" -> TagBox[
+    SuperscriptBox[
+     OverscriptBox["\[SelectionPlaceholder]", "^"], 
+     "\[SelectionPlaceholder]"], 
+    QuantumAlgebra`QuantumAlgebra`Private`superscript], "opdu" -> TagBox[
+    SubsuperscriptBox[
+     OverscriptBox["\[SelectionPlaceholder]", "^"], "\[SelectionPlaceholder]",
+      "\[SelectionPlaceholder]"], 
+    QuantumAlgebra`QuantumAlgebra`Private`superscript], "hop" -> 
+  SuperscriptBox[
+    OverscriptBox["\[SelectionPlaceholder]", "^"], "\[Dagger]"]},
+Magnification->1.,
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "QAStyles.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell["Bra Ket Styles", "Section"], 
+      Cell[
+      " The cells below define certain styles needed for defining Bras&Kets. \
+These styles serve to give the correct structural properties to Bras & Kets ",
+        "Text"], 
+      Cell[
+       StyleData["BraKetArg"], SpanMinSize -> Automatic, StyleMenuListing -> 
+       None, AdjustmentBoxOptions -> {BoxMargins -> {{0, 0}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> True, Selectable -> True}], 
+      Cell[
+       StyleData["BraWrapper"], 
+       AutoStyleOptions -> {"HighlightSyntaxErrors" -> False}, 
+       ScriptBaselineShifts -> {0.6, 0.9}, SpanMinSize -> 1.5, 
+       StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0.2, -0.13}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["KetWrapper"], 
+       AutoStyleOptions -> {"HighlightSyntaxErrors" -> False}, 
+       ScriptBaselineShifts -> {0.6, 0.9}, SpanMinSize -> 1.5, 
+       StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{-0.1, 0.2}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["BraKetWrapper"], ScriptBaselineShifts -> {0.6, 0.9}, 
+       SpanMinSize -> 1.5, StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0.25, 0.25}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["RIndex"], StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{-0.16, 0}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["LIndex"], StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0, -0.1}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}]}, Closed]]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (32-bit) (January 25, 2013)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "b:3.0"->{
+  Cell[929, 36, 583, 12, 55, "Text",
+   CellTags->"b:3.0"],
+  Cell[1537, 52, 289, 6, 41, "Input",
+   CellTags->"b:3.0"],
+  Cell[1829, 60, 255, 5, 41, "Output",
+   CellTags->"b:3.0"],
+  Cell[2864, 96, 461, 10, 77, "Text",
+   CellTags->"b:3.0"],
+  Cell[3350, 110, 993, 27, 45, "Input",
+   CellTags->"b:3.0"],
+  Cell[4346, 139, 2224, 69, 111, "Output",
+   CellTags->"b:3.0"]},
+ "b:3.1"->{
+  Cell[19843, 621, 768, 13, 121, "Text",
+   CellTags->"b:3.1"],
+  Cell[20636, 638, 844, 22, 46, "Input",
+   CellTags->"b:3.1"],
+  Cell[21483, 662, 771, 22, 46, "Output",
+   CellTags->"b:3.1"],
+  Cell[22291, 689, 2520, 67, 46, "Input",
+   CellTags->"b:3.1"],
+  Cell[24814, 758, 2310, 65, 46, "Output",
+   CellTags->"b:3.1"],
+  Cell[27139, 826, 464, 8, 33, "Text",
+   CellTags->"b:3.1"],
+  Cell[29546, 903, 625, 11, 55, "Text",
+   CellTags->"b:3.1"],
+  Cell[30196, 918, 1623, 41, 46, "Input",
+   CellTags->"b:3.1"],
+  Cell[31822, 961, 10198, 296, 120, "Output",
+   CellTags->"b:3.1"],
+  Cell[42035, 1260, 506, 9, 55, "Text",
+   CellTags->"b:3.1"],
+  Cell[42566, 1273, 1522, 41, 46, "Input",
+   CellTags->"b:3.1"],
+  Cell[44091, 1316, 10134, 295, 120, "Output",
+   CellTags->"b:3.1"]},
+ "qa:HC.0"->{
+  Cell[567, 22, 62, 1, 99, "Section",
+   CellTags->"qa:HC.0"]},
+ "qa:HC.1"->{
+  Cell[839, 33, 87, 1, 60, "Subsection",
+   CellTags->"qa:HC.1"]},
+ "qa:HC.2"->{
+  Cell[9584, 305, 81, 1, 60, "Subsection",
+   CellTags->"qa:HC.2"]},
+ "qa:HC.3"->{
+  Cell[19757, 618, 83, 1, 60, "Subsection",
+   CellTags->"qa:HC.3"]},
+ "qa:HC.4"->{
+  Cell[54620, 1630, 84, 1, 60, "Subsection",
+   CellTags->"qa:HC.4"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"b:3.0", 94998, 2667},
+ {"b:3.1", 95384, 2680},
+ {"qa:HC.0", 96181, 2705},
+ {"qa:HC.1", 96259, 2708},
+ {"qa:HC.2", 96340, 2711},
+ {"qa:HC.3", 96423, 2714},
+ {"qa:HC.4", 96507, 2717}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 62, 1, 99, "Section",
+ CellTags->"qa:HC.0"],
+Cell[632, 25, 101, 1, 33, "Text"],
+Cell[736, 28, 78, 1, 50, "InputOnly"],
+Cell[CellGroupData[{
+Cell[839, 33, 87, 1, 60, "Subsection",
+ CellTags->"qa:HC.1"],
+Cell[929, 36, 583, 12, 55, "Text",
+ CellTags->"b:3.0"],
+Cell[CellGroupData[{
+Cell[1537, 52, 289, 6, 41, "Input",
+ CellTags->"b:3.0"],
+Cell[1829, 60, 255, 5, 41, "Output",
+ CellTags->"b:3.0"]
+}, Open  ]],
+Cell[2099, 68, 149, 3, 33, "Text"],
+Cell[CellGroupData[{
+Cell[2273, 75, 299, 8, 43, "Input"],
+Cell[2575, 85, 274, 8, 43, "Output"]
+}, Open  ]],
+Cell[2864, 96, 461, 10, 77, "Text",
+ CellTags->"b:3.0"],
+Cell[CellGroupData[{
+Cell[3350, 110, 993, 27, 45, "Input",
+ CellTags->"b:3.0"],
+Cell[4346, 139, 2224, 69, 111, "Output",
+ CellTags->"b:3.0"]
+}, Open  ]],
+Cell[6585, 211, 439, 8, 77, "Text"],
+Cell[CellGroupData[{
+Cell[7049, 223, 521, 15, 43, "Input"],
+Cell[7573, 240, 415, 11, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8025, 256, 725, 19, 45, "Input"],
+Cell[8753, 277, 782, 22, 45, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9584, 305, 81, 1, 60, "Subsection",
+ CellTags->"qa:HC.2"],
+Cell[9668, 308, 337, 6, 77, "Text"],
+Cell[CellGroupData[{
+Cell[10030, 318, 1113, 32, 46, "Input"],
+Cell[11146, 352, 976, 28, 44, "Output"]
+}, Open  ]],
+Cell[12137, 383, 282, 6, 77, "Text"],
+Cell[CellGroupData[{
+Cell[12444, 393, 1017, 29, 46, "Input"],
+Cell[13464, 424, 859, 26, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14360, 455, 1290, 38, 47, "Input"],
+Cell[15653, 495, 1199, 37, 44, "Output"]
+}, Open  ]],
+Cell[16867, 535, 451, 8, 99, "Text"],
+Cell[CellGroupData[{
+Cell[17343, 547, 1250, 33, 45, "Input"],
+Cell[18596, 582, 1112, 30, 45, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19757, 618, 83, 1, 60, "Subsection",
+ CellTags->"qa:HC.3"],
+Cell[19843, 621, 768, 13, 121, "Text",
+ CellTags->"b:3.1"],
+Cell[CellGroupData[{
+Cell[20636, 638, 844, 22, 46, "Input",
+ CellTags->"b:3.1"],
+Cell[21483, 662, 771, 22, 46, "Output",
+ CellTags->"b:3.1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22291, 689, 2520, 67, 46, "Input",
+ CellTags->"b:3.1"],
+Cell[24814, 758, 2310, 65, 46, "Output",
+ CellTags->"b:3.1"]
+}, Open  ]],
+Cell[27139, 826, 464, 8, 33, "Text",
+ CellTags->"b:3.1"],
+Cell[CellGroupData[{
+Cell[27628, 838, 550, 16, 45, "Input"],
+Cell[28181, 856, 472, 12, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28690, 873, 370, 11, 45, "Input"],
+Cell[29063, 886, 468, 14, 46, "Output"]
+}, Open  ]],
+Cell[29546, 903, 625, 11, 55, "Text",
+ CellTags->"b:3.1"],
+Cell[CellGroupData[{
+Cell[30196, 918, 1623, 41, 46, "Input",
+ CellTags->"b:3.1"],
+Cell[31822, 961, 10198, 296, 120, "Output",
+ CellTags->"b:3.1"]
+}, Open  ]],
+Cell[42035, 1260, 506, 9, 55, "Text",
+ CellTags->"b:3.1"],
+Cell[CellGroupData[{
+Cell[42566, 1273, 1522, 41, 46, "Input",
+ CellTags->"b:3.1"],
+Cell[44091, 1316, 10134, 295, 120, "Output",
+ CellTags->"b:3.1"]
+}, Open  ]],
+Cell[54240, 1614, 106, 1, 33, "Text"],
+Cell[CellGroupData[{
+Cell[54371, 1619, 122, 2, 41, "Input"],
+Cell[54496, 1623, 75, 1, 41, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54620, 1630, 84, 1, 60, "Subsection",
+ CellTags->"qa:HC.4"],
+Cell[54707, 1633, 315, 6, 55, "Text"],
+Cell[CellGroupData[{
+Cell[55047, 1643, 348, 9, 45, "Input"],
+Cell[55398, 1654, 355, 9, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55790, 1668, 1093, 30, 46, "Input"],
+Cell[56886, 1700, 987, 29, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57910, 1734, 1177, 33, 46, "Input"],
+Cell[59090, 1769, 627, 19, 44, "Output"]
+}, Open  ]],
+Cell[59732, 1791, 307, 5, 99, "Text"],
+Cell[CellGroupData[{
+Cell[60064, 1800, 2081, 58, 44, "Input"],
+Cell[62148, 1860, 1931, 56, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64116, 1921, 2034, 60, 47, "Input"],
+Cell[66153, 1983, 1036, 32, 47, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

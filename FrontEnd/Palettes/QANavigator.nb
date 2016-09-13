@@ -1,0 +1,1112 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     44870,       1103]
+NotebookOptionsPosition[     38659,        942]
+NotebookOutlinePosition[     40850,        996]
+CellTagsIndexPosition[     40807,        993]
+WindowTitle->None
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[ButtonBox["General Information",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "QuantumAlgebra 2.0 .nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:GI.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["About Quantum Algebra",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "QuantumAlgebra 2.0 .nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:GI.1"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["New in Version 2.0",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "QuantumAlgebra 2.0 .nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:GI.2"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Contact Information",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "QuantumAlgebra 2.0 .nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:GI.3"}]], "Subsubsection",
+ CellChangeTimes->{3.4447741025968*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Installation",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:I.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["Installation Directories",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:I.1"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Loading the Package",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:I.2"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Using the Palettes",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:I.3"}]], "Subsubsection",
+ CellChangeTimes->{{3.4447741390838003`*^9, 3.4447741590738*^9}, {
+  3.594227917124694*^9, 3.5942279186378965`*^9}}],
+
+Cell[TextData[ButtonBox["Requesting Information",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:I.4"}]], "Subsubsection",
+ CellChangeTimes->{{3.4447736435308*^9, 3.4447736482648*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Dirac Notation",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Dirac Notation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:DN.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.444594262918*^9, 3.444594269297*^9}, {
+  3.4451149121875377`*^9, 3.4451149168595376`*^9}}],
+
+Cell[TextData[ButtonBox["Operators",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Dirac Notation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:DN.1"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}}],
+
+Cell[TextData[ButtonBox["Bras, Kets and Brakets",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Dirac Notation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:DN.2"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Internal Representation",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Dirac Notation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:DN.3"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595175124*^9, 3.4445951831689997`*^9}, 
+   3.4451149245205374`*^9}],
+
+Cell[TextData[ButtonBox["Batch Files",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Dirac Notation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:DN.4"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595187788*^9, 3.4445951907539997`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Non Commutative Algebra",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Non Commutative Algebra.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:NCA.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["Quantum Products",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Non Commutative Algebra.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:NCA.1"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+  3.4445952872130003`*^9, 3.4445952910699997`*^9}}],
+
+Cell[TextData[ButtonBox["Linear Properties",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Non Commutative Algebra.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:NCA.2"}]], "Subsubsection",
+ CellChangeTimes->{{3.4445951618120003`*^9, 3.444595170421*^9}, {
+  3.444595297703*^9, 3.444595302125*^9}}],
+
+Cell[TextData[ButtonBox["Special Operators",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Non Commutative Algebra.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:NCA.3"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595175124*^9, 3.4445951831689997`*^9}, {
+  3.444595316751*^9, 3.444595320832*^9}}],
+
+Cell[TextData[ButtonBox["Bad Products",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Non Commutative Algebra.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:NCA.4"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595187788*^9, 3.4445951907539997`*^9}, {
+  3.444595336014*^9, 3.444595360891*^9}}],
+
+Cell[TextData[ButtonBox["Power of Operators",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Non Commutative Algebra.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:NCA.5"}]], "Subsubsection"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Tensor Direct Product",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Tensor Direct Product.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:TDP.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["Composite Quantum Objects",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Tensor Direct Product.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:TDP.1"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Quantum Product of Tensors",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Tensor Direct Product.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:TDP.2"}]], "Subsubsection",
+ CellChangeTimes->{3.4451151347525377`*^9}],
+
+Cell[TextData[ButtonBox["Short Tensor Notation",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Tensor Direct Product.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:TDP.3"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Automatic Tensor Generation",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Tensor Direct Product.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:TDP.4"}]], "Subsubsection"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Hermitian Conjugation",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Hermitian Conjugation.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:HC.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["Conjugation of Operators: Adjoint Operators",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Hermitian Conjugation.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:HC.1"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Conjugation of Bras, Kets and Brakets ",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Hermitian Conjugation.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:HC.2"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Conjugation of More Complex Expressions",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Hermitian Conjugation.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:HC.3"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Conjugation of Composite Quantum Objects",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Hermitian Conjugation.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:HC.4"}]], "Subsubsection"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Commutators",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Commutators.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:C.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["Basic Properties",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Commutators.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:C.1"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Expanding and Contracting Commutators",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Commutators.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:C.2"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Defining Commutation Relations",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Commutators.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:C.3"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Sorting the Products of Operators",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Commutators.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:C.4"}]], "Subsubsection"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Braketing Rules",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Braketing Rules.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:BR.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["Braketing in Single State Spaces",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Braketing Rules.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:BR.1"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Products of Outer Products",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Braketing Rules.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:BR.2"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Braketing in Composite State Spaces",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Braketing Rules.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:BR.3"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Outer Products Revisited",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Braketing Rules.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:BR.4"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Braketing Rules for the Short Tensor Notation",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Braketing Rules.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:BR.5"}]], "Subsubsection"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Setting New Definitions",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting New Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:7.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.4445944026280003`*^9, 3.4445944091949997`*^9}, {
+  3.445168605701*^9, 3.445168620523*^9}, {3.4451693492860003`*^9, 
+  3.445169385512*^9}, {3.445170620571*^9, 3.44517064096*^9}, {
+  3.4451707374890003`*^9, 3.445170742458*^9}}],
+
+Cell[TextData[ButtonBox["Inner Products in Single State Spaces",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting New Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:7.1"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+  3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+  3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+  3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+  3.4445962303529997`*^9}, {3.445167924006*^9, 3.445167944558*^9}, {
+  3.4451680895109997`*^9, 3.445168092605*^9}, {3.445169487131*^9, 
+  3.445169522483*^9}, {3.445170446573*^9, 3.445170449413*^9}, {
+  3.445170527191*^9, 3.445170535446*^9}, {3.445255189718*^9, 
+  3.445255194579*^9}, {3.4452552410880003`*^9, 3.445255256777*^9}, {
+  3.445255297204*^9, 3.4452553254309998`*^9}}],
+
+Cell[TextData[ButtonBox["Operators in Single State Systems",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting New Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:7.2"}]], "Subsubsection",
+ CellChangeTimes->{{3.4445951618120003`*^9, 3.444595170421*^9}, {
+   3.444595297703*^9, 3.444595302125*^9}, {3.444595896209*^9, 
+   3.44459590583*^9}, {3.444596003793*^9, 3.44459601966*^9}, {
+   3.4445962343719997`*^9, 3.444596250488*^9}, 3.44466847605*^9, {
+   3.445167928008*^9, 3.445167950593*^9}, {3.445168096458*^9, 
+   3.4451680994379997`*^9}, 3.445169491962*^9, {3.4451704720369997`*^9, 
+   3.445170473834*^9}, {3.4451705183*^9, 3.445170523799*^9}, {
+   3.4452551987650003`*^9, 3.4452552118120003`*^9}, {3.4452552448450003`*^9, 
+   3.4452552610629997`*^9}, {3.4452553300299997`*^9, 3.445255334303*^9}}],
+
+Cell[TextData[{
+ ButtonBox["Inner Products",
+  BaseStyle->"Subsubsection",
+  ButtonData->{
+    FrontEnd`FileName[{
+      ParentDirectory[
+       ParentDirectory[]], "Documentation", "English"}, 
+     "Setting New Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+    "qa:7.1"}],
+ ButtonBox[" in Composite State Spaces",
+  BaseStyle->"Subsubsection",
+  ButtonData->{
+    FrontEnd`FileName[{
+      ParentDirectory[
+       ParentDirectory[]], "Documentation", "English"}, 
+     "Setting New Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+    "qa:7.3"}]
+}], "Subsubsection",
+ CellChangeTimes->{{3.4451679333789997`*^9, 3.445167954745*^9}, {
+  3.445168110336*^9, 3.445168113325*^9}, {3.445169497598*^9, 
+  3.445169501035*^9}, {3.4451704604890003`*^9, 3.445170463774*^9}, {
+  3.445170546631*^9, 3.445170548883*^9}, {3.4452553393450003`*^9, 
+  3.445255344954*^9}}],
+
+Cell[TextData[ButtonBox["Operators in Composite State Spaces",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting New Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:7.4"}]], "Subsubsection",
+ CellChangeTimes->{{3.445167937113*^9, 3.445167937567*^9}, {3.445168121513*^9,
+   3.445168128152*^9}, {3.4451694814300003`*^9, 3.445169506602*^9}, {
+  3.4451705516809998`*^9, 3.445170553137*^9}, {3.4452553476949997`*^9, 
+  3.445255355177*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Setting Several Definitions",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting Several Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:SSD.0"}]], "Section",
+ ShowGroupOpener->True],
+
+Cell[TextData[ButtonBox["QASet and QAClear",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting Several Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:SSD.1"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Defining Bras and Kets",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting Several Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:SSD.2"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Defining Operators ",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting Several Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:SSD.3"}]], "Subsubsection"],
+
+Cell[TextData[ButtonBox["Defining Commutators",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Setting Several Definitions.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:SSD.4"}]], "Subsubsection"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Operator Representation",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Operator Representations.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:OR.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.444594428722*^9, 3.444594434505*^9}, 
+   3.444929831895549*^9}],
+
+Cell[TextData[ButtonBox["Basis Vectors",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+  3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+  3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+  3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+  3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}}],
+
+Cell[TextData[ButtonBox["Gram\[Dash]Schmidt Procedure",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.4445951618120003`*^9, 3.444595170421*^9}, {
+  3.444595297703*^9, 3.444595302125*^9}, {3.444595896209*^9, 
+  3.44459590583*^9}, {3.444596003793*^9, 3.44459601966*^9}, {
+  3.4445962343719997`*^9, 3.444596250488*^9}, {3.4445964738970003`*^9, 
+  3.44459647859*^9}, {3.444975822945939*^9, 3.444975829558939*^9}, {
+  3.444975873871939*^9, 3.4449758907329392`*^9}}],
+
+Cell["Outer Representation in Orthonormal Basis", "Subsubsection",
+ CellChangeTimes->{{3.444595175124*^9, 3.4445951831689997`*^9}, {
+   3.444595316751*^9, 3.444595320832*^9}, {3.4445959253129997`*^9, 
+   3.444595933742*^9}, {3.444596071716*^9, 3.444596075637*^9}, {
+   3.444596152061*^9, 3.444596153488*^9}, {3.444596266248*^9, 
+   3.4445962725299997`*^9}, 3.444596514057*^9, {3.444975794987939*^9, 
+   3.444975802006939*^9}, 3.444975857459939*^9}],
+
+Cell["Outer Representation in Non Orthonormal Basis", "Subsubsection",
+ CellChangeTimes->{{3.444595175124*^9, 3.4445951831689997`*^9}, {
+   3.444595316751*^9, 3.444595320832*^9}, {3.4445959253129997`*^9, 
+   3.444595933742*^9}, {3.444596071716*^9, 3.444596075637*^9}, {
+   3.444596152061*^9, 3.444596153488*^9}, {3.444596266248*^9, 
+   3.4445962725299997`*^9}, 3.444596514057*^9, {3.4449758073409395`*^9, 
+   3.4449758165809393`*^9}, 3.4449758532459393`*^9}],
+
+Cell[TextData[ButtonBox["Matrix Representation in Orthonormal Basis",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.4445951618120003`*^9, 3.444595170421*^9}, {
+  3.444595297703*^9, 3.444595302125*^9}, {3.444595896209*^9, 
+  3.44459590583*^9}, {3.444596003793*^9, 3.44459601966*^9}, {
+  3.4445962343719997`*^9, 3.444596250488*^9}, {3.4445964738970003`*^9, 
+  3.44459647859*^9}, {3.444975822945939*^9, 3.444975829558939*^9}}],
+
+Cell[TextData[ButtonBox["Matrix Representation in Non Orthonormal Basis",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.4445951618120003`*^9, 3.444595170421*^9}, {
+  3.444595297703*^9, 3.444595302125*^9}, {3.444595896209*^9, 
+  3.44459590583*^9}, {3.444596003793*^9, 3.44459601966*^9}, {
+  3.4445962343719997`*^9, 3.444596250488*^9}, {3.4445964738970003`*^9, 
+  3.44459647859*^9}, {3.444975822945939*^9, 3.4449758405679393`*^9}}],
+
+Cell[TextData[ButtonBox["Trace and Partial Trace",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595187788*^9, 3.4445951907539997`*^9}, {
+  3.444595336014*^9, 3.444595360891*^9}, {3.4445959525959997`*^9, 
+  3.44459596231*^9}, {3.4445960861730003`*^9, 3.4445961000179996`*^9}, {
+  3.444596276138*^9, 3.444596286477*^9}, {3.4445965212609997`*^9, 
+  3.4445966022980003`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Exponential and Power \nOperators",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Exponential Operators.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:2.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.444594512295*^9, 3.444594518368*^9}, 
+   3.4449298374555492`*^9, {3.444976086737939*^9, 3.4449760941169395`*^9}, {
+   3.444976335576939*^9, 3.444976342306939*^9}}],
+
+Cell[TextData[ButtonBox["Outer Representation",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+  3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+  3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+  3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+  3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+  3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+  3.444596767847*^9}, {3.4445969208199997`*^9, 3.444596926174*^9}, {
+  3.444597273149*^9, 3.4445972777349997`*^9}, {3.444983075793*^9, 
+  3.444983089391*^9}}],
+
+Cell[TextData[ButtonBox["Matrix Representation",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+  3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+  3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+  3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+  3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+  3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+  3.444596767847*^9}, {3.4445969208199997`*^9, 3.444596926174*^9}, {
+  3.444597273149*^9, 3.4445972777349997`*^9}, {3.444983075793*^9, 
+  3.444983101936*^9}}],
+
+Cell["BCHRelation", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Series Expansion",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Series Expansion.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.44459454388*^9, 3.4445945487*^9}}],
+
+Cell[TextData[ButtonBox["Simple Operator Functions",
+ BaseStyle->"Subsubsection",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "2 Installation.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+  3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+  3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+  3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+  3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+  3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+  3.444596767847*^9}, {3.4445969208199997`*^9, 3.444596926174*^9}, {
+  3.444597273149*^9, 3.4445972777349997`*^9}, {3.444597364869*^9, 
+  3.444597365808*^9}, {3.444597638705*^9, 3.4445976517390003`*^9}}],
+
+Cell["\<\
+Baker\[Dash]Campbell\[Dash]Hausdorff Formula\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+  3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+  3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+  3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+  3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+  3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+  3.444596767847*^9}, {3.4445969208199997`*^9, 3.444596926174*^9}, {
+  3.444597273149*^9, 3.4445972777349997`*^9}, {3.444597364869*^9, 
+  3.444597365808*^9}, {3.444597638705*^9, 3.4445976517390003`*^9}, {
+  3.444597969315*^9, 3.444597986391*^9}}],
+
+Cell["Hadamard Lemma", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, {3.444597469656*^9, 3.4445974720179996`*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Example I: Coherent States of the Harmonic \
+Oscillator",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "Coherent States.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.44459454388*^9, 3.4445945487*^9}}],
+
+Cell["The harmonic oscillator in quantum mechanics", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445969208199997`*^9, 3.444596926174*^9}, {
+   3.444597273149*^9, 3.4445972777349997`*^9}, {3.444597364869*^9, 
+   3.444597365808*^9}, {3.444597638705*^9, 3.4445976517390003`*^9}, 
+   3.444597777685*^9}],
+
+Cell["Definition of coherent states", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, 3.4445977862060003`*^9}],
+
+Cell["Coherent states : minimun uncertainty states", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, {3.444597469656*^9, 3.4445974720179996`*^9}, 
+   3.444597792343*^9}],
+
+Cell["The displacement operator", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, {3.444597469656*^9, 3.4445974720179996`*^9}, {
+   3.444597792343*^9, 3.444597804001*^9}}],
+
+Cell["Evolution of initial coherent state", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, {3.444597469656*^9, 3.4445974720179996`*^9}, {
+   3.444597792343*^9, 3.444597814743*^9}}],
+
+Cell["Wave packet associated with a coherent state", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, {3.444597469656*^9, 3.4445974720179996`*^9}, {
+   3.444597792343*^9, 3.4445978322019997`*^9}}],
+
+Cell["Cat States with One and Two Mode Oscillators", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, {3.444597469656*^9, 3.4445974720179996`*^9}, {
+   3.444597792343*^9, 3.444597858948*^9}}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Example II: Elements of Quantum Computation",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, 
+    "Quantum Computation.nb", CharacterEncoding -> "WindowsANSI"], 
+   "qa:2.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.44459454388*^9, 3.4445945487*^9}, {
+  3.4455929918970003`*^9, 3.445593002593*^9}, {3.44559334415*^9, 
+  3.44559335402*^9}}],
+
+Cell["Quantum Bits", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445969208199997`*^9, 3.444596926174*^9}, {
+   3.444597273149*^9, 3.4445972777349997`*^9}, {3.444597364869*^9, 
+   3.444597365808*^9}, {3.444597638705*^9, 3.4445976517390003`*^9}, 
+   3.444597777685*^9, {3.444597890965*^9, 3.444597893586*^9}, {
+   3.444598024125*^9, 3.444598026756*^9}}],
+
+Cell["Quantum Gates", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445969208199997`*^9, 3.444596926174*^9}, {
+   3.444597273149*^9, 3.4445972777349997`*^9}, {3.444597364869*^9, 
+   3.444597365808*^9}, {3.444597638705*^9, 3.4445976517390003`*^9}, 
+   3.444597777685*^9, {3.444597890965*^9, 3.444597893586*^9}, {
+   3.444598080883*^9, 3.444598092171*^9}}],
+
+Cell["Teleporting a Qubit", "Subsubsection",
+ CellChangeTimes->{{3.444595153883*^9, 3.444595156638*^9}, {
+   3.4445952872130003`*^9, 3.4445952910699997`*^9}, {3.444595869884*^9, 
+   3.444595878949*^9}, {3.444595991321*^9, 3.4445959943129997`*^9}, {
+   3.444596147576*^9, 3.444596148935*^9}, {3.444596224652*^9, 
+   3.4445962303529997`*^9}, {3.444596456718*^9, 3.444596460991*^9}, {
+   3.4445966786140003`*^9, 3.4445966832469997`*^9}, {3.444596764582*^9, 
+   3.444596767847*^9}, {3.4445968009300003`*^9, 3.444596803994*^9}, {
+   3.444596990057*^9, 3.444596998149*^9}, {3.444597057398*^9, 
+   3.44459708579*^9}, 3.4445972861730003`*^9, {3.444597337958*^9, 
+   3.444597345698*^9}, 3.4445977862060003`*^9, {3.444598097282*^9, 
+   3.4445981026619997`*^9}}]
+}, Closed]],
+
+Cell[TextData[ButtonBox["References",
+ BaseStyle->"Section",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[
+      ParentDirectory[]], "Documentation", "English"}, "References.nb", 
+    CharacterEncoding -> "WindowsANSI"], "qa:2.0"}]], "Section",
+ ShowGroupOpener->True,
+ CellChangeTimes->{{3.44459462663*^9, 3.444594629939*^9}}]
+},
+WindowSize->{239, 588},
+WindowMargins->{{0, Automatic}, {Automatic, -1}},
+WindowElements->"VerticalScrollBar",
+WindowFrameElements->"CloseBox",
+WindowTitle->None,
+DockedCells->Cell[
+  BoxData[
+   StyleBox[
+   "\!\(\*FrameBox[\"\[CapitalPsi]\",\nStripOnInput->False]\)   \
+QuantumAlgebra Navigator", FontFamily -> "Helvetica", FontWeight -> "Bold", 
+    FontColor -> GrayLevel[1]]], "DockedCell", Background -> 
+  RGBColor[0, 0.25098, 0.501961]],
+ShowCellTags->True,
+Background->RGBColor[0.968627, 0.94902, 1],
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData["Section"], CellMargins -> {{27, Inherited}, {8, 14}}, 
+    CellFrameColor -> GrayLevel[0.752941], FontFamily -> "Helvetica", 
+    FontSize -> 12, FontWeight -> "Bold", FontColor -> 
+    RGBColor[0., 0.08627450980392157, 0.17647058823529413`], 
+    ButtonBoxOptions -> {
+     Active -> True, Appearance -> {Automatic, None}, ButtonExpandable -> 
+      False, ButtonFunction :> (FrontEndExecute[{
+         NotebookLocate[#2]}]& ), Evaluator -> None, ImageSize -> Full, 
+      Method -> "Queued"}], 
+   Cell[
+    StyleData["Subsubsection"], CellDingbat -> "\[Wolf]", 
+    CellMargins -> {{48, 3}, {2, 2}}, FontFamily -> "Helvetica", FontSize -> 
+    11, FontWeight -> "Bold", FontSlant -> "Plain", FontTracking -> "Plain", 
+    FontVariations -> {
+     "Masked" -> False, "Outline" -> False, "Shadow" -> False, 
+      "StrikeThrough" -> False, "Underline" -> False}, FontColor -> 
+    RGBColor[0., 0.25098039215686274`, 0.], 
+    ButtonBoxOptions -> {
+     Active -> True, Appearance -> {Automatic, None}, ButtonExpandable -> 
+      False, ButtonFunction :> (FrontEndExecute[{
+         NotebookLocate[#2]}]& ), Evaluator -> None, ImageSize -> Full, 
+      Method -> "Queued"}]}, Visible -> False, FrontEndVersion -> 
+  "9.0 for Microsoft Windows (32-bit) (January 25, 2013)", StyleDefinitions -> 
+  "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[585, 23, 305, 8, 42, "Section"],
+Cell[893, 33, 295, 7, 70, "Subsubsection"],
+Cell[1191, 42, 292, 7, 70, "Subsubsection"],
+Cell[1486, 51, 333, 8, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1856, 64, 286, 7, 32, "Section"],
+Cell[2145, 73, 286, 6, 18, "Subsubsection"],
+Cell[2434, 81, 281, 6, 18, "Subsubsection"],
+Cell[2718, 89, 397, 8, 18, "Subsubsection"],
+Cell[3118, 99, 346, 7, 18, "Subsubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3501, 111, 404, 9, 42, "Section"],
+Cell[3908, 122, 334, 7, 70, "Subsubsection"],
+Cell[4245, 131, 287, 6, 70, "Subsubsection"],
+Cell[4535, 139, 381, 8, 70, "Subsubsection"],
+Cell[4919, 149, 341, 7, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5297, 161, 314, 8, 32, "Section"],
+Cell[5614, 171, 408, 9, 70, "Subsubsection"],
+Cell[6025, 182, 404, 9, 70, "Subsubsection"],
+Cell[6432, 193, 404, 9, 70, "Subsubsection"],
+Cell[6839, 204, 399, 9, 70, "Subsubsection"],
+Cell[7241, 215, 297, 7, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7575, 227, 310, 8, 32, "Section"],
+Cell[7888, 237, 302, 7, 70, "Subsubsection"],
+Cell[8193, 246, 347, 8, 70, "Subsubsection"],
+Cell[8543, 256, 298, 7, 70, "Subsubsection"],
+Cell[8844, 265, 304, 7, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[9185, 277, 309, 8, 32, "Section"],
+Cell[9497, 287, 319, 7, 70, "Subsubsection"],
+Cell[9819, 296, 314, 7, 70, "Subsubsection"],
+Cell[10136, 305, 315, 7, 70, "Subsubsection"],
+Cell[10454, 314, 316, 7, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[10807, 326, 284, 7, 32, "Section"],
+Cell[11094, 335, 277, 6, 70, "Subsubsection"],
+Cell[11374, 343, 298, 6, 70, "Subsubsection"],
+Cell[11675, 351, 291, 6, 70, "Subsubsection"],
+Cell[11969, 359, 294, 6, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[12300, 370, 293, 7, 32, "Section"],
+Cell[12596, 379, 298, 6, 70, "Subsubsection"],
+Cell[12897, 387, 292, 6, 70, "Subsubsection"],
+Cell[13192, 395, 301, 6, 70, "Subsubsection"],
+Cell[13496, 403, 290, 6, 70, "Subsubsection"],
+Cell[13789, 411, 311, 6, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14137, 422, 560, 12, 32, "Section"],
+Cell[14700, 436, 956, 17, 70, "Subsubsection"],
+Cell[15659, 455, 920, 16, 70, "Subsubsection"],
+Cell[16582, 473, 870, 22, 70, "Subsubsection"],
+Cell[17455, 497, 556, 11, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[18048, 513, 322, 8, 32, "Section"],
+Cell[18373, 523, 300, 7, 70, "Subsubsection"],
+Cell[18676, 532, 305, 7, 70, "Subsubsection"],
+Cell[18984, 541, 302, 7, 70, "Subsubsection"],
+Cell[19289, 550, 303, 7, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[19629, 562, 400, 10, 32, "Section"],
+Cell[20032, 574, 609, 11, 70, "Subsubsection"],
+Cell[20644, 587, 673, 12, 70, "Subsubsection"],
+Cell[21320, 601, 448, 6, 70, "Subsubsection"],
+Cell[21771, 609, 458, 6, 70, "Subsubsection"],
+Cell[22232, 617, 636, 11, 70, "Subsubsection"],
+Cell[22871, 630, 642, 11, 70, "Subsubsection"],
+Cell[23516, 643, 588, 11, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[24141, 659, 506, 11, 49, "Section"],
+Cell[24650, 672, 848, 15, 70, "Subsubsection"],
+Cell[25501, 689, 849, 15, 70, "Subsubsection"],
+Cell[26353, 706, 626, 9, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27016, 720, 351, 8, 32, "Section"],
+Cell[27370, 730, 898, 15, 70, "Subsubsection"],
+Cell[28271, 747, 729, 12, 70, "Subsubsection"],
+Cell[29003, 761, 718, 10, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[29758, 776, 389, 9, 49, "Section"],
+Cell[30150, 787, 709, 10, 70, "Subsubsection"],
+Cell[30862, 799, 712, 10, 70, "Subsubsection"],
+Cell[31577, 811, 771, 11, 70, "Subsubsection"],
+Cell[32351, 824, 773, 11, 70, "Subsubsection"],
+Cell[33127, 837, 783, 11, 70, "Subsubsection"],
+Cell[33913, 850, 797, 11, 70, "Subsubsection"],
+Cell[34713, 863, 792, 11, 70, "Subsubsection"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[35542, 879, 474, 11, 49, "Section"],
+Cell[36019, 892, 761, 11, 70, "Subsubsection"],
+Cell[36783, 905, 762, 11, 70, "Subsubsection"],
+Cell[37548, 918, 751, 11, 70, "Subsubsection"]
+}, Closed]],
+Cell[38314, 932, 341, 8, 32, "Section"]
+}
+]
+*)
+
+(* End of internal cache information *)

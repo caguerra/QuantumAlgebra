@@ -1,0 +1,314 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     12170,        305]
+NotebookOptionsPosition[     10209,        235]
+NotebookOutlinePosition[     11487,        280]
+CellTagsIndexPosition[     11339,        272]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ Cell[BoxData[
+  StyleBox[
+   FrameBox["\[CapitalPsi]",
+    StripOnInput->False], "Title"]]],
+ " ",
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"],
+ " 2.0"
+}], "Title",
+ CellChangeTimes->{{3.4447733669958*^9, 3.4447733742158003`*^9}, {
+   3.5063460828277903`*^9, 3.506346083254815*^9}, 3.5063461570250344`*^9, {
+   3.5063467085955825`*^9, 3.506346709054609*^9}, 3.594226361830289*^9},
+ CellTags->"qa:GI.0"],
+
+Cell["\<\
+A Mathematica Package to do 
+Quantum Calculations\
+\>", "Subtitle",
+ CellChangeTimes->{{3.4440412267966003`*^9, 3.4440412428716*^9}, {
+  3.4440414480836*^9, 3.4440414497536*^9}}],
+
+Cell[TextData[StyleBox["by C\[EAcute]sar Guerra\ncguerra@pucp.edu.pe\n\n",
+ FontWeight->"Bold"]], "Subtitle",
+ CellChangeTimes->{{3.4440388904695997`*^9, 3.4440389109666*^9}, {
+   3.4440391319146*^9, 3.4440391322916*^9}, {3.4440404718216*^9, 
+   3.4440404726636*^9}, 3.4440415073456*^9, 3.4440415609276*^9, {
+   3.4440450871656*^9, 3.4440450966216*^9}, {3.4440451539876003`*^9, 
+   3.4440451570306*^9}, {3.4440453681636*^9, 3.4440453695866003`*^9}, {
+   3.4440490472916*^9, 3.4440490496796*^9}, {3.444103952191*^9, 
+   3.444103986875*^9}},
+ FontSize->12],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "About ",
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"]
+}], "Subsection",
+ CellChangeTimes->{3.5942263523344107`*^9},
+ CellTags->"qa:GI.1"],
+
+Cell[TextData[{
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"],
+ " is a package to do symbolic quantum calculations using Dirac notation. The \
+package is written in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " language and it's fully functional provided that the standard ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " front\[Dash]end is available. Notations and definitions about bras, kets, \
+operators, commutators and direct products are implemented, together with \
+several commands to manipulate them. "
+}], "Text",
+ CellChangeTimes->{{3.4437743475723476`*^9, 3.443774353287348*^9}, {
+   3.4437743852483473`*^9, 3.4437744235973473`*^9}, {3.443774547160348*^9, 
+   3.4437746144153476`*^9}, 3.4437746636093473`*^9, {3.4437747207363477`*^9, 
+   3.4437748462463474`*^9}, {3.4437748768783474`*^9, 
+   3.4437749101093473`*^9}, {3.443774967891348*^9, 3.4437749708633475`*^9}, {
+   3.4437750324183474`*^9, 3.443775053787348*^9}, {3.4437751512813473`*^9, 
+   3.4437751961683474`*^9}, 3.443775227542348*^9, {3.4437753194793477`*^9, 
+   3.4437754527273474`*^9}, {3.4437755817123475`*^9, 
+   3.4437756002093477`*^9}, {3.4437757880533476`*^9, 
+   3.4437760231523476`*^9}, {3.4437760707963476`*^9, 3.4437761593873477`*^9}, 
+   3.4437788117653475`*^9, 3.443789870538*^9, 3.443791635981*^9, {
+   3.4440370949276*^9, 3.4440370954516*^9}, {3.472338354559043*^9, 
+   3.4723383670297565`*^9}, {3.5942103348268127`*^9, 3.594210341482193*^9}, {
+   3.594210454132636*^9, 3.594210478449027*^9}, 3.594226345532799*^9}],
+
+Cell[TextData[{
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"],
+ " 2.0 runs pretty well in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " 9.0, but it was not tested in previous versions of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". Also, there is not complete compatibility with notebooks written using \
+QuantumAlgebra 1.0 The main reason is that this new version uses its own \
+notation definitions, based on low-level structural constructs, rather than \
+the notation package of Jason Harris, on which Quantum Algebra 1.0 was based."
+}], "Text",
+ CellChangeTimes->{{3.4437743475723476`*^9, 3.443774353287348*^9}, {
+   3.4437743852483473`*^9, 3.4437744235973473`*^9}, {3.443774547160348*^9, 
+   3.4437746144153476`*^9}, 3.4437746636093473`*^9, {3.4437747207363477`*^9, 
+   3.4437748462463474`*^9}, {3.4437748768783474`*^9, 
+   3.4437749101093473`*^9}, {3.443774967891348*^9, 3.4437749708633475`*^9}, {
+   3.4437750324183474`*^9, 3.443775053787348*^9}, {3.4437751512813473`*^9, 
+   3.4437751961683474`*^9}, 3.443775227542348*^9, {3.4437753194793477`*^9, 
+   3.4437753287763476`*^9}, {3.4437783725843477`*^9, 3.443778535042348*^9}, {
+   3.4437785692013474`*^9, 3.4437786699953475`*^9}, {3.4437787127303476`*^9, 
+   3.4437787194413476`*^9}, {3.4437787700723476`*^9, 3.443778772167348*^9}, {
+   3.44378961113*^9, 3.443789615528*^9}, {3.443789753994*^9, 
+   3.4437897542720003`*^9}, {3.44378979985*^9, 3.4437898572130003`*^9}, 
+   3.44379012524*^9, {3.4437917156809998`*^9, 3.443791716013*^9}, {
+   3.472338390303087*^9, 3.4723383913361464`*^9}, {3.5063531759106627`*^9, 
+   3.506353176634704*^9}, {3.59422626327767*^9, 3.5942263423971934`*^9}, {
+   3.5942264121611676`*^9, 3.594226465600381*^9}, {3.6296556932868137`*^9, 
+   3.6296557093105173`*^9}}],
+
+Cell[TextData[{
+ "The package was used to do calculations in Quantum Optics and Quantum \
+Computing, and to prepare some educational materials of Quantum Mechanics. ",
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"],
+ " can do extensive calculations, like computing effective Hamiltonians in \
+ion\[Dash]atom interactions, solutions of master equations by means of \
+superoperator algebra, POVM measurements, mean\[Dash]fidelity calculations of \
+qubit registers tracing over large superpositions of quantum states."
+}], "Text",
+ CellChangeTimes->{{3.4437761664863477`*^9, 3.4437763607623477`*^9}, {
+   3.4437763934753475`*^9, 3.443776444535348*^9}, {3.4437767046983476`*^9, 
+   3.4437767050833473`*^9}, {3.4437767614393473`*^9, 
+   3.4437767906373477`*^9}, {3.4437769750263476`*^9, 3.443777118721348*^9}, {
+   3.4437771723363476`*^9, 3.4437771916103477`*^9}, 3.4437774507833476`*^9, {
+   3.443777708806348*^9, 3.443777979299348*^9}, {3.4437780130473475`*^9, 
+   3.4437781375413475`*^9}, {3.443778308193348*^9, 3.4437783146323476`*^9}, {
+   3.4437788450773478`*^9, 3.4437789165613475`*^9}, {3.4437792466123476`*^9, 
+   3.4437792496423473`*^9}, {3.4437792895843477`*^9, 
+   3.4437793098373475`*^9}, {3.4437896275030003`*^9, 3.443789646943*^9}, {
+   3.443789707082*^9, 3.443789718299*^9}, {3.443791743084*^9, 
+   3.443791759703*^9}, 3.444987191829*^9, {3.59422648213242*^9, 
+   3.5942265112882624`*^9}, {3.594226543588317*^9, 3.594226552452824*^9}, 
+   3.6296557591987567`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reading the Tutorial", "Subsection",
+ CellChangeTimes->{{3.445109111611538*^9, 3.4451091215305376`*^9}, 
+   3.4451096836755376`*^9}],
+
+Cell[TextData[{
+ StyleBox["QuantumAlgebra",
+  FontSlant->"Italic"],
+ " comes with a complete tutorial that you can follow using the Navigator \
+palette (see the Installation section). "
+}], "Text",
+ CellChangeTimes->{{3.445109624422538*^9, 3.445109649646538*^9}, {
+   3.4451097845625377`*^9, 3.4451099446605377`*^9}, {3.4451100246125374`*^9, 
+   3.4451100266295376`*^9}, {3.4451100642455378`*^9, 
+   3.4451100738055377`*^9}, {3.4451103731235375`*^9, 
+   3.4451103775965376`*^9}, {3.445110407894538*^9, 3.4451104524335375`*^9}, 
+   3.445110501920538*^9, {3.4451106366945376`*^9, 3.4451106372455378`*^9}, {
+   3.4451106968385377`*^9, 3.4451107234915376`*^9}, {3.4451107541335373`*^9, 
+   3.4451107613345375`*^9}, {3.4451107965565376`*^9, 
+   3.4451108016265373`*^9}, {3.445110883842538*^9, 3.4451108864495373`*^9}, {
+   3.4451109231995373`*^9, 3.4451109721865377`*^9}, {3.50635484309102*^9, 
+   3.5063548440950775`*^9}, {3.594226592220853*^9, 3.594226648723395*^9}}],
+
+Cell["\<\
+At the beggining of each section, the command to load QuantumAlgebra should \
+be run in a fresh kernel to avoid variable conflicts with earlier definitions \
+of your kernel session.\
+\>", "Text",
+ CellChangeTimes->{{3.445109624422538*^9, 3.445109649646538*^9}, {
+   3.4451097845625377`*^9, 3.4451099446605377`*^9}, {3.4451100246125374`*^9, 
+   3.4451100266295376`*^9}, {3.4451100642455378`*^9, 
+   3.4451100738055377`*^9}, {3.4451103731235375`*^9, 
+   3.4451103775965376`*^9}, {3.445110407894538*^9, 3.4451104524335375`*^9}, 
+   3.445110501920538*^9, {3.4451106366945376`*^9, 3.4451106372455378`*^9}, {
+   3.4451106968385377`*^9, 3.4451107234915376`*^9}, {3.4451107541335373`*^9, 
+   3.4451107613345375`*^9}, {3.4451107965565376`*^9, 
+   3.4451108016265373`*^9}, {3.445110883842538*^9, 3.4451108864495373`*^9}, {
+   3.4451109231995373`*^9, 3.4451109721865377`*^9}, {3.50635484309102*^9, 
+   3.5063548440950775`*^9}, {3.594226592220853*^9, 3.594226648723395*^9}, {
+   3.6296557955419855`*^9, 3.6296558052544603`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["New in Version 2.0", "Subsection",
+ CellTags->"qa:GI.2"],
+
+Cell["\<\
+\[Bullet] Notations implemented from low level structures.
+\[Bullet] Tensor direct product and properties.
+\[Bullet] Braketing in composite systems.
+\[Bullet] Operator representations and tracing.
+\[Bullet] New definitions for QASet and QAClear.
+\[Bullet] New commands QACommute, DoTensorProduct.\
+\>", "Text",
+ CellChangeTimes->{{3.4443027285699997`*^9, 3.444302803998*^9}, {
+  3.444302836223*^9, 3.444302851415*^9}, {3.444302890723*^9, 
+  3.444302957259*^9}, {3.4443030382320004`*^9, 3.444303097039*^9}, {
+  3.5942266897687426`*^9, 3.5942267232196665`*^9}, {3.629655810638048*^9, 
+  3.6296558144776173`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Contact Information", "Subsection",
+ CellTags->"qa:GI.3"],
+
+Cell["\<\
+C\[EAcute]sar Guerra
+cguerra@pucp.edu.pe
+(+511) 6262000 - anexo 4108
+
+Secci\[OAcute]n F\[IAcute]sica - Dpto. de Ciencias
+Pontificia Universidad Cat\[OAcute]lica del Per\[UAcute]
+Av. Universitaria 1801, San Miguel, Lima 32, Per\[UAcute]\
+\>", "Text",
+ CellChangeTimes->{{3.444302676267*^9, 3.444302719748*^9}, {3.444393098237*^9,
+    3.444393178849*^9}, 3.444987279975*^9, {3.444987310882*^9, 
+   3.444987358782*^9}, {3.5942268320888543`*^9, 3.5942268768064117`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{770, 945},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+DockedCells->Cell[
+  BoxData[
+   StyleBox[
+   "\!\(\*FrameBox[\"\[CapitalPsi]\",\nStripOnInput->False]\)   \
+QuantumAlgebra 2.0", FontFamily -> "Helvetica", FontWeight -> "Bold", 
+    FontColor -> GrayLevel[1]]], "DockedCell", Background -> 
+  RGBColor[0, 0.25098, 0.501961]],
+Magnification->1.,
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (March 5, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "QAStyles.nb"]]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (64-bit) (March 5, 2013)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "qa:GI.0"->{
+  Cell[567, 22, 426, 13, 91, "Title",
+   CellTags->"qa:GI.0"]},
+ "qa:GI.1"->{
+  Cell[1766, 57, 161, 6, 60, "Subsection",
+   CellTags->"qa:GI.1"]},
+ "qa:GI.2"->{
+  Cell[8917, 197, 62, 1, 60, "Subsection",
+   CellTags->"qa:GI.2"]},
+ "qa:GI.3"->{
+  Cell[9639, 217, 63, 1, 60, "Subsection",
+   CellTags->"qa:GI.3"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"qa:GI.0", 11003, 257},
+ {"qa:GI.1", 11081, 260},
+ {"qa:GI.2", 11164, 263},
+ {"qa:GI.3", 11247, 266}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 426, 13, 91, "Title",
+ CellTags->"qa:GI.0"],
+Cell[996, 37, 188, 5, 67, "Subtitle"],
+Cell[1187, 44, 554, 9, 95, "Subtitle"],
+Cell[CellGroupData[{
+Cell[1766, 57, 161, 6, 60, "Subsection",
+ CellTags->"qa:GI.1"],
+Cell[1930, 65, 1522, 27, 121, "Text"],
+Cell[3455, 94, 1773, 30, 121, "Text"],
+Cell[5231, 126, 1478, 23, 121, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6746, 154, 138, 2, 60, "Subsection"],
+Cell[6887, 158, 964, 16, 55, "Text"],
+Cell[7854, 176, 1026, 16, 55, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8917, 197, 62, 1, 60, "Subsection",
+ CellTags->"qa:GI.2"],
+Cell[8982, 200, 620, 12, 143, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9639, 217, 63, 1, 60, "Subsection",
+ CellTags->"qa:GI.3"],
+Cell[9705, 220, 476, 11, 165, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

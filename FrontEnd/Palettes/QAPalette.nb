@@ -1,0 +1,1848 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     68585,       1838]
+NotebookOptionsPosition[     66051,       1773]
+NotebookOutlinePosition[     68608,       1838]
+CellTagsIndexPosition[     68565,       1835]
+WindowFrame->Palette*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   FrameBox["\[CapitalPsi]",
+    StripOnInput->False], "   ", "QuantumAlgebra", " ", "2.0"}],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontColor->GrayLevel[1]]], NotebookDefault,
+ Background->RGBColor[0, 0.25098, 0.501961]],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[GridBox[{
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            OverscriptBox["\[SelectionPlaceholder]", "^"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder]]],
+             Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SubscriptBox[
+             OverscriptBox["\[SelectionPlaceholder]", "^"], 
+             "\[SelectionPlaceholder]"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], \
+{\[SelectionPlaceholder]}, {}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SuperscriptBox[
+              OverscriptBox["\[SelectionPlaceholder]", "^"], 
+              "\[SelectionPlaceholder]"],
+             QuantumAlgebra`QuantumAlgebra`Private`superscript],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], \
+{}, {\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SubsuperscriptBox[
+              OverscriptBox["\[SelectionPlaceholder]", "^"], 
+              "\[SelectionPlaceholder]", "\[SelectionPlaceholder]"],
+             QuantumAlgebra`QuantumAlgebra`Private`superscript],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], \
+{\[SelectionPlaceholder]}, {\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SuperscriptBox[
+             OverscriptBox["\[SelectionPlaceholder]", "^"], "\[Dagger]"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], 
+              "H"]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SubsuperscriptBox[
+             OverscriptBox["\[SelectionPlaceholder]", "^"], 
+             "\[SelectionPlaceholder]", "\[Dagger]"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], 
+              "H", {\[SelectionPlaceholder]}, {}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SuperscriptBox[
+             OverscriptBox["\[SelectionPlaceholder]", "^"], 
+             RowBox[{"\[SelectionPlaceholder]", ",", "\[Dagger]"}]],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], 
+              "H", {}, {\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SuperscriptBox["\[SelectionPlaceholder]", "\[Dagger]"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              SuperDagger[\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              AdjustmentBox["\[VerticalSeparator]",
+               BoxMargins->{{-0.2, 0}, {0, 0}}], 
+              AdjustmentBox[
+               TagBox["\[SelectionPlaceholder]",
+                QuantumAlgebra`QuantumAlgebra`KetArgs,
+                BaseStyle->"BraKetArg"],
+               BoxBaselineShift->0], "\[RightAngleBracket]"}],
+             QuantumAlgebra`QuantumAlgebra`Ket,
+             BaseStyle->"KetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             QuantumAlgebra`QuantumAlgebra`Ket[\[SelectionPlaceholder]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SubscriptBox[
+              RowBox[{
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{-0.2, 0}, {0, 0}}], 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"]],
+             QuantumAlgebra`QuantumAlgebra`Ket,
+             BaseStyle->"KetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Ket[\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SuperscriptBox[
+              RowBox[{
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{-0.2, 0}, {0, 0}}], 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"]],
+             QuantumAlgebra`QuantumAlgebra`Ket,
+             BaseStyle->"KetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Ket[\[SelectionPlaceholder], {}, {\
+\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SubsuperscriptBox[
+              RowBox[{
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{-0.2, 0}, {0, 0}}], 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"]],
+             QuantumAlgebra`QuantumAlgebra`Ket,
+             BaseStyle->"KetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Ket[\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{"\[LeftAngleBracket]", 
+              AdjustmentBox[
+               TagBox["\[SelectionPlaceholder]",
+                QuantumAlgebra`QuantumAlgebra`BraArgs,
+                BaseStyle->"BraKetArg"],
+               BoxBaselineShift->0], 
+              AdjustmentBox["\[VerticalSeparator]",
+               BoxMargins->{{0, -0.2}, {0, 0}}]}],
+             QuantumAlgebra`QuantumAlgebra`Bra,
+             BaseStyle->"BraWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             QuantumAlgebra`QuantumAlgebra`Bra[\[SelectionPlaceholder]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SubscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`BraArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], 
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{0, -0.2}, {0, 0}}]}]}],
+             QuantumAlgebra`QuantumAlgebra`Bra,
+             BaseStyle->"BraWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Bra[\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`BraArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], 
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{0, -0.2}, {0, 0}}]}]}],
+             QuantumAlgebra`QuantumAlgebra`Bra,
+             BaseStyle->"BraWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Bra[\[SelectionPlaceholder], {}, {\
+\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"], 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`BraArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], 
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{0, -0.2}, {0, 0}}]}]}],
+             QuantumAlgebra`QuantumAlgebra`Bra,
+             BaseStyle->"BraWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Bra[\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              AdjustmentBox["\[VerticalSeparator]",
+               BoxMargins->{{-0.2, 0}, {0, 0}}], 
+              AdjustmentBox[
+               TagBox[
+                
+                SubscriptBox["\[SelectionPlaceholder]", 
+                 "\[SelectionPlaceholder]"],
+                QuantumAlgebra`QuantumAlgebra`KetArgs,
+                BaseStyle->"BraKetArg"],
+               BoxBaselineShift->0], "\[RightAngleBracket]"}],
+             QuantumAlgebra`QuantumAlgebra`Ket,
+             BaseStyle->"KetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             QuantumAlgebra`QuantumAlgebra`Ket[
+              Subscript[\[SelectionPlaceholder], \[SelectionPlaceholder]]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{"\[LeftAngleBracket]", 
+              AdjustmentBox[
+               TagBox[
+                
+                SubscriptBox["\[SelectionPlaceholder]", 
+                 "\[SelectionPlaceholder]"],
+                QuantumAlgebra`QuantumAlgebra`BraArgs,
+                BaseStyle->"BraKetArg"],
+               BoxBaselineShift->0], 
+              AdjustmentBox["\[VerticalSeparator]",
+               BoxMargins->{{0, -0.2}, {0, 0}}]}],
+             QuantumAlgebra`QuantumAlgebra`Bra,
+             BaseStyle->"BraWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             QuantumAlgebra`QuantumAlgebra`Bra[
+              Subscript[\[SelectionPlaceholder], \[SelectionPlaceholder]]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]}
+       },
+       ColumnsEqual->False,
+       FrameStyle->Directive[
+         Thickness[1], 
+         GrayLevel[0.5]],
+       GridBoxFrame->{"Columns" -> None, "Rows" -> None},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{0.}}, "Rows" -> {{0}}},
+       RowsEqual->False],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{"\[LeftAngleBracket]", 
+              AdjustmentBox[
+               RowBox[{
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                 BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                 BaseStyle->"BraKetArg"]}],
+               BoxBaselineShift->0], "\[RightAngleBracket]"}],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder]}, \
+{\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{
+             TagBox[
+              RowBox[{
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{-0.2, 0}, {0, 0}}], 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}],
+              QuantumAlgebra`QuantumAlgebra`Ket,
+              BaseStyle->"KetWrapper"], "\[CenterDot]", 
+             TagBox[
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`BraArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], 
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{0, -0.2}, {0, 0}}]}],
+              QuantumAlgebra`QuantumAlgebra`Bra,
+              BaseStyle->"BraWrapper"]}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             NonCommutativeMultiply[
+              QuantumAlgebra`QuantumAlgebra`Ket[\[SelectionPlaceholder]], 
+              QuantumAlgebra`QuantumAlgebra`Bra[\[SelectionPlaceholder]]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{
+             TagBox[
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`BraArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], 
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{0, -0.2}, {0, 0}}]}],
+              QuantumAlgebra`QuantumAlgebra`Bra,
+              BaseStyle->"BraWrapper"], "\[CenterDot]", 
+             "\[SelectionPlaceholder]", "\[CenterDot]", 
+             TagBox[
+              RowBox[{
+               AdjustmentBox["\[VerticalSeparator]",
+                BoxMargins->{{-0.2, 0}, {0, 0}}], 
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}],
+              QuantumAlgebra`QuantumAlgebra`Ket,
+              BaseStyle->"KetWrapper"]}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             NonCommutativeMultiply[
+              
+              QuantumAlgebra`QuantumAlgebra`Bra[\[SelectionPlaceholder]], \
+\[SelectionPlaceholder], 
+              QuantumAlgebra`QuantumAlgebra`Ket[\[SelectionPlaceholder]]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{
+            "\[SelectionPlaceholder]", "\[CircleTimes]", 
+             "\[SelectionPlaceholder]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`TensorProduct[\
+\[SelectionPlaceholder], \[SelectionPlaceholder]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{
+            "\[SelectionPlaceholder]", "\[CircleTimes]", 
+             "\[SelectionPlaceholder]", "\[CircleTimes]", 
+             "\[SelectionPlaceholder]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`TensorProduct[\
+\[SelectionPlaceholder], \[SelectionPlaceholder], \[SelectionPlaceholder]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{
+            "\[SelectionPlaceholder]", "\[CircleTimes]", 
+             "\[SelectionPlaceholder]", "\[CircleTimes]", 
+             "\[SelectionPlaceholder]", "\[CircleTimes]", 
+             "\[SelectionPlaceholder]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`TensorProduct[\
+\[SelectionPlaceholder], \[SelectionPlaceholder], \[SelectionPlaceholder], \
+\[SelectionPlaceholder]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]}
+       },
+       ColumnsEqual->False,
+       FrameStyle->Directive[
+         Thickness[1], 
+         GrayLevel[0.5]],
+       GridBoxFrame->{"Columns" -> None, "Rows" -> None},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{0.}}, "Rows" -> {{0.}}},
+       RowsEqual->False],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SubscriptBox[
+             RowBox[{"[", 
+              RowBox[{
+               OverscriptBox["\[SelectionPlaceholder]", "^"], ",", 
+               OverscriptBox["\[SelectionPlaceholder]", "^"]}], "]"}], "-"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              QuantumAlgebra`QuantumAlgebra`Commutator[
+               
+               QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder]]\
+, 
+               
+               QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder]]\
+]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SubscriptBox[
+             RowBox[{"[", 
+              RowBox[{
+               OverscriptBox["\[SelectionPlaceholder]", "^"], ",", 
+               SuperscriptBox[
+                OverscriptBox["\[SelectionPlaceholder]", "^"], "\[Dagger]"]}],
+               "]"}], "-"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             QuantumAlgebra`QuantumAlgebra`Commutator[
+              QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder]], 
+              
+              QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], 
+               "H"]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SubscriptBox[
+             RowBox[{"[", 
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["\[SelectionPlaceholder]", "^"], "\[Dagger]"], 
+               ",", 
+               OverscriptBox["\[SelectionPlaceholder]", "^"]}], "]"}], "-"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             QuantumAlgebra`QuantumAlgebra`Commutator[
+              
+              QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder], 
+               "H"], 
+              
+              QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder]]]\
+], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            SubscriptBox[
+             RowBox[{"[", 
+              RowBox[{
+               SuperscriptBox[
+                OverscriptBox["\[SelectionPlaceholder]", "^"], "\[Dagger]"], 
+               ",", 
+               SuperscriptBox[
+                OverscriptBox["\[SelectionPlaceholder]", "^"], "\[Dagger]"]}],
+               "]"}], "-"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              QuantumAlgebra`QuantumAlgebra`Commutator[
+               
+               QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder],
+                 "H"], 
+               
+               QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder],
+                 "H"]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]}
+       },
+       ColumnsEqual->False,
+       FrameStyle->Directive[
+         Thickness[1], 
+         GrayLevel[0.5]],
+       GridBoxFrame->{"Columns" -> None, "Rows" -> None},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{0.}}},
+       RowsEqual->False],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QAMatrix", "[", 
+             RowBox[{
+             "\[SelectionPlaceholder]", ",", "\[SelectionPlaceholder]"}], 
+             "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QAMatrix[\[SelectionPlaceholder], \
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QADirac", "[", 
+             RowBox[{
+             "\[SelectionPlaceholder]", ",", "\[SelectionPlaceholder]"}], 
+             "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QADirac[\[SelectionPlaceholder], \
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QATrace", "[", 
+             RowBox[{
+             "\[SelectionPlaceholder]", ",", "\[SelectionPlaceholder]"}], 
+             "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QATrace[\[SelectionPlaceholder], \
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"Hermitian", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`Hermitian[\[SelectionPlaceholder]]\
+]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QASet", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              QuantumAlgebra`QuantumAlgebra`QASet[\[SelectionPlaceholder]]]], 
+            Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QAClear", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QAClear[\[SelectionPlaceholder]]]]\
+, Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]}
+       },
+       ColumnsEqual->False,
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{0.}}, "Rows" -> {{0.}}},
+       RowsEqual->False],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         ButtonBox[
+          StyleBox["\<\"Tutorial Navigator\"\>",
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>FrontEndExecute[{
+             NotebookLocate[{"QANavigator.nb", None}]}],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QAPowerExpand", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QAPowerExpand[\
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QAProductExpand", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QAProductExpand[\
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{
+            "QACommutatorExpand", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QACommutatorExpand[\
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{
+            "QACommutatorContract", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QACommutatorContract[\
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QAExpandAll", "[", "\[SelectionPlaceholder]", "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              
+              QuantumAlgebra`QuantumAlgebra`QAExpandAll[\
+\[SelectionPlaceholder]]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            RowBox[{"QASeries", "[", 
+             RowBox[{"\[SelectionPlaceholder]", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                OverscriptBox["\[SelectionPlaceholder]", "^"], ",", 
+                OverscriptBox["\[SelectionPlaceholder]", "^"], ",", 
+                "\[SelectionPlaceholder]"}], "}"}]}], "]"}],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             Defer[
+              QuantumAlgebra`QuantumAlgebra`QASeries[\[SelectionPlaceholder], {
+                
+                QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder]\
+], 
+                
+                QuantumAlgebra`QuantumAlgebra`Operator[\[SelectionPlaceholder]\
+], \[SelectionPlaceholder]}]]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]}
+       },
+       ColumnsEqual->False,
+       FrameStyle->Directive[
+         Thickness[1], 
+         GrayLevel[0.5]],
+       GridBoxAlignment->{"Columns" -> {{Left}}},
+       GridBoxFrame->{"Columns" -> None, "Rows" -> None},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{0.}}, "Rows" -> {{0.}}},
+       RowsEqual->False],
+      "Column"]},
+    {
+     TagBox[GridBox[{
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SubscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                RowBox[{
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"]}],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}]}],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {}}, {\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                RowBox[{
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"]}],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}]}],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder], \
+{}, {\[SelectionPlaceholder]}}, {\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"], 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                RowBox[{
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"]}],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}]}],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {\[SelectionPlaceholder]}}, \
+{\[SelectionPlaceholder]}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SubscriptBox[
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                RowBox[{
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"]}],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"]],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder]}, \
+{\[SelectionPlaceholder], {\[SelectionPlaceholder]}, {}}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SuperscriptBox[
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                RowBox[{
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"]}],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"]],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder]}, \
+{\[SelectionPlaceholder], {}, {\[SelectionPlaceholder]}}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             SubsuperscriptBox[
+              RowBox[{"\[LeftAngleBracket]", 
+               AdjustmentBox[
+                RowBox[{
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                  BaseStyle->"BraKetArg"]}],
+                BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"], 
+              TagBox[
+               AdjustmentBox[
+                TagBox["\[SelectionPlaceholder]",
+                 QuantumAlgebra`QuantumAlgebra`KetArgs,
+                 BaseStyle->"BraKetArg"],
+                BoxBaselineShift->0],
+               QuantumAlgebra`QuantumAlgebra`UDScript,
+               BaseStyle->"RIndex"]],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder]}, \
+{\[SelectionPlaceholder], {\[SelectionPlaceholder]}, \
+{\[SelectionPlaceholder]}}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]},
+        {
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SubscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              SubscriptBox[
+               RowBox[{"\[LeftAngleBracket]", 
+                AdjustmentBox[
+                 RowBox[{
+                  TagBox["\[SelectionPlaceholder]",
+                   QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                   BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                  TagBox["\[SelectionPlaceholder]",
+                   QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                   BaseStyle->"BraKetArg"]}],
+                 BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"RIndex"]]}],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {}}, {\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {}}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SuperscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              SuperscriptBox[
+               RowBox[{"\[LeftAngleBracket]", 
+                AdjustmentBox[
+                 RowBox[{
+                  TagBox["\[SelectionPlaceholder]",
+                   QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                   BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                  TagBox["\[SelectionPlaceholder]",
+                   QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                   BaseStyle->"BraKetArg"]}],
+                 BoxBaselineShift->0], "\[RightAngleBracket]"}], 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"RIndex"]]}],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder], \
+{}, {\[SelectionPlaceholder]}}, {\[SelectionPlaceholder], {}, {\
+\[SelectionPlaceholder]}}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"], 
+         ButtonBox[
+          StyleBox[
+           TagBox[
+            TagBox[
+             RowBox[{
+              SubsuperscriptBox["\[InvisiblePrefixScriptBase]", 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0.],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"], 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0.],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"LIndex"]], 
+              SubsuperscriptBox[
+               RowBox[{"\[LeftAngleBracket]", 
+                AdjustmentBox[
+                 RowBox[{
+                  TagBox["\[SelectionPlaceholder]",
+                   QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                   BaseStyle->"BraKetArg"], "\[VerticalSeparator]", 
+                  TagBox["\[SelectionPlaceholder]",
+                   QuantumAlgebra`QuantumAlgebra`BraKetArgs,
+                   BaseStyle->"BraKetArg"]}],
+                 BoxBaselineShift->0.], "\[RightAngleBracket]"}], 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0.],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"RIndex"], 
+               TagBox[
+                AdjustmentBox[
+                 TagBox["\[SelectionPlaceholder]",
+                  QuantumAlgebra`QuantumAlgebra`BraArgs,
+                  BaseStyle->"BraKetArg"],
+                 BoxBaselineShift->0.],
+                QuantumAlgebra`QuantumAlgebra`UDScript,
+                BaseStyle->"RIndex"]]}],
+             QuantumAlgebra`QuantumAlgebra`Braket,
+             BaseStyle->"BraKetWrapper"],
+            HoldForm],
+           StripOnInput->False,
+           LineColor->GrayLevel[0.],
+           FrontFaceColor->GrayLevel[0.],
+           BackFaceColor->GrayLevel[0.],
+           GraphicsColor->GrayLevel[0.],
+           FontWeight->Bold,
+           FontColor->GrayLevel[0.]],
+          Appearance->{Automatic, "DialogBox"},
+          ButtonFunction:>NotebookApply[
+            InputNotebook[], 
+            ToBoxes[
+             
+             QuantumAlgebra`QuantumAlgebra`Braket[{\[SelectionPlaceholder], {\
+\[SelectionPlaceholder]}, {\[SelectionPlaceholder]}}, \
+{\[SelectionPlaceholder], {\[SelectionPlaceholder]}, \
+{\[SelectionPlaceholder]}}]], Placeholder],
+          Evaluator->Automatic,
+          Method->"Preemptive"]}
+       },
+       ColumnsEqual->False,
+       FrameStyle->Directive[
+         Thickness[1], 
+         GrayLevel[0.5]],
+       GridBoxFrame->{"Columns" -> None, "Rows" -> None},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+       GridBoxSpacings->{"Columns" -> {{0.}}, "Rows" -> {{0.}}},
+       RowsEqual->False],
+      "Grid"]}
+   },
+   ColumnsEqual->False,
+   GridBoxAlignment->{"Columns" -> {{Center}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   RowsEqual->False],
+  "Column"]], NotebookDefault,
+ PageBreakAbove->True,
+ InputAutoReplacements->{
+  "->" -> "\[Rule]", ":>" -> "\[RuleDelayed]", "<=" -> "\[LessEqual]", ">=" -> 
+   "\[GreaterEqual]", "!=" -> "\[NotEqual]", "==" -> "\[Equal]", ParentList},
+ "TwoByteSyntaxCharacterAutoReplacement"->True,
+ LineSpacing->{1.25, 0, 2},
+ SingleLetterItalics->False,
+ StyleMenuListing->None,
+ FontFamily->"Courier"]
+},
+ClosingAutoSave->False,
+IncludeFileExtension->False,
+Editable->True,
+WindowSize->All,
+WindowMargins->{{76, Automatic}, {Automatic, 30}},
+WindowFrame->"Palette",
+WindowElements->{},
+WindowFrameElements->{"CloseBox", "MinimizeBox"},
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (January 25, 2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Palette.nb"]], 
+   Cell[
+    CellGroupData[{
+      Cell["Bra Ket Styles", "Section"], 
+      Cell[
+      " The cells below define certain styles needed for defining Bras&Kets. \
+These styles serve to give the correct structural properties to Bras & Kets ",
+        "Text"], 
+      Cell[
+       StyleData["BraKetArg"], SpanMinSize -> Automatic, StyleMenuListing -> 
+       None, AdjustmentBoxOptions -> {BoxMargins -> {{0, 0}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> True, Selectable -> True}], 
+      Cell[
+       StyleData["BraWrapper"], 
+       AutoStyleOptions -> {"HighlightSyntaxErrors" -> False}, 
+       ScriptBaselineShifts -> {0.6, 0.9}, SpanMinSize -> 1.5, 
+       StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {
+        BoxBaselineShift -> -0.01, BoxMargins -> {{0.2, -0.13}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["KetWrapper"], 
+       AutoStyleOptions -> {"HighlightSyntaxErrors" -> False}, 
+       ScriptBaselineShifts -> {0.6, 0.9}, SpanMinSize -> 1.5, 
+       StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {
+        BoxBaselineShift -> -0.01, BoxMargins -> {{-0.2, 0.2}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["BraKetWrapper"], ScriptBaselineShifts -> {0.6, 0.9}, 
+       SpanMinSize -> 1.5, StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0.25, 0.25}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["RIndex"], StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{-0.16, 0}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}], 
+      Cell[
+       StyleData["LIndex"], StyleMenuListing -> None, 
+       AdjustmentBoxOptions -> {BoxMargins -> {{0, -0.1}, {0, 0}}}, 
+       TagBoxOptions -> {Editable -> False}]}, Closed]]}, Visible -> False, 
+  FrontEndVersion -> "9.0 for Microsoft Windows (32-bit) (January 25, 2013)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 269, 8, 43, NotebookDefault],
+Cell[830, 30, 65217, 1741, 525, NotebookDefault,
+ PageBreakAbove->True]
+}
+]
+*)
+
+(* End of internal cache information *)
+
