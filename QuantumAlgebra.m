@@ -291,7 +291,7 @@ SetAttributes[{Hermitian, OperatorQ, KetQ, BraQ, ConstantQ, QuantumObjectQ,
 	QAProductExpand, QAPowerExpand, QACommutatorExpand, QAExpandAll}, Listable]
 
 SetAttributes[DoTensorProduct,{HoldAll}]
-SetAttributes[TensorProduct,{Flat, OneIdentity}]
+
 
 protected = Unprotect[NonCommutativeMultiply, Exp, Times, Power, Conjugate, SubscriptBox, RowBox, FullForm];
 
@@ -351,17 +351,16 @@ Bra[x__Subscript] := Bra[Sequence@@Sort[{x},OrderedQ[{#1[[2]],#2[[2]]}]&]]/;
 	(!OrderedQ[{x},OrderedQ[{#1[[2]],#2[[2]]}]&])
 
 Unprotect[TensorProduct];	
+
+SetAttributes[TensorProduct, {Flat, OneIdentity}]
 	
 TensorProduct[P___, Q_Plus, R___] := Map[TensorProduct[P, #, R]&, Q]
 
 TensorProduct[P___, (c_? ConstantQ Q_),  R___] := c TensorProduct[P, Q, R] /; ({P,R}=!={})
 
-ClearAttributes[TensorProduct,{Flat, OneIdentity}]
-
-TensorProduct[lista__List]:=
-  Flatten[Outer[TensorProduct,lista]] /; Length[{lista}] >= 2 
-  
-SetAttributes[TensorProduct,{Flat, OneIdentity}]
+TensorProduct[lista__List]:= Module[{prod},
+  	prod = Flatten[Outer[TensorProduct, lista]]
+	]/; Length[{lista}] >= 2
 
 TensorProduct[ g:(Ket[__Subscript]..)] := Ket @@(Sequence@@#&/@{g}) /; Length[{g}]>1
 
@@ -391,6 +390,8 @@ TensorProduct[NonCommutativeMultiply[TensorProduct[x__Ket],TensorProduct[y__Bra]
 	NonCommutativeMultiply[TensorProduct[u__Ket],TensorProduct[v__Bra]]]:=
 		NonCommutativeMultiply[TensorProduct[x,u],TensorProduct[y,v]];
 
+(* SetAttributes[TensorProduct, {Orderless}] *)
+
 (*TensorProduct[a_Ket] := (Print["1"];a)
 
 TensorProduct[a_Bra] := a*)
@@ -399,7 +400,7 @@ TensorProduct[a_Bra] := a*)
 (*Tensor Product Generation*)
 
 
-DoTensorProduct[expr_,{n_}] := TensorProduct@@Table[expr,{n}]
+DoTensorProduct[expr_,{n_}] := TensorProduct @@ Table[expr,{n}]
 
 DoTensorProduct[expr_,{i_,n_}] := TensorProduct@@Table[expr,{i,n}]
 
@@ -3346,7 +3347,6 @@ Protect[ Evaluate[protected] ]
 End[]
 
 (*Protect[Evaluate[$Context <> "*"]]*)
-SetAttributes[TensorProduct,{Orderless}]
 
 SetAttributes[ Evaluate[ToExpression/@(Complement[Names @ "QuantumAlgebra`QuantumAlgebra`*", {"AutoLoadNotationPalette", "AutoLoadNavigatorPalette"}])], {ReadProtected}]
 
